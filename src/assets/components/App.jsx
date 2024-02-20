@@ -1,13 +1,10 @@
 import './styles/App.css'
+import Home from './Home'
 
 function App() {
-
-
   return (
     <>
-    <div className="Container">
-      <h1>first-Commit!!!</h1>
-    </div>
+      <Home />
     </>
   )
 }
