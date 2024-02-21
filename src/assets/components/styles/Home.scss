@@ -1,10 +1,4 @@
-html {
-  height: 100%;
-  overflow-x: hidden;
-  background-color: #000910;
-}
-
-.background{
+.background {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +8,8 @@ html {
   width: 100vw;
 
   position: relative;
-  background: url('background.png') no-repeat center center/cover;
+  background: url("background.png") no-repeat center top/cover;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -27,27 +22,36 @@ html {
   }
 }
 
-$d: 50;      // density
-$w: 1000;     // grid size
-$s: 12s;       // speed
+$d: 50; // density
+$w: 1000; // grid size
+$s: 12s; // speed
 
 // Generate the snow image using radial gradients
 $grad: ();
 @for $i from 0 to $d {
   $v: random(4) + 2;
-  $a: random(5) * .1 + .5;
-  $grad: $grad, radial-gradient(
-      $v+px $v+px at
-      (random($w - $v * 2) + $v)+px
-      (random($w - $v * 2) + $v)+px, 
-      rgba(200,200,200,$a) 50%,
-      rgba(0,0,0,0)
-  ) !global;
+  $a: random(5) * 0.1 + 0.5;
+  $grad: $grad,
+    radial-gradient(
+      $v +
+        px
+        $v +
+        px
+        at
+        (random($w - $v * 2) + $v) +
+        px
+        (random($w - $v * 2) + $v) +
+        px,
+      rgba(200, 200, 200, $a) 50%,
+      rgba(0, 0, 0, 0)
+    ) !global;
 }
 
 // The CSS
 
-.snow, .snow:before, .snow:after {
+.snow,
+.snow:before,
+.snow:after {
   position: absolute;
   top: -$w + px;
   left: 0;
@@ -57,20 +61,19 @@ $grad: ();
   background-size: $w + px $w + px;
   animation: snow $s linear infinite;
   content: "";
-
 }
 .snow:after {
   margin-left: -$w/3 + px;
-  opacity: .4;
-  animation-duration: $s*2;
+  opacity: 0.4;
+  animation-duration: $s * 2;
   animation-direction: reverse;
   filter: blur(3px);
 }
 .snow:before {
-  animation-duration: $s*3;
+  animation-duration: $s * 3;
   animation-direction: reverse;
   margin-left: -$w/2 + px;
-  opacity: .65;
+  opacity: 0.65;
   filter: blur(1.5px);
 }
 @keyframes snow {
@@ -80,8 +83,42 @@ $grad: ();
 }
 
 // TODO: Home Menu
-.title{
-  font-size: 3rem;
-  color: white;
-  text-align: center;
+.containTittle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 45%;
+
+  gap: 3%;
+  z-index: 1;
+
+  img {
+    padding-top: 5%;
+    margin-right: 5%;
+    width: 70%;
+    height: auto;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: white;
+
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+  }
+
+  button {
+    width: 40%;
+    padding: 1rem;
+    border: none;
+
+    font-size: 1.5em;
+    color: white;
+
+    background-color: #1e90ff;
+    cursor: pointer;
+  }
 }
