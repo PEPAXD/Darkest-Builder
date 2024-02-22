@@ -1,9 +1,12 @@
 import Home from "./Home";
+import Hero from "./HeroGallery";
 
 function App() {
+
   return (
     <>
-      <Home />
+      <Home url_Bg = "background.png"/>
+      <Hero url_Bg = "Heroswallpaper.png"/>
       <footer>
         <div>
           © 2024 Darkest Builder &nbsp;

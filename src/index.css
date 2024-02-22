@@ -42,3 +42,106 @@ footer {
     }
   }
 }
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+
+  height: 100vh;
+  width: auto;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, #000910, rgba(255, 255, 255, 0));
+  }
+}
+
+@media (max-width: 500px) {
+  .homeContain {
+    justify-content: center;
+    margin-bottom: 10%;
+    img {
+      width: 25rem;
+    }
+  }
+  .welcomeContain {
+    width: 25rem;
+  }
+  .welcometitle {
+    font-size: 1.4em;
+  }
+  .welcomebody {
+    font-size: 1em;
+  }
+  .welcomeBT {
+    font-size: 1em;
+  }
+
+  footer{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 380px) {
+
+  
+  .homeContain {
+    justify-content: center;
+    margin-bottom: 10%;
+    img {
+      width: 20rem;
+    }
+  }
+  .welcomeContain {
+    width: 20rem;
+  }
+  .welcometitle {
+    font-size: 1.2em;
+  }
+  .welcomebody {
+    font-size: 1em;
+  }
+  .welcomeBT {
+    font-size: 1em;
+  }
+
+  footer{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 300px) {
+  .homeContain {
+    justify-content: center;
+    margin-bottom: 10%;
+    img {
+      width: 15rem;
+    }
+  }
+  .welcomeContain {
+    width: 15rem;
+  }
+  .welcometitle {
+    font-size: 0.9em;
+  }
+  .welcomebody {
+    font-size: 0.8em;
+  }
+  .welcomeBT {
+    font-size: 0.8em;
+  }
+
+  footer{
+    font-size: 0.6em;
+  }
+}
