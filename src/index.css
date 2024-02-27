@@ -23,6 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*TODO: AddBoostrap-Header and CleanStyle*/
 header {
   display: flex;
   justify-content: space-between;
@@ -34,6 +35,21 @@ header {
   z-index: 100;
   position: fixed;
   padding: 1rem 2rem;
+
+  a{
+
+    color: #fff;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .navBar{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
 }
 
 .background {
