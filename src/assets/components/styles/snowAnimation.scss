@@ -1,4 +1,4 @@
-$d: 50; // density
+$d: 25; // density
 $w: 1000; // grid size
 $s: 12s; // speed
 
@@ -24,7 +24,6 @@ $grad: ();
 }
 
 // The CSS
-
 .snow,
 .snow:before,
 .snow:after {
@@ -37,6 +36,7 @@ $grad: ();
   background-size: $w + px $w + px;
   animation: snow $s linear infinite;
   content: "";
+  will-change: transform; // Informa al navegador que la propiedad transform será animada
 }
 .snow:after {
   margin-left: -$w/3 + px;
@@ -44,6 +44,7 @@ $grad: ();
   animation-duration: $s * 2;
   animation-direction: reverse;
   filter: blur(3px);
+  will-change: transform; // Informa al navegador que la propiedad transform será animada
 }
 .snow:before {
   animation-duration: $s * 3;
@@ -51,6 +52,7 @@ $grad: ();
   margin-left: -$w/2 + px;
   opacity: 0.65;
   filter: blur(1.5px);
+  will-change: transform; // Informa al navegador que la propiedad transform será animada
 }
 @keyframes snow {
   to {

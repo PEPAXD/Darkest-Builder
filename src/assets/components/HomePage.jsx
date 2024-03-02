@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./styles/snowAnimation.scss";
 
 export default function HomePage({ url_Bg }) {
+
+  const [src, setSrc] = useState('dd2-logo.png');
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 800) {
+        setSrc('dd2-logoResponsive.png');
+      } else {
+        setSrc('dd2-logo.png');
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <div className="Home">
       <div
@@ -11,26 +30,7 @@ export default function HomePage({ url_Bg }) {
         <div className="snow"></div>
 
         <div className="homeContain">
-          <img src="dd2-logo.png" alt="" />
-          <h4>
-            Welcome To The Darkest Builder
-            <hr />
-          </h4>
-
-          <p>
-            Explora información detallada sobre héroes, sus habilidades,
-            fortalezas, debilidades, estadísticas y subclases.
-          </p>
-          <p>
-            Experimenta diferentes estilos de juego y sigue nuestra tier list de
-            héroes y composiciones de equipo.
-          </p>
-          <p>
-            Domina la oscuridad de la mazmorra con nuestras guías, basadas en la
-            wikioficial del juego.
-          </p>
-
-          <button>Build Hero</button>
+          <img src={src} alt=""/> 
         </div>
       </div>
     </div>
