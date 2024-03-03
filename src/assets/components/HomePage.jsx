@@ -3,6 +3,8 @@ import "./styles/snowAnimation.scss";
 import "./styles/HomePage.scss";
 
 import { SiFandom } from "react-icons/si";
+import { IoLogoGameControllerB } from "react-icons/io";
+import { FaBookReader } from "react-icons/fa";
 
 export default function HomePage({ url_Bg }) {
   const [src, setSrc] = useState("dd2-logo.png");
@@ -28,24 +30,55 @@ export default function HomePage({ url_Bg }) {
         className="background"
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
-        {/* TempDisable 
-        <div className="snow"></div>
-        */}
+        {/* Snow Animation
+        <div className="snow"></div> */}
+
         <div className="homeContain">
           <img src={src} alt="" />
         </div>
 
         <div className="FooterButtons">
           <ul class="wrapper">
-            <li class="icon WikiFandom">
+            <a
+              href="https://darkestdungeon.fandom.com/wiki/Darkest_Dungeon_II_Wiki"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="icon WikiFandom">
+                <span style={{ fontSize: "1.4em" }}>
+                  <SiFandom />
+                </span>
+              </li>
               <span class="tooltip">WikiGame</span>
-              <span>
-                <SiFandom />
-              </span>
-            </li>
+            </a>
+
+            <a
+              href="https://steamcommunity.com/sharedfiles/filedetails/?id=2973257745"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="icon steamGuide">
+                <span style={{ fontSize: "1.3em" }}>
+                  <FaBookReader />
+                </span>
+              </li>
+              <span class="tooltip">SteamGuide</span>
+            </a>
+
+            <a
+              href="https://www.darkestdungeon.com/darkest-dungeon-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li class="icon gameWeb">
+                <span style={{ fontSize: "1.6em" }}>
+                  <IoLogoGameControllerB />
+                </span>
+              </li>
+              <span class="tooltip">GameWeb</span>
+            </a>
           </ul>
         </div>
-
       </div>
     </div>
   );

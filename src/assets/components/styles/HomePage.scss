@@ -16,76 +16,79 @@
   }
 }
 
+//LINKS BUTTONS
 .FooterButtons {
   position: absolute;
 
-  right: 2%;
-  bottom: 2%;
+  left: 2%;
+  bottom: 4%;
 }
 
 .wrapper {
   position: relative;
   display: inline-flex;
-  list-style: none;
+  flex-direction: column;
 
-  font-family: "Poppins", sans-serif;
-  justify-content: flex-end;
+  gap: 0.5rem;
   z-index: 5;
 
+  a {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+}
+
+.tooltip {
+  display: flex;
+  position: absolute;
+
+  left: 3rem;
+  z-index: -1;
+  padding: 0.4rem 8rem 0.4rem 2.5rem;
+  margin-right: -10rem;
+
+  font-size: 1em;
+  font-weight: 500;
+  color: #808280;
+
+  border-top: 2px solid #363636;
+  border-bottom: 2px solid #363636;
+  background: linear-gradient(-90deg, transparent, #121212 40%);
+
+  transition: all 0.2s ease-in-out;
 }
 
 .wrapper .icon {
-  position: relative;
-  background: #fff;
-  border-radius: 50%;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  border: 1px solid #505455;
+  background: #121212;
+
   cursor: pointer;
+
+  margin: 10px;
+  width: 3rem;
+  height: 3rem;
+
+  transform: rotate(45deg);
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   svg {
     display: block;
-    margin-bottom: 0.2rem;
-    color: #FA005A;
-    font-size: 1.8em;
+    color: #808280;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out;
   }
 }
 
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #fff;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #fff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
 .wrapper .icon:hover .tooltip {
-  top: -45px;
+  left: 15%;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -99,14 +102,29 @@
 .wrapper .WikiFandom:hover,
 .wrapper .WikiFandom:hover .tooltip,
 .wrapper .WikiFandom:hover .tooltip::before {
-  background: #FA005A;
-  color: #fff;
+  background: #fa005a;
 }
 
-.wrapper .icon:hover{
-  transform: scale(1.1);
-  
-  svg{
-    color: #FFC500;
+.wrapper .gameWeb:hover,
+.wrapper .gameWeb:hover .tooltip,
+.wrapper .gameWeb:hover .tooltip::before {
+  background: #ee2819;
+}
+
+.wrapper .steamGuide:hover,
+.wrapper .steamGuide:hover .tooltip,
+.wrapper .steamGuide:hover .tooltip::before {
+  background: #156aa0;
+}
+
+.wrapper a {
+  &:hover {
+    .tooltip {
+      color: #fff;
+    }
+
+    svg {
+      color: #fff;
+    }
   }
 }
