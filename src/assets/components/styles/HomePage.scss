@@ -1,3 +1,7 @@
+$color-wikiFandom: rgb(255, 0, 153);
+$color-steamGuide: rgb(21, 106, 160);
+$color-gameWeb: rgb(238, 40, 25);
+
 .homeContain {
   display: flex;
   flex-direction: column;
@@ -16,10 +20,8 @@
   }
 }
 
-//LINKS BUTTONS
 .FooterButtons {
   position: absolute;
-
   left: 2%;
   bottom: 4%;
 }
@@ -28,14 +30,13 @@
   position: relative;
   display: inline-flex;
   flex-direction: column;
-
-  gap: 0.5rem;
+  gap: 0.2rem;
   z-index: 5;
+  
 
   a {
     display: flex;
     align-items: center;
-
     position: relative;
   }
 }
@@ -43,21 +44,16 @@
 .tooltip {
   display: flex;
   position: absolute;
-
-  left: 3rem;
-  z-index: -1;
-  padding: 0.4rem 8rem 0.4rem 2.5rem;
-  margin-right: -10rem;
-
+  left: 2rem;
+  z-index: 3;
+  padding: 0.2rem 3rem;
+  width: 14rem;
   font-size: 1em;
   font-weight: 500;
   color: #808280;
-
   border-top: 2px solid #363636;
   border-bottom: 2px solid #363636;
   background: linear-gradient(-90deg, transparent, #121212 40%);
-
-  transition: all 0.2s ease-in-out;
 }
 
 .wrapper .icon {
@@ -66,65 +62,40 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-
   border: 1px solid #505455;
   background: #121212;
-
   cursor: pointer;
-
-  margin: 10px;
-  width: 3rem;
-  height: 3rem;
-
+  margin: 0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 4;
   transform: rotate(45deg);
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   svg {
     display: block;
     color: #808280;
     transform: rotate(-45deg);
-    transition: all 0.2s ease-in-out;
   }
 }
 
-.wrapper .icon:hover .tooltip {
-  left: 15%;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
+a:hover {
+  .icon svg {
+    color: #fff;
+  }
 
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
+  span {
+    color: #fff;
+  }
 
-.wrapper .WikiFandom:hover,
-.wrapper .WikiFandom:hover .tooltip,
-.wrapper .WikiFandom:hover .tooltip::before {
-  background: #fa005a;
-}
+  #iconGameWeb {
+    background-color: $color-gameWeb;
+  }
 
-.wrapper .gameWeb:hover,
-.wrapper .gameWeb:hover .tooltip,
-.wrapper .gameWeb:hover .tooltip::before {
-  background: #ee2819;
-}
+  #steamGuide {
+    background-color: $color-steamGuide;
+  }
 
-.wrapper .steamGuide:hover,
-.wrapper .steamGuide:hover .tooltip,
-.wrapper .steamGuide:hover .tooltip::before {
-  background: #156aa0;
-}
-
-.wrapper a {
-  &:hover {
-    .tooltip {
-      color: #fff;
-    }
-
-    svg {
-      color: #fff;
-    }
+  #wikiFandom {
+    background-color: $color-wikiFandom;
   }
 }
