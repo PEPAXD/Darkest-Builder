@@ -6,11 +6,38 @@ $color-gameWeb: rgb(238, 40, 25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+
+  height: 95vh;
 
   img {
     z-index: 5;
-    width: 55%;
+    width: 45%;
+  }
+
+  h1 {
+    text-align: center;
+    z-index: 3;
+    padding: 0.2rem 3rem;
+    width: 30rem;
+
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #808280;
+    border-top: 2px solid #363636;
+    border-bottom: 2px solid #363636;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(
+      to right,
+      transparent 5%,
+      #000 50%,
+      transparent 95%
+    );
+
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
   }
 }
 
@@ -32,7 +59,6 @@ $color-gameWeb: rgb(238, 40, 25);
   flex-direction: column;
   gap: 0.2rem;
   z-index: 5;
-  
 
   a {
     display: flex;
@@ -97,5 +123,42 @@ a:hover {
 
   #wikiFandom {
     background-color: $color-wikiFandom;
+  }
+}
+
+//TODO: profileUser
+.profileUser {
+  position: absolute;
+  right: 2%;
+  bottom: 4%;
+  z-index: 5;
+
+  text-align: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #505455;
+    background: #000;
+    cursor: pointer;
+    margin: 2rem;
+    width: 5rem;
+    height: 5rem;
+
+    z-index: 4;
+    transform: rotate(45deg);
+    overflow: hidden;
+
+    img{
+      position: relative;
+      top: 10px;
+      left: 20px;
+      width: 8rem;
+      transform: rotate(-45deg);
+    }
+    
   }
 }

@@ -19,7 +19,7 @@ const useWindowWidth = () => {
   return windowWidth;
 };
 
-const FooterButton = ({ href, iconColor, fontSize, Icon, bannerName }) => (
+const LinksButtons = ({ href, iconColor, fontSize, Icon, bannerName }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <li className="icon" id={iconColor}>
       <span style={{ fontSize }}>
@@ -40,27 +40,38 @@ export default function HomePage({ url_Bg }) {
         className="background"
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
+
+        <div className="snow"></div>
+
         <div className="homeContain">
           <img src={src} alt="" />
+          <h1>Build GameTeam</h1>
+        </div>
+
+        <div className="profileUser">
+          <a href="">
+            <img src="public\HeroProfile\plagueDoctor.png" alt="Profile" />
+          </a>
+          <h4>UserName</h4>
         </div>
 
         <div className="FooterButtons">
           <ul className="wrapper">
-            <FooterButton
+            <LinksButtons
               href="https://darkestdungeon.fandom.com/wiki/Darkest_Dungeon_II_Wiki"
               iconColor="wikiFandom"
               fontSize="1.4em"
               Icon={SiFandom}
               bannerName="WikiGame"
             />
-            <FooterButton
+            <LinksButtons
               href="https://steamcommunity.com/sharedfiles/filedetails/?id=2973257745"
               iconColor="steamGuide"
               fontSize="1.3em"
               Icon={FaBookReader}
               bannerName="SteamGuide"
             />
-            <FooterButton
+            <LinksButtons
               href="https://www.darkestdungeon.com/darkest-dungeon-2/"
               iconColor="iconGameWeb"
               fontSize="1.6em"

@@ -1,0 +1,29 @@
+header {
+
+  //Home Section Disable HEADER
+  //visibility: hidden;
+
+
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #000;
+  }
+
+  ul {
+    position: relative;
+    display: flex;
+
+    list-style-type: none;
+    gap: 2.5rem;
+
+    li {
+      padding: 1rem;
+
+      &:hover {
+        background: #333;
+      }
+    }
+  }
+}
