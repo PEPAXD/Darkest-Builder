@@ -29,6 +29,7 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <div class="Difusse"></div>
     </header>
   );
 }

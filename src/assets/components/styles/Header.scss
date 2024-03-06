@@ -1,14 +1,17 @@
 header {
-
   //Home Section Disable HEADER
   //visibility: hidden;
-
-
   nav {
     display: flex;
     justify-content: center;
     width: 100%;
     background: #000;
+  }
+
+  .Difusse{
+    width: 100%;
+    height: 2rem; // Ajusta esto para cambiar la altura del rectángulo
+    background: linear-gradient(180deg, #000, transparent);
   }
 
   ul {
