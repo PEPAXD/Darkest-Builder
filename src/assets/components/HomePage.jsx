@@ -34,6 +34,28 @@ export default function HomePage({ url_Bg }) {
   const windowWidth = useWindowWidth();
   const src = windowWidth < 800 ? "dd2-logoResponsive.png" : "dd2-logo.png";
 
+  // Array ProfileImg
+  const images = [
+    "public/HeroProfile/Flagellant.png",
+    "public/HeroProfile/graveRobber.png",
+    "public/HeroProfile/Hellion.png",
+    "public/HeroProfile/Highwayman.png",
+    "public/HeroProfile/Jester.png",
+    "public/HeroProfile/Leper.png",
+    "public/HeroProfile/manAtArms.png",
+    "public/HeroProfile/Occultist.png",
+    "public/HeroProfile/PlagueDoctor.png",
+    "public/HeroProfile/Vestal.png",
+    "public/HeroProfile/Runaway.png",
+  ];
+  // ImgCurrentProfile
+  const [currentImage, setCurrentImage] = useState(images[0]);
+  const AvatarUser = () => {
+    const currentIndex = images.indexOf(currentImage);
+    const nextIndex = (currentIndex + 1) % images.length;
+    setCurrentImage(images[nextIndex]);
+  };
+
   return (
     <div className="Home">
       <div
@@ -49,9 +71,10 @@ export default function HomePage({ url_Bg }) {
         </div>
 
         <div className="profileUser">
-          <a href="">
-            <img src="public\HeroProfile\plagueDoctor.png" alt="Profile" />
-          </a>
+          {/* Utiliza un botón en lugar de un enlace */}
+          <button onClick={AvatarUser}>
+            <img src={currentImage} alt="Profile" />
+          </button>
           <h4>UserName</h4>
         </div>
 

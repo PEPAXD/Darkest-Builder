@@ -29,7 +29,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div class="Difusse"></div>
+      <div className="Difusse"></div>
     </header>
   );
 }
