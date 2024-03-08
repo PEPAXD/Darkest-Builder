@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Header.scss";
 
 function Header() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header>
       <nav>
         <ul>
-          <li>
-            <a href="#0">Home</a>
+          <li
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("home");
+            }}
+          >
+            <a href="#home">Home</a>
           </li>
-          <li>
-            <a href="#0">About</a>
+          <li
+            href="#About"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("About");
+            }}
+          >
+            <a>About</a>
           </li>
-          <li>
+          <li
+            href="#Regions"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("Regions");
+            }}
+          >
             <a href="#0">Regions</a>
           </li>
           <li>

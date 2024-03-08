@@ -1,6 +1,4 @@
 header {
-  //Home Section Disable HEADER
-  //visibility: hidden;
   nav {
     display: flex;
     justify-content: center;
@@ -8,7 +6,7 @@ header {
     background: #000;
   }
 
-  .Difusse{
+  .Difusse {
     width: 100%;
     height: 2rem; // Ajusta esto para cambiar la altura del rectángulo
     background: linear-gradient(180deg, #000, transparent);
@@ -25,7 +23,8 @@ header {
       padding: 1rem;
 
       &:hover {
-        background: #333;
+        background: linear-gradient(180deg, #981a0c, transparent);
+        cursor: pointer;
       }
     }
   }

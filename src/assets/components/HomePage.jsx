@@ -36,10 +36,10 @@ export default function HomePage({ url_Bg }) {
 
   // Array ProfileImg
   const images = [
+    "public/HeroProfile/Highwayman.png",
     "public/HeroProfile/Flagellant.png",
     "public/HeroProfile/graveRobber.png",
     "public/HeroProfile/Hellion.png",
-    "public/HeroProfile/Highwayman.png",
     "public/HeroProfile/Jester.png",
     "public/HeroProfile/Leper.png",
     "public/HeroProfile/manAtArms.png",
@@ -54,6 +54,15 @@ export default function HomePage({ url_Bg }) {
     const currentIndex = images.indexOf(currentImage);
     const nextIndex = (currentIndex + 1) % images.length;
     setCurrentImage(images[nextIndex]);
+  };
+
+  // TextProfile
+  const [text, setText] = useState("Darkest Adventur");
+  const changeText = () => {
+    const userInput = prompt("New Adventure Name:");
+    if (userInput) {
+      setText(userInput);
+    }
   };
 
   return (
@@ -71,11 +80,10 @@ export default function HomePage({ url_Bg }) {
         </div>
 
         <div className="profileUser">
-          {/* Utiliza un botón en lugar de un enlace */}
           <button onClick={AvatarUser}>
             <img src={currentImage} alt="Profile" />
           </button>
-          <h4>UserName</h4>
+          <h4 onClick={changeText}>{text}</h4>
         </div>
 
         <div className="FooterButtons">
@@ -95,6 +103,7 @@ export default function HomePage({ url_Bg }) {
               bannerName="SteamGuide"
             />
             <LinksButtons
+            
               href="https://www.darkestdungeon.com/darkest-dungeon-2/"
               iconColor="iconGameWeb"
               fontSize="1.6em"
