@@ -18,6 +18,12 @@ export default function AboutPage({ url_Bg }) {
               facere adipisci, quos aut architecto!
             </p>
           </div>
+          <div className="PointSections">
+            <button>A</button>
+            <button>B</button>
+            <button>C</button>
+            <button>D</button>
+          </div>
         </div>
       </div>
     </div>

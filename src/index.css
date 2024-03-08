@@ -46,6 +46,7 @@ header {
 
   background-color: #1e1e1e;
   min-height: 100vh;
+  
 
   &::after {
     content: "";
@@ -58,3 +59,14 @@ header {
   }
 }
 
+.App {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+}

@@ -16,10 +16,10 @@ function Header() {
               scrollToSection("home");
             }}
           >
-            <a href="#home">Home</a>
+            <a href="home">Home</a>
           </li>
           <li
-            href="#About"
+            href="About"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("About");
@@ -28,25 +28,25 @@ function Header() {
             <a>About</a>
           </li>
           <li
-            href="#Regions"
+            href="Regions"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("Regions");
             }}
           >
-            <a href="#0">Regions</a>
+            <a href="#">Regions</a>
           </li>
           <li>
-            <a href="#0">Enemies</a>
+            <a href="#">Enemies</a>
           </li>
           <li>
-            <a href="#0">Builds</a>
+            <a href="#">Builds</a>
           </li>
           <li>
-            <a href="#0">Backstories</a>
+            <a href="#">Backstories</a>
           </li>
           <li>
-            <a href="#0">TierList</a>
+            <a href="#">TierList</a>
           </li>
         </ul>
       </nav>
