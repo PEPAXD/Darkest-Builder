@@ -19,10 +19,58 @@ export default function AboutPage({ url_Bg }) {
             </p>
           </div>
           <div className="PointSections">
-            <button>A</button>
-            <button>B</button>
-            <button>C</button>
-            <button>D</button>
+            <label>
+              <input
+                type="radio"
+                name="section"
+                value="A"
+                style={{ display: "none" }}
+              />
+              <img
+                src="public/icon/aboutGame.jpg"
+                alt=""
+                className="radio-image"
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="section"
+                value="B"
+                style={{ display: "none" }}
+              />
+              <img
+                src="public/icon/mapGame.jpg"
+                alt=""
+                className="radio-image"
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="section"
+                value="C"
+                style={{ display: "none" }}
+              />
+              <img
+                src="public/icon/enemiesGame.jpg"
+                alt=""
+                className="radio-image"
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="section"
+                value="D"
+                style={{ display: "none" }}
+              />
+              <img
+                src="public/icon/heroesGame.jpg"
+                alt=""
+                className="radio-image"
+              />
+            </label>
           </div>
         </div>
       </div>
