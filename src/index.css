@@ -59,6 +59,7 @@ header {
   }
 }
 
+/* TEMP DISABLE SCROOL BAR
 .App {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -70,3 +71,4 @@ section {
   scroll-snap-align: start;
   height: 100vh;
 }
+*/
