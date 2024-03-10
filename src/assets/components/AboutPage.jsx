@@ -18,12 +18,13 @@ export default function AboutPage({ url_Bg }) {
         <div className="AboutContainer">
           <div className="AboutContent">
             <h2>{aboutData[selectedRadio].title}</h2>
-
+            <hr />
             <div>
               {aboutData[selectedRadio].content.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
+            <cite>{aboutData[selectedRadio].cite}</cite>
           </div>
 
           <div className="PointSections">

@@ -20,8 +20,33 @@
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
     background-color: rgb(0, 0, 0, 0.6);
-  }
 
+    h2 {
+      font-size: 2rem;
+      color: #d5ae52;
+    }
+
+    hr {
+      width: 100%;
+      margin-bottom: 1rem;
+      border: 1px solid #d5ae52;
+    }
+
+    p {
+      font-size: 1em;
+      color: #fff;
+      text-align: left;
+      margin-bottom: 1em;
+    }
+
+    cite {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #d5ae52;
+      text-align: center;
+      margin: 1em 0em;
+    }
+  }
 
   .PointSections {
     display: flex;
@@ -29,9 +54,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 2%;
-    border-right: 2px solid #fff;
-    background-color: rgb(0, 0, 0, 0.6);
+    padding: 3%;
 
     gap: 1rem;
 
@@ -42,17 +65,13 @@
       border: 2px solid #000;
       cursor: pointer;
 
-
-
       img {
         width: 100%;
         height: 100%;
-        opacity: 0.5;
       }
 
       input[type="radio"]:checked + .radio-image {
         border: 2px solid #c29d58;
-        opacity: 1;
       }
       .radio-image {
         border: 2px solid #54422c;
