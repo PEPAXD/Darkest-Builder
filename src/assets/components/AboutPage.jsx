@@ -32,7 +32,7 @@ export default function AboutPage({ url_Bg }) {
                 {aboutData.map((item, index) =>
                   item.linksIcon && Array.isArray(item.linksIcon)
                     ? item.linksIcon.map((link, linkIndex) => (
-                        <a key={`${index}-${linkIndex}`} href="">
+                        <a key={`${index}-${linkIndex}`} href={item.linkWiki[linkIndex]} target="_blank">
                           <img src={link} alt={`Icon ${linkIndex}`} />
                           <i>{item.linkNames[linkIndex]}</i>
                         </a>
