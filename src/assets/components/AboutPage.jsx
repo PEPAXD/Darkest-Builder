@@ -29,11 +29,12 @@ export default function AboutPage({ url_Bg }) {
           </div>
 
           <div className="PointSections">
-          <div className="scroll-icon">
-          <FaAnglesUp />
-              <span>SCROLL <br /> UP</span>
+          <div className="about-icon">
+              <span>Tell Me <br /> More</span>
+          <FaAnglesDown />
 
             </div>
+
             {aboutData.map((item, index) => (
               <label key={index}>
                 <input
@@ -46,15 +47,10 @@ export default function AboutPage({ url_Bg }) {
                 <img src={item.imgRadio} className="radio-image" />
               </label>
             ))}
-            <div className="scroll-icon">
-              <span>
-                SCROLL <br /> DOWN
-              </span>
-              <FaAnglesDown />
             </div>
           </div>
         </div>
       </div>
-    </div>
+
   );
 }
