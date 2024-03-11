@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { aboutData } from "../data/aboutSection";
+import { FaAnglesDown, FaAnglesUp } from "react-icons/fa6";
 import "./styles/AboutPage.scss";
 
 export default function AboutPage({ url_Bg }) {
@@ -28,6 +29,11 @@ export default function AboutPage({ url_Bg }) {
           </div>
 
           <div className="PointSections">
+          <div className="scroll-icon">
+          <FaAnglesUp />
+              <span>SCROLL <br /> UP</span>
+
+            </div>
             {aboutData.map((item, index) => (
               <label key={index}>
                 <input
@@ -37,12 +43,15 @@ export default function AboutPage({ url_Bg }) {
                   onChange={() => handleRadioChange(index)}
                   style={{ display: "none" }}
                 />
-                <img
-                  src={item.imgRadio}
-                  className="radio-image"
-                />
+                <img src={item.imgRadio} className="radio-image" />
               </label>
             ))}
+            <div className="scroll-icon">
+              <span>
+                SCROLL <br /> DOWN
+              </span>
+              <FaAnglesDown />
+            </div>
           </div>
         </div>
       </div>

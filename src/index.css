@@ -56,6 +56,7 @@ header {
     right: 0;
     height: 150px;
     background: linear-gradient(to top, #000, rgba(255, 255, 255, 0));
+    pointer-events: none;
   }
 }
 

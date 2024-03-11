@@ -44,7 +44,7 @@ $grad: ();
   animation-duration: $s * 2;
   animation-direction: reverse;
   filter: blur(3px);
-  will-change: transform; // Informa al navegador que la propiedad transform será animada
+  will-change: transform; 
 }
 .snow:before {
   animation-duration: $s * 3;
@@ -52,7 +52,7 @@ $grad: ();
   margin-left: -$w/2 + px;
   opacity: 0.65;
   filter: blur(1.5px);
-  will-change: transform; // Informa al navegador que la propiedad transform será animada
+  will-change: transform; 
 }
 @keyframes snow {
   to {

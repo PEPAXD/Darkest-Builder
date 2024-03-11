@@ -1,13 +1,15 @@
 .AboutContainer {
   position: absolute;
   top: 52%;
-  left: 66%;
+  left: 68%;
   transform: translate(-50%, -50%);
 
   display: flex;
 
   width: 60%;
   height: 100%;
+
+
 
   .AboutContent {
     display: flex;
@@ -44,7 +46,6 @@
       font-weight: 600;
       color: #d5ae52;
       text-align: center;
-      margin: 1em 0em;
     }
   }
 
@@ -78,4 +79,44 @@
       }
     }
   }
+}
+
+.scroll-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  span {
+    font-size: 0.6em;
+    margin: 0.3rem;
+  }
+
+  svg {
+    font-size: 1em;
+
+    @keyframes scaleUpDown {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.AboutContainer:hover .scroll-icon {
+  opacity: 1;
+}
+
+.AboutContainer:hover .scroll-icon svg {
+  animation: scaleUpDown 1s infinite;
 }
