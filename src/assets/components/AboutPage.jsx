@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { aboutData } from "../data/aboutSection";
-import { FaAnglesDown, FaAnglesUp } from "react-icons/fa6";
+import { FaAnglesDown } from "react-icons/fa6";
 import "./styles/AboutPage.scss";
 
 export default function AboutPage({ url_Bg }) {
@@ -26,13 +26,29 @@ export default function AboutPage({ url_Bg }) {
               ))}
             </div>
             <cite>{aboutData[selectedRadio].cite}</cite>
+
+            {selectedRadio === 2 && (
+              <div className="linkIcons">
+                {aboutData.map((item, index) =>
+                  item.linksIcon && Array.isArray(item.linksIcon)
+                    ? item.linksIcon.map((link, linkIndex) => (
+                        <a key={`${index}-${linkIndex}`} href="">
+                          <img src={link} alt={`Icon ${linkIndex}`} />
+                          <i>{item.linkNames[linkIndex]}</i>
+                        </a>
+                      ))
+                    : null
+                )}
+              </div>
+            )}
           </div>
 
           <div className="PointSections">
-          <div className="about-icon">
-              <span>Tell Me <br /> More</span>
-          <FaAnglesDown />
-
+            <div className="about-icon">
+              <span>
+                Tell Me <br /> More
+              </span>
+              <FaAnglesDown />
             </div>
 
             {aboutData.map((item, index) => (
@@ -47,10 +63,9 @@ export default function AboutPage({ url_Bg }) {
                 <img src={item.imgRadio} className="radio-image" />
               </label>
             ))}
-            </div>
           </div>
         </div>
       </div>
-
+    </div>
   );
 }

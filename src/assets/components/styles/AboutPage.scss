@@ -24,8 +24,10 @@
     background-color: rgb(0, 0, 0, 0.6);
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.9em;
       color: #d5ae52;
+      text-transform: uppercase;
+      text-align: center;
     }
 
     hr {
@@ -46,6 +48,27 @@
       font-weight: 600;
       color: #d5ae52;
       text-align: center;
+    }
+
+    .linkIcons{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; 
+      gap: 1rem;
+
+      a{
+        color: #d5ae52;
+        font-size: 1.2em;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      img{
+        width: 100%;
+      }
     }
   }
 
