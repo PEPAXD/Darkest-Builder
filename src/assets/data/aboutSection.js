@@ -18,8 +18,8 @@ export const aboutData = [
     content: [
       "Darkest Dungeon II es una aventura roguelike de un grupo de condenados que forman equipo y se aventúran ante lo desconocido en un último intento por impedir el apocalipsis.",
       "La historia del juego está dividida en cinco actos, cada acto corresponde a una partida unica donde el jugar se enfrentara a un jefe final que cerrara el arco elegido.",
-      "Cada viaje se divide en múltiples rutas, iniciando en el  El Valle, un segmento breve que nos ayudara a familiarizarnos con las mecanicas de composicion de nuestro equipo y finalizando en La Montaña, donde enfrentaremos al jefe final.",
     ],
+    background: "public/darkest_dungeon-5200517.jpg",
     cite: [
       '"Ármate de valor y embárcate hacia el caos de un mundo en ruinas."',
     ],
@@ -53,19 +53,42 @@ export const aboutData = [
   {
     title: "Enemies, Monsters and Creatures",
     imgRadio: "public/icon/heroesGame.jpg",
-    content: [""],    linksIcon: [
+    content: [
+      "Cada nueva ubicación explorada revela horrores aún mayores, desde los oscuros bosques infestados por temibles criaturas, hasta las ruinas ancestrales que albergan horrores indescriptibles. En cada batalla, los heroes tendran que demostrar su habilidad  y su valentía, enfrentándose a los peligros del camino.",
+    ],
+    linksIcon: [
+      "public/Enemies/creature.jpg",
       "public/Enemies/cultist.jpg",
-      "public/Enemies/battalion.jpg",
       "public/Enemies/fanatic.jpg",
       "public/Enemies/fisherfolk.jpg",
+      "public/Enemies/battalion.jpg",
       "public/Enemies/plague.jpg",
       "public/Enemies/swine.jpg",
       "public/Enemies/ghouls.jpg",
-      "public/Enemies/creature.jpg",
       "public/Enemies/brigands.jpg",
     ],
-    linkNames: ["CreatureA", "CreatureB", "CreatureC", "CreatureD", "CreatureE", "CreatureF", "CreatureG", "CreatureH", "CreatureI"],
-    linkWiki: ["https://darkestdungeon.fandom.com/wiki/Creature"],
-    cite: '"Your path lies through them, and so they must fall"'
+    linkNames: [
+      "Creature",
+      "Cultists",
+      "Fanatics",
+      "Fisherfolk",
+      "Cadavers",
+      "Gentry",
+      "Swine",
+      "Gaunt",
+      "Pillager",
+    ],
+    linkWiki: [
+      "https://darkestdungeon.fandom.com/wiki/Creature_Den",
+      "https://darkestdungeon.fandom.com/wiki/Cultists_(Darkest_Dungeon_II)",
+      "https://darkestdungeon.fandom.com/wiki/The_Sprawl#Fanatics",
+      "https://darkestdungeon.fandom.com/wiki/The_Shroud#Fisherfolk",
+      "https://darkestdungeon.fandom.com/wiki/The_Tangle",
+      "https://darkestdungeon.fandom.com/wiki/The_Foetor",
+      "https://darkestdungeon.fandom.com/wiki/The_Sluice",
+      "https://darkestdungeon.fandom.com/wiki/Gaunts",
+      "https://darkestdungeon.fandom.com/wiki/Pillagers",
+    ],
+    cite: '"Your path lies through them, and so they must fall"',
   },
 ];

@@ -50,7 +50,7 @@ export default function AboutPage({ url_Bg }) {
                   : null}
               </div>
             )}
-
+            <div className="imgSplayart"><img src={aboutData[selectedRadio].background} alt="" /></div>
             <cite>{aboutData[selectedRadio].cite}</cite>
           </div>
 
