@@ -24,6 +24,7 @@ export const aboutData = [
       '"Ármate de valor y embárcate hacia el caos de un mundo en ruinas."',
     ],
   },
+
   {
     title: "The world of Darkest Dungeon II",
     imgRadio: "public/icon/enemiesGame.jpg",
@@ -48,11 +49,23 @@ export const aboutData = [
       "https://darkestdungeon.fandom.com/wiki/The_Sluice",
     ],
   },
+
   {
-    title: "text BLA BLA BLA",
+    title: "Enemies, Monsters and Creatures",
     imgRadio: "public/icon/heroesGame.jpg",
-    content: [
-      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.',
+    content: [""],    linksIcon: [
+      "public/Enemies/cultist.jpg",
+      "public/Enemies/battalion.jpg",
+      "public/Enemies/fanatic.jpg",
+      "public/Enemies/fisherfolk.jpg",
+      "public/Enemies/plague.jpg",
+      "public/Enemies/swine.jpg",
+      "public/Enemies/ghouls.jpg",
+      "public/Enemies/creature.jpg",
+      "public/Enemies/brigands.jpg",
     ],
+    linkNames: ["CreatureA", "CreatureB", "CreatureC", "CreatureD", "CreatureE", "CreatureF", "CreatureG", "CreatureH", "CreatureI"],
+    linkWiki: ["https://darkestdungeon.fandom.com/wiki/Creature"],
+    cite: '"Your path lies through them, and so they must fall"'
   },
 ];

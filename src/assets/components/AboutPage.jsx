@@ -25,22 +25,33 @@ export default function AboutPage({ url_Bg }) {
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-            <cite>{aboutData[selectedRadio].cite}</cite>
 
-            {selectedRadio === 2 && (
-              <div className="linkIcons">
-                {aboutData.map((item, index) =>
-                  item.linksIcon && Array.isArray(item.linksIcon)
-                    ? item.linksIcon.map((link, linkIndex) => (
-                        <a key={`${index}-${linkIndex}`} href={item.linkWiki[linkIndex]} target="_blank">
-                          <img src={link} alt={`Icon ${linkIndex}`} />
-                          <i>{item.linkNames[linkIndex]}</i>
+            {(selectedRadio === 2 || selectedRadio === 3) && (
+              <div
+                className={
+                  selectedRadio === 3 ? "enemiesIcon" : "locationIcons"
+                }
+              >
+                {aboutData[selectedRadio].linksIcon &&
+                Array.isArray(aboutData[selectedRadio].linksIcon)
+                  ? aboutData[selectedRadio].linksIcon.map(
+                      (link, linkIndex) => (
+                        <a
+                          key={`${selectedRadio}-${linkIndex}`}
+                          href={aboutData[selectedRadio].linkWiki[linkIndex]}
+                          target="_blank"
+                        >
+
+                          <div className="imgContain"><img src={link} alt={`Icon ${linkIndex}`} /></div>
+                          <i>{aboutData[selectedRadio].linkNames[linkIndex]}</i>
                         </a>
-                      ))
-                    : null
-                )}
+                      )
+                    )
+                  : null}
               </div>
             )}
+
+            <cite>{aboutData[selectedRadio].cite}</cite>
           </div>
 
           <div className="PointSections">
