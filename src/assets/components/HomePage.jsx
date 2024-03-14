@@ -47,6 +47,9 @@ export default function HomePage({ url_Bg }) {
     "public/HeroProfile/PlagueDoctor.png",
     "public/HeroProfile/Vestal.png",
     "public/HeroProfile/Runaway.png",
+    "public/HeroProfile/BountyHunter.jpg",
+    "public/HeroProfile/Crusader.jpg",
+    "public/HeroProfile/Duelist.jpg",
   ];
   // ImgCurrentProfile
   const [currentImage, setCurrentImage] = useState(images[0]);
@@ -71,8 +74,9 @@ export default function HomePage({ url_Bg }) {
         className="background"
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
-        {/*SNOW ANIMATION
-        <div className="snow"></div>*/}
+        {/* SNOW ANIMATION
+        <div className="snow"></div>
+         */}
 
         <div className="homeContain">
           <img src={src} alt="" />
@@ -103,7 +107,6 @@ export default function HomePage({ url_Bg }) {
               bannerName="SteamGuide"
             />
             <LinksButtons
-            
               href="https://www.darkestdungeon.com/darkest-dungeon-2/"
               iconColor="iconGameWeb"
               fontSize="1.6em"

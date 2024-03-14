@@ -10,6 +10,38 @@ export default function AboutPage({ url_Bg }) {
     setSelectedRadio(index);
   };
 
+  const getClassName = () => {
+    switch (selectedRadio) {
+      case 2:
+        return "locationIcons";
+      case 3:
+        return "enemiesIcon";
+      case 4:
+        return "heroesIcon";
+      default:
+        return "";
+    }
+  };
+
+  const renderParagraphs = () =>
+    aboutData[selectedRadio].content.map((paragraph, i) => (
+      <p key={i}>{paragraph}</p>
+    ));
+
+  const renderRadioLabels = () =>
+    aboutData.map((item, index) => (
+      <label key={index}>
+        <input
+          type="radio"
+          value={index}
+          checked={selectedRadio === index}
+          onChange={() => handleRadioChange(index)}
+          style={{ display: "none" }}
+        />
+        <img src={item.imgRadio} className="radio-image" />
+      </label>
+    ));
+
   return (
     <div className="About">
       <div
@@ -20,18 +52,10 @@ export default function AboutPage({ url_Bg }) {
           <div className="AboutContent">
             <h2>{aboutData[selectedRadio].title}</h2>
             <hr />
-            <div>
-              {aboutData[selectedRadio].content.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
+            <div>{renderParagraphs()}</div>
 
-            {(selectedRadio === 2 || selectedRadio === 3) && (
-              <div
-                className={
-                  selectedRadio === 3 ? "enemiesIcon" : "locationIcons"
-                }
-              >
+            {(selectedRadio === 2 || selectedRadio === 3 || selectedRadio === 4) && (
+              <div className={getClassName()}>
                 {aboutData[selectedRadio].linksIcon &&
                 Array.isArray(aboutData[selectedRadio].linksIcon)
                   ? aboutData[selectedRadio].linksIcon.map(
@@ -41,7 +65,6 @@ export default function AboutPage({ url_Bg }) {
                           href={aboutData[selectedRadio].linkWiki[linkIndex]}
                           target="_blank"
                         >
-
                           <div className="imgContain"><img src={link} alt={`Icon ${linkIndex}`} /></div>
                           <i>{aboutData[selectedRadio].linkNames[linkIndex]}</i>
                         </a>
@@ -62,18 +85,7 @@ export default function AboutPage({ url_Bg }) {
               <FaAnglesDown />
             </div>
 
-            {aboutData.map((item, index) => (
-              <label key={index}>
-                <input
-                  type="radio"
-                  value={index}
-                  checked={selectedRadio === index}
-                  onChange={() => handleRadioChange(index)}
-                  style={{ display: "none" }}
-                />
-                <img src={item.imgRadio} className="radio-image" />
-              </label>
-            ))}
+            {renderRadioLabels()}
           </div>
         </div>
       </div>
