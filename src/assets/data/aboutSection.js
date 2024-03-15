@@ -14,20 +14,20 @@ export const aboutData = [
   },
   {
     title: "DARKEST DUNGEON II",
-    imgRadio: "public/icon/mapGame.jpg",
+    imgRadio: "public/icon/darkestDungeon.jpg",
     content: [
       "Darkest Dungeon II is a roguelike adventure featuring a group of condemned individuals who team up and venture into the unknown in a last-ditch effort to prevent the apocalypse.",
       "The game's story is divided into five acts, with each act corresponding to a unique playthrough where the player will face a final boss that concludes the chosen storyline.",
     ],
     background: "public/darkest_dungeon-5200517.jpg",
     cite: [
-      'Arm yourself with courage and embark into the chaos of a world in ruins.',
+      "Arm yourself with courage and embark into the chaos of a world in ruins.",
     ],
   },
 
   {
     title: "The world of Darkest Dungeon II",
-    imgRadio: "public/icon/enemiesGame.jpg",
+    imgRadio: "public/icon/mapGame.jpg",
     content: [
       "During our journey, we will traverse different regions, acquire various modifications, designs, tools, and face small groups of enemies or mini-bosses.",
       "Each region consists of a series of interconnected Nodes along Roads, where we will engage in battles or assist other travelers.",
@@ -52,7 +52,7 @@ export const aboutData = [
 
   {
     title: "Enemies, Monsters and Creatures",
-    imgRadio: "public/icon/heroesGame.jpg",
+    imgRadio: "public/icon/enemiesGame.jpg",
     content: [
       "Each newly explored location reveals even greater horrors, from dark forests infested with terrifying creatures to ancient ruins harboring indescribable terrors. In every battle, the heroes must demonstrate their skill and bravery, facing the dangers of the path ahead.",
     ],
@@ -145,5 +145,17 @@ export const aboutData = [
       "https://darkestdungeon.fandom.com/wiki/Crusader_(Darkest_Dungeon_II)",
       "https://darkestdungeon.fandom.com/wiki/Duelist_(Darkest_Dungeon_II)",
     ],
+  },
+
+  {
+    title: "Developer Note´s",
+    imgRadio: "public/icon/noteDev.jpg",
+    content: [
+      '"Darkest Builder" is a personal project developed to provide a simple guide for the game Darkest Dungeon II.',
+      "I really enjoyed developing this project; I learned a lot about the game, its story, and mechanics. Additionally, I was able to practice my skills as a developer.",
+      "It was developed using the React library and is part of my portfolio of work.",
+      "If you have any suggestions or comments, or if you would like to collaborate on the project, feel free to contact me.",
+    ],
+    cite: ['"Developed By Mauro Exequiel Pepa 2024"'],
   },
 ];

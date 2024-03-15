@@ -2,8 +2,10 @@ import React from "react";
 
 import HomePage from "./HomePage";
 import Aboutpage from "./AboutPage";
-import RegionsPage from "./RegionsPage";
+import HeroesPage from "./HeroesPage";
 import Header from "./Header";
+
+
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
           <Aboutpage url_Bg="AboutWallpaper.jpg" />
         </section>
 
-        <section id="Regions">
-          <RegionsPage url_Bg="Heroswallpaper.png" />
+        <section id="Heroes">
+          <HeroesPage url_Bg="cityMap.jpg" />
         </section>
       </div>
     </>

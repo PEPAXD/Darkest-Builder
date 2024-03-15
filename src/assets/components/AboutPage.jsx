@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { aboutData } from "../data/aboutSection";
+
 import { FaAnglesDown } from "react-icons/fa6";
+
+import { SocialNetworks } from "./container/SocialNetworks";
 import "./styles/AboutPage.scss";
 
 export default function AboutPage({ url_Bg }) {
@@ -17,7 +20,7 @@ export default function AboutPage({ url_Bg }) {
       case 3:
         return "enemiesIcon";
       case 4:
-        return "heroesIcon";
+        return "enemiesIcon";
       default:
         return "";
     }
@@ -54,7 +57,9 @@ export default function AboutPage({ url_Bg }) {
             <hr />
             <div>{renderParagraphs()}</div>
 
-            {(selectedRadio === 2 || selectedRadio === 3 || selectedRadio === 4) && (
+            {(selectedRadio === 2 ||
+              selectedRadio === 3 ||
+              selectedRadio === 4) && (
               <div className={getClassName()}>
                 {aboutData[selectedRadio].linksIcon &&
                 Array.isArray(aboutData[selectedRadio].linksIcon)
@@ -65,7 +70,9 @@ export default function AboutPage({ url_Bg }) {
                           href={aboutData[selectedRadio].linkWiki[linkIndex]}
                           target="_blank"
                         >
-                          <div className="imgContain"><img src={link} alt={`Icon ${linkIndex}`} /></div>
+                          <div className="imgContain">
+                            <img src={link} alt={`Icon ${linkIndex}`} />
+                          </div>
                           <i>{aboutData[selectedRadio].linkNames[linkIndex]}</i>
                         </a>
                       )
@@ -73,8 +80,15 @@ export default function AboutPage({ url_Bg }) {
                   : null}
               </div>
             )}
-            <div className="imgSplayart"><img src={aboutData[selectedRadio].background} alt="" /></div>
+            <div className="imgSplayart">
+              <img src={aboutData[selectedRadio].background} alt="" />
+            </div>
+
+
             <cite>{aboutData[selectedRadio].cite}</cite>
+
+            {selectedRadio === 5 && <SocialNetworks />}
+
           </div>
 
           <div className="PointSections">

@@ -28,14 +28,15 @@ function Header() {
             <a>About</a>
           </li>
           <li
-            href="Regions"
+            href="Heroes"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("Regions");
+              scrollToSection("Heroes");
             }}
           >
-            <a href="#">Regions</a>
+            <a href="Heroes">Heroes</a>
           </li>
+
           <li>
             <a href="#">Enemies</a>
           </li>
