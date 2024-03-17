@@ -52,7 +52,8 @@ export default function AboutPage({ url_Bg }) {
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
         <div className="AboutContainer">
-          <div className="AboutContent">
+
+          <article className="AboutContent">
             <h2>{aboutData[selectedRadio].title}</h2>
             <hr />
             <div>{renderParagraphs()}</div>
@@ -84,12 +85,9 @@ export default function AboutPage({ url_Bg }) {
               <img src={aboutData[selectedRadio].background} alt="" />
             </div>
 
-
             <cite>{aboutData[selectedRadio].cite}</cite>
-
             {selectedRadio === 5 && <SocialNetworks />}
-
-          </div>
+          </article>
 
           <div className="PointSections">
             <div className="about-icon">

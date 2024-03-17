@@ -8,9 +8,7 @@ export default function HeroesPage({ url_Bg }) {
         className="background"
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
-        <div className="heroSelectorContain">
-          <div className="hero">HEROE</div>
-        </div>
+
         
       </div>
     </div>

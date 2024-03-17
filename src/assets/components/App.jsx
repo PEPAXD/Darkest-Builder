@@ -22,7 +22,7 @@ function App() {
         </section>
 
         <section id="Heroes">
-          <HeroesPage url_Bg="cityMap.jpg" />
+          <HeroesPage url_Bg="heroSelect.jpg" />
         </section>
       </div>
     </>
