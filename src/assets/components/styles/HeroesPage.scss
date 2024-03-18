@@ -1,11 +1,96 @@
-.heroSelectorContain{
+.heroContainer{
+    position: absolute;
+    left: 0;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 60%;
+    height: 92vh;
+}
+
+.heroContain{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 0 20px 0;
-    padding: 0 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+
+    h2 {
+        font-size: 1.8em;
+        color: #d5ae52;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    hr {
+        width: 60%;
+        margin-bottom: 1rem;
+        border: 1px solid #d5ae52;
+      }
+}
+
+.boxHeroContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    gap: 0.5rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+
+      .imgContain {
+        position: relative;
+
+        border: solid 2px rgb(255, 255, 255, 0.5);
+        overflow: hidden;
+        width: 7rem;
+        height: 7rem;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      i {
+        color: #fff;
+      }
+
+      .goodHero {
+        opacity: 0;
+      }
+
+      &:hover {
+        .goodHero {
+          opacity: 1;
+          scale: 1.3;
+          transform: translate(-10px, 10px);
+        }
+    
+        .badHero {
+          opacity: 0;
+          scale: 1.3;
+          transform: translate(-10px, 10px);
+        }
+
+        i{
+          color: #d5ae52;
+        }
+      }
+    }
 }
