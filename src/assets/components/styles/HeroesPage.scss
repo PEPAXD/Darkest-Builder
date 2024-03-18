@@ -4,7 +4,7 @@
 
     display: flex;
     width: 60%;
-    height: 92vh;
+    height: 95vh;
 }
 
 .heroContain{
@@ -48,6 +48,7 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
+      margin-bottom: 1rem;
 
       .imgContain {
         position: relative;
@@ -90,6 +91,10 @@
 
         i{
           color: #d5ae52;
+        }
+
+        .imgContain{
+          border: solid 2px rgb(213, 174, 82);
         }
       }
     }
