@@ -1,9 +1,9 @@
 import React from "react";
 
-import HomePage from "./HomePage";
-import Aboutpage from "./AboutPage";
-import HeroesPage from "./HeroesPage";
-import Header from "./Header";
+import HomePage from "../components/HomePage";
+import Aboutpage from "../components/AboutPage";
+import HeroesPage from "../components/HeroesPage";
+import Header from "../components/Header";
 
 
 

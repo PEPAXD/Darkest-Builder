@@ -3,7 +3,7 @@ import { aboutData } from "../data/aboutSection";
 
 import { FaAnglesDown } from "react-icons/fa6";
 
-import { SocialNetworks } from "./container/SocialNetworks";
+import { SocialNetworks } from "./SocialNetworks";
 import "./styles/AboutPage.scss";
 
 export default function AboutPage({ url_Bg }) {
