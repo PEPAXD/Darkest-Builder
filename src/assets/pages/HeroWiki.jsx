@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 function HeroWiki() {
+
+  useEffect(() => {
+    document.title = 'HeroWiki';
+  }, []);
+
   return (
-    <div>HeroWiki</div>
+    <div>
+      <h1>Hola Mundo</h1>
+    </div>
   )
 }
 

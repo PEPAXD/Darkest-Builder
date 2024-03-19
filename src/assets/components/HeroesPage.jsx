@@ -19,7 +19,7 @@ export default function HeroesPage({ url_Bg }) {
                 heroData[0] &&
                 heroData[0].badHero &&
                 heroData[0].badHero.map((hero, index) => (
-                  <a href="" key={index}>
+                  <a href="/herowiki"  target="_blank" key={index}>
                     <div className="imgContain">
                       <img
                         className="badHero"
