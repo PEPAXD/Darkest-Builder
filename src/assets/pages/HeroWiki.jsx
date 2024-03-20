@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function HeroWiki() {
+  const location = useLocation();
+  const heroName = location.state.heroName;
 
   useEffect(() => {
-    document.title = 'HeroWiki';
+    document.title = 'Wiki-'+heroName;
   }, []);
 
   return (
     <div>
-      <h1>Hola Mundo</h1>
+      <h1>{heroName}</h1>
     </div>
   )
 }

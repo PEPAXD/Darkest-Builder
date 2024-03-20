@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles/HeroesPage.scss";
 import { heroData } from "../data/heroSection";
 
 export default function HeroesPage({ url_Bg }) {
+  const navigate = useNavigate();
+
   return (
     <div className="Heroes">
       <div
@@ -19,7 +22,10 @@ export default function HeroesPage({ url_Bg }) {
                 heroData[0] &&
                 heroData[0].badHero &&
                 heroData[0].badHero.map((hero, index) => (
-                  <a href="/herowiki"  target="_blank" key={index}>
+                  <a
+                  onClick={() => navigate('/herowiki', { state: { heroName: heroData[0].heroNames[index] } })}
+                  key={index}
+                >
                     <div className="imgContain">
                       <img
                         className="badHero"
