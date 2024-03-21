@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import HeroWikiPage from '../components/HeroWikiPage';
 
 function HeroWiki() {
   const location = useLocation();
@@ -7,12 +8,21 @@ function HeroWiki() {
 
   useEffect(() => {
     document.title = 'Wiki-'+heroName;
-  }, []);
+    if (location.pathname === '/herowiki') {
+      document.querySelector('.App').style.overflowY = 'hidden';
+    }
+  
+    return () => {
+      document.querySelector('.App').style.overflowY = 'auto';
+    };
+  }, [location]);
 
   return (
+    <>
     <div>
-      <h1>{heroName}</h1>
+      <HeroWikiPage url_Bg="cuthuluSheet.jpg" heroName={heroName}  />
     </div>
+    </>
   )
 }
 
