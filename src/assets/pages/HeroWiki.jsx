@@ -14,7 +14,7 @@ function HeroWiki() {
     <>
       <div>
         <HeroWikiPage
-          url_Bg={`public/HeroBG/${heroName}BG.jpg`}
+          url_Bg={`public/shadow.jpg`}
           heroName={heroName}
         />
       </div>
