@@ -100,7 +100,7 @@ export default function HomePage({ url_Bg }) {
               bannerName="WikiGame"
             />
             <LinksButtons
-              href="https://steamcommunity.com/sharedfiles/filedetails/?id=2973257745"
+              href="https://steamcommunity.com/app/1940340/guides/?searchText=&browsefilter=trend&browsesort=creationorder&requiredtags%5B0%5D=-1&p=1&days=365"
               iconColor="steamGuide"
               fontSize="1.3em"
               Icon={FaBookReader}

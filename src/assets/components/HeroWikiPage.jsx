@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/HeroWikiPage.scss";
 
-import { IoIosArrowForward, IoIosArrowBack  } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 function HeroWikiPage({ url_Bg, heroName }) {
   return (
@@ -24,17 +24,41 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <cite>"path Phrase LoreHero text"</cite>
 
               <div className="pathRoad">
-                <input type="radio" id="A" name="choice" value="A" />
-                <label for="A">A</label>
+                <input
+                  value="value-1"
+                  name="value-radio"
+                  id="value-1"
+                  type="radio"
+                  defaultChecked
+                />
+                <label htmlFor="value-1">A</label>
 
-                <input type="radio" id="B" name="choice" value="B" />
-                <label for="B">B</label>
+                <input
+                  value="value-2"
+                  name="value-radio"
+                  id="value-2"
+                  type="radio"
 
-                <input type="radio" id="C" name="choice" value="C" />
-                <label for="C">C</label>
+                />
+                <label htmlFor="value-2">B</label>
 
-                <input type="radio" id="D" name="choice" value="D" />
-                <label for="D">D</label>
+                <input
+                  value="value-3"
+                  name="value-radio"
+                  id="value-3"
+                  type="radio"
+
+                />
+                <label htmlFor="value-3">C</label>
+
+                <input
+                  value="value-4"
+                  name="value-radio"
+                  id="value-4"
+                  type="radio"
+
+                />
+                <label htmlFor="value-4">D</label>
               </div>
             </div>
           </div>
