@@ -7,8 +7,16 @@ function HeroWiki() {
   const heroName = location.state.heroName;
 
   useEffect(() => {
-    document.title = "Wiki-" + heroName;
-  }, []);
+    document.title = 'Wiki-'+heroName;
+
+    if (location.pathname === '/herowiki') {
+      document.querySelector('.App').style.overflowY = 'hidden';
+    }
+
+    return () => {
+      document.querySelector('.App').style.overflowY = 'auto';
+    };
+  }, [location, heroName]);
 
   return (
     <>

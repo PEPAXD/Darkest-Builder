@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/HeroWikiPage.scss";
 
+import { IoIosArrowForward, IoIosArrowBack  } from "react-icons/io";
+
 function HeroWikiPage({ url_Bg, heroName }) {
   return (
     <div className="wiki">
@@ -10,7 +12,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
       >
         <div className="containHeroWiki">
           <div className="heroRef">
-            <input placeholder={heroName} type="text" required=""></input>
+            <div className="boxInputName">
+              <IoIosArrowBack />
+              <input placeholder={heroName} type="text" required=""></input>
+              <IoIosArrowForward />
+            </div>
+
             <img src={`public/HeroBG/${heroName}.png`} alt="Hero" />
 
             <div className="heroPath">
@@ -33,6 +40,27 @@ function HeroWikiPage({ url_Bg, heroName }) {
           </div>
 
           <div className="contain-WikiData">
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
               velit, cumque voluptatibus itaque soluta dolore dolores qui,
@@ -60,6 +88,41 @@ function HeroWikiPage({ url_Bg, heroName }) {
               assumenda debitis totam repudiandae? Libero impedit obcaecati
               mollitia tempora architecto ab, incidunt similique.
             </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              velit, cumque voluptatibus itaque soluta dolore dolores qui,
+              assumenda debitis totam repudiandae? Libero impedit obcaecati
+              mollitia tempora architecto ab, incidunt similique.
+            </p>
+            <br />
           </div>
         </div>
       </div>

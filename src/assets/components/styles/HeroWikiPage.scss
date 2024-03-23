@@ -9,13 +9,40 @@
 
 //TODO: WIP INPUT NAME HERO ----------------------------------------
 
-.heroRef {
-  position: relative;
+.boxInputName{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
+  svg{
+    padding: 0.5rem;
+    font-size: 3.5em;
+    color: #777;
+    transition: all ease-in-out 0.1s;
+
+    &:hover{
+      color: #7a9cc6;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+  }
+}
+
+.heroRef {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
+
 
   width: 40%;
   height: 95%;
@@ -63,11 +90,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     position: absolute;
+    
     bottom: 5%;
-    z-index: 5;
-
+    z-index: 3;
     gap: 1rem;
 
     cite {
@@ -82,6 +108,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+
+      width: 80%;
 
       input[type="radio"] {
         display: none;
@@ -111,22 +139,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
 
   width: 60%;
-  height: 95%;
+  max-height: 100%;
+  overflow-y: auto;
 
-  padding: 1rem;
+  padding: 0% 2.5%;
 
   border-style: solid;
   border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
   border-right: 1px;
 
+  background: rgb(0, 0, 0, 0.6);
+
   p {
     color: #fff;
     font-size: 1.4em;
     font-weight: 300;
-    margin: 1rem;
   }
 }
