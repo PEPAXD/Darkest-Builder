@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/HeroWikiPage.scss";
+import { heroWiki } from "../data/heroWiki.js";
+
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 function HeroWikiPage({ url_Bg, heroName }) {
+
+  //FindIndex
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const newIndex = heroWiki[0].heroNames.findIndex((name) => name === heroName);
+    setIndex(newIndex);
+  }, [heroName]);
+
   return (
     <div className="wiki">
       <div
@@ -13,15 +23,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
         <div className="containHeroWiki">
           <div className="heroRef">
             <div className="boxInputName">
-              <IoIosArrowBack />
-              <input placeholder={heroName} type="text" required=""></input>
-              <IoIosArrowForward />
+              <button onClick={() => setIndex((oldIndex) => oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1)}><IoIosArrowBack /></button>
+              <input placeholder={heroWiki[0].heroNames[index]} type="text" required=""></input>
+              <button onClick={() => setIndex((oldIndex) => oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0)}><IoIosArrowForward /></button>
             </div>
 
             <img src={`public/HeroBG/${heroName}.png`} alt="Hero" />
 
             <div className="heroPath">
-              <cite>"path Phrase LoreHero text"</cite>
+              <cite>{heroWiki[0].academicNotes[index]}</cite>
 
               <div className="pathRoad">
                 <input

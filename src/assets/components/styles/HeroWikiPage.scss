@@ -7,28 +7,39 @@
   height: 100vh;
 }
 
-.boxInputName{
+.boxInputName {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
 
-  svg{
+  button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 0.5rem;
-    font-size: 3.5em;
-    color: #777;
-    transition: all ease-in-out 0.1s;
+  
+    background: transparent;
+    border: none;
 
-    &:hover{
-      color: #7a9cc6;
-      transform: scale(1.1);
-      cursor: pointer;
-    }
+    svg {
+      font-size: 3.5em;
+      color: #777;
+      transition: all ease-in-out 0.1s;
 
-    &:active {
-      transform: scale(0.9);
-      opacity: 0.5;
+      &:hover {
+        color: #7a9cc6;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(0.9);
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -88,15 +99,21 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    
+
+    width: 100%;
     bottom: 5%;
     z-index: 3;
     gap: 1rem;
 
     cite {
+
+      max-width: 70%;
+      text-align: center;
+
       color: #d5ae52;
-      font-size: 1.5em;
+      font-size: 1.3em;
       font-style: italic;
+      font-weight: 400;
     }
 
     .pathRoad {
