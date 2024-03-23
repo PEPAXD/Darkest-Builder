@@ -7,8 +7,6 @@
   height: 100vh;
 }
 
-//TODO: WIP INPUT NAME HERO ----------------------------------------
-
 .boxInputName{
   display: flex;
   flex-direction: row;
@@ -97,9 +95,10 @@
     gap: 1rem;
 
     cite {
-      color: #fff;
+      color: #d5ae52;
       font-size: 1.5em;
       font-style: italic;
+
     }
 
     .pathRoad {
@@ -132,8 +131,6 @@
     }
   }
 }
-
-//TODO: WIP INPUT NAME HERO ----------------------------------------
 
 .contain-WikiData {
   display: flex;
