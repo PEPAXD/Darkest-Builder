@@ -9,6 +9,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   //FindIndex
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     const newIndex = heroWiki[0].heroNames.findIndex((name) => name === heroName);
     setIndex(newIndex);
@@ -28,7 +29,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <button onClick={() => setIndex((oldIndex) => oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0)}><IoIosArrowForward /></button>
             </div>
 
-            <img src={`public/HeroBG/${heroName}.png`} alt="Hero" />
+            <img src={`public/HeroBG/${heroWiki[0].heroNames[index]}.png`} alt="Hero" />
 
             <div className="heroPath">
               <cite>{heroWiki[0].academicNotes[index]}</cite>
