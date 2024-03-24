@@ -53,9 +53,124 @@ export const heroWiki = [
           "Venomdrop",
           "Nightsworn",
         ]
-      ]
+      ],
 
-      //TODO: Add the rest of the hero paths
+      [
+        "Hellion",
+        [
+          "Wanderer",
+          "Ravager",
+          "Berserker",
+          "Carcass",
+        ]
+      ],
+
+      [
+        "Jester",
+        [
+          "Wanderer",
+          "Virtuoso",
+          "Soloist",
+          "Intermezzo",
+        ]
+      ],
+
+      [
+        "Leper",
+        [
+          "Wanderer",
+          "Tempest",
+          "Poet",
+          "Monarch",
+        ]
+      ],
+
+      [
+        "Man-At-Arms",
+        [
+          "Wanderer",
+          "Sergeant",
+          "Bulwark",
+          "Vanguard",
+        ]
+      ],
+
+      [
+        "Occultist",
+        [
+          "Wanderer",
+          "Ritualist",
+          "Warlock",
+          "Aspirant",
+        ]
+      ],
+
+      [
+        "Plague-Doctor",
+        [
+          "Wanderer",
+          "Surgeon",
+          "Alchemist",
+          "Physician",
+        ]
+      ],
+
+      [
+        "Vestal",
+        [
+          "Wanderer",
+          "Confessor",
+          "Chaplain",
+          "Seraph",
+        ]
+      ],
+
+      [
+        "Runaway",
+        [
+          "Wanderer",
+          "Arsonist",
+          "Survivor",
+          "Orphan",
+        ]
+      ],
+
+      [
+        "Bounty-Hunter",
+        [
+          "Professional",
+        ]
+      ],
+
+      [
+        "Crusader",
+        [
+          "Wanderer",
+          "Aggressor",
+          "Templar",
+          "Banneret",
+        ]
+      ],
+
+      [
+        "Duelist",
+        [
+          "Wanderer",
+          "Instructrice",
+          "Antagoniste",
+          "Intrépide",
+        ]
+      ],
+      
+      [
+        "Flagellant",
+        [
+          "Wanderer",
+          "Maniac",
+          "Exanimate",
+          "Scourge",
+        ]
+      ],
     ]
 
   },
