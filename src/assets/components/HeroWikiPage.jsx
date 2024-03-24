@@ -15,6 +15,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setIndex(newIndex);
   }, [heroName]);
 
+  console.log(heroWiki[0].heroPaths[index])
+
   return (
     <div className="wiki">
       <div
@@ -35,41 +37,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <cite>{heroWiki[0].academicNotes[index]}</cite>
 
               <div className="pathRoad">
-                <input
-                  value="value-1"
-                  name="value-radio"
-                  id="value-1"
-                  type="radio"
-                  defaultChecked
-                />
-                <label htmlFor="value-1">A</label>
-
-                <input
-                  value="value-2"
-                  name="value-radio"
-                  id="value-2"
-                  type="radio"
-
-                />
-                <label htmlFor="value-2">B</label>
-
-                <input
-                  value="value-3"
-                  name="value-radio"
-                  id="value-3"
-                  type="radio"
-
-                />
-                <label htmlFor="value-3">C</label>
-
-                <input
-                  value="value-4"
-                  name="value-radio"
-                  id="value-4"
-                  type="radio"
-
-                />
-                <label htmlFor="value-4">D</label>
+                {heroWiki[0].heroPaths[index][1].map((path, pathIndex) => (
+                  <React.Fragment key={pathIndex}>
+                    <input
+                      value={`value-${pathIndex + 1}`}
+                      name="value-radio"
+                      id={`value-${pathIndex + 1}`}
+                      type="radio"
+                      defaultChecked={pathIndex === 0}
+                    />
+                    <label htmlFor={`value-${pathIndex + 1}`}>{path}</label>
+                  </React.Fragment>
+                ))}
               </div>
             </div>
           </div>

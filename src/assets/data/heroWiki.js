@@ -33,5 +33,30 @@ export const heroWiki = [
       '"Perfection glints wicked along the rapiers edge."',
       '"Zealotry—an undying blight upon the soul"',
     ],
+
+    heroPaths: [
+      [
+        "Highwayman",
+        [
+          "Wanderer",
+          "Rogue",
+          "Sharpshot",
+          "Yellowhand",
+        ]
+      ],
+
+      [
+        "GraveRobber",
+        [
+          "Wanderer",
+          "Deadeye",
+          "Venomdrop",
+          "Nightsworn",
+        ]
+      ]
+
+      //TODO: Add the rest of the hero paths
+    ]
+
   },
 ];
