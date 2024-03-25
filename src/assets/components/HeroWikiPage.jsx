@@ -28,7 +28,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
         <div className="containHeroWiki">
           <div className="heroRef">
             <div className="boxInputName">
-              <button onClick={() => setIndex((oldIndex) => oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1)}><IoIosArrowBack /></button>
+              <button onClick={() => setIndex((oldIndex) => oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1)}><IoIosArrowBack /></button>          
               <input placeholder={heroWiki[0].heroNames[index]} type="text" required=""></input>
               <button onClick={() => setIndex((oldIndex) => oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0)}><IoIosArrowForward /></button>
             </div>

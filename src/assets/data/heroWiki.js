@@ -39,20 +39,124 @@ export const heroWiki = [
         ]
       ],
 
-      //TODO: Add the rest of the heroes
+      [
+        "Hellion",
+        [
+          '"Beneath the bloodlust and fury, there is emptiness... and shame."',
+          '"I am no coward - come make your end!"',
+          '"Let it bleed! AKYLORAAHHH!"',
+          '"Again! I can take it!"',
+        ]
+      ],
 
-      '"Beneath the bloodlust and fury, there is emptiness... and shame."',
-      '"A murderous melody lingers long after the final chord has been struck."',
-      '"Making peace with adversity is the very essence of existence."',
-      '"Pride - more devastating than the horrors of a hundred campaigns."',
-      '"To know the abyss, one must embrace it."',
-      '"Indiscriminate science stains the surgeons hands."',
-      '"A sister of battle—repudiated but unbowed!"',
-      '"Nothing remains... save a burning will to survive."',
-      '"The thrill of the hunt, the promise of payment!"',
-      '"Metal and man, soldier and sword - forged in the fires of war."',
-      '"Perfection glints wicked along the rapiers edge."',
-      '"Zealotry—an undying blight upon the soul"',
+      [
+        "Jester",
+        [
+          '"A murderous melody lingers long after the final chord has been struck."',
+          '"Play the hits, keep the crowd happy."',
+          '"This ll be a cutting performance..."',
+          '"Lets keep this melody moving..."',
+        ]
+      ],
+
+      [
+        "Leper",
+        [
+          '"Making peace with adversity is the very essence of existence."',
+          '"The winter storm knows only rage."',
+          '"Petals must fall."',
+          '"To rule, one must learn to serve."',
+        ]
+      ],
+
+      [
+        "Man-At-Arms",
+        [
+          '"Pride - more devastating than the horrors of a hundred campaigns."',
+          '"Listen up you lot!"',
+          '"Stand fast behind me!"',
+          '"Look death in the eye."',
+        ]
+      ],
+
+      [
+        "Occultist",
+        [
+          '"To know the abyss, one must embrace it."',
+          '"A curse upon my enemies, and a curse upon myself."',
+          '"Those beyond the veil hear my calls and obey!"',
+          '"I drift in the starless skies of the void."',
+        ]
+      ],
+
+      [
+        "Plague-Doctor",
+        [
+          '"Indiscriminate science stains the surgeons hands."',
+          '"Suture or sever? Both have their uses..."',
+          '"A fascinating reaction..."',
+          '"Let me prescribe a more ...holistic regimen."',
+        ]
+      ],
+
+      [
+        "Vestal",
+        [
+          '"A sister of battle—repudiated but unbowed!"',
+          '"Submit and be purified!"',
+          '"Faith is my shield; piety, my armor!"',
+          '"Witness ye the holy radiance of the Light!"',
+        ]
+      ],
+
+      [
+        "Runaway",
+        [
+          '"Nothing remains... save a burning will to survive."',
+          '"Everything burns."',
+          '"Patch up. Stay sharp. Keep moving."',
+          '"I have nothing, and so I have everything."',
+        ]
+      ],
+
+      [
+        "Bounty Hunter",
+        [
+          '"The thrill of the hunt, the promise of payment!"',
+        ]
+      ],
+
+      [
+        "Crusader",
+        [
+          '"Metal and man, soldier and sword - forged in the fires of war."',
+          '"Flame and damnation!"',
+          '"Let the blows rain upon me. I will not fall."',
+          '"When the wind whips violent, rally to my standard!"',
+        ]
+      ],
+
+      [
+        "Duelist",
+        [
+          '"Perfection glints wicked along the rapiers edge."',
+          '"Encore! Again - until you get it right!"',
+          '"Imbécile! You are nothing to me!"',
+          '"I live for this."',
+        ]
+      ],
+
+      [
+        "Flagellant",
+        [
+          '"Zealotry—an undying blight upon the soul"',
+          '"Sacrifice and sensation to the last!"',
+          '"Let me but sample the bitter taste of death!"',
+          '"I am purged of beauty, empty of all but blight!"',
+        ]
+      ],
+
+
     ],
 
     heroPaths: [

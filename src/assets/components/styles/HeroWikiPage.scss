@@ -105,16 +105,19 @@
     z-index: 3;
     gap: 1rem;
 
-    cite {
 
+    cite {
       max-width: 80%;
       text-align: center;
 
-      color: #f5b92c;
       font-size: 1.3em;
       font-style: italic;
       font-weight: bold;
+
+      color: #f5b92c;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8) ,transparent);
       
+      padding: 0rem 2rem;
     }
 
     .pathRoad {
