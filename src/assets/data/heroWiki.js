@@ -18,8 +18,29 @@ export const heroWiki = [
     ],
 
     academicNotes: [
-      '"Hunted, hurried, a fugitive seeking to outpace the past."',
-      '"Avarice slips unseen into the catacombs of the mind."',
+
+      [
+        "Highwayman",
+        [
+          '"Hunted, hurried, a fugitive seeking to outpace the past."',
+          '"Up close and personal - thats how the job gets done."',
+          '"I never miss."',
+          '"Lets go another round, then."',
+        ]
+      ],
+
+      [
+        "Grave-Robber",
+        [
+          '"Avarice slips unseen into the catacombs of the mind."',
+          '"I always was rather good at darts, wasnt I?."',
+          '"Ill double the dose, just to be sure."',
+          '"The shadows—my favorite cloak."',
+        ]
+      ],
+
+      //TODO: Add the rest of the heroes
+
       '"Beneath the bloodlust and fury, there is emptiness... and shame."',
       '"A murderous melody lingers long after the final chord has been struck."',
       '"Making peace with adversity is the very essence of existence."',

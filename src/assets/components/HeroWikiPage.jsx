@@ -10,12 +10,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
   //FindIndex
   const [index, setIndex] = useState(0);
 
+  //PathHeroIndex
+  const [pathIndex, setPathIndex] = useState(0);
+
   useEffect(() => {
     const newIndex = heroWiki[0].heroNames.findIndex((name) => name === heroName);
     setIndex(newIndex);
   }, [heroName]);
 
-  console.log(heroWiki[0].heroPaths[index])
 
   return (
     <div className="wiki">
@@ -34,7 +36,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <img src={`public/HeroBG/${heroWiki[0].heroNames[index]}.png`} alt="Hero" />
 
             <div className="heroPath">
-              <cite>{heroWiki[0].academicNotes[index]}</cite>
+              <cite>{heroWiki[0].academicNotes[index][1][pathIndex]}</cite>
 
               <div className="pathRoad">
                 {heroWiki[0].heroPaths[index][1].map((path, pathIndex) => (
@@ -45,6 +47,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       id={`value-${pathIndex + 1}`}
                       type="radio"
                       defaultChecked={pathIndex === 0}
+                      onChange={() => {
+                        setPathIndex(pathIndex);
+                        console.log(`Input seleccionado: ${pathIndex}`);
+                      }}
                     />
                     <label htmlFor={`value-${pathIndex + 1}`}>{path}</label>
                   </React.Fragment>
