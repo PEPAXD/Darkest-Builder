@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./styles/HeroWikiPage.scss";
 import { heroWiki } from "../data/heroWiki.js";
 
-
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 function HeroWikiPage({ url_Bg, heroName }) {
-
   //FindIndex
   const [index, setIndex] = useState(0);
 
@@ -14,10 +12,23 @@ function HeroWikiPage({ url_Bg, heroName }) {
   const [pathIndex, setPathIndex] = useState(0);
 
   useEffect(() => {
-    const newIndex = heroWiki[0].heroNames.findIndex((name) => name === heroName);
+    const newIndex = heroWiki[0].heroNames.findIndex(
+      (name) => name === heroName
+    );
     setIndex(newIndex);
   }, [heroName]);
 
+
+  // ArrowNextBackHerodata
+  const handleButtonClick = (direction) => {
+    setIndex((oldIndex) => {
+      if (direction === "back") {
+        return oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
+      } else if (direction === "forward") {
+        return oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
+      }
+    });
+  };
 
   return (
     <div className="wiki">
@@ -28,12 +39,23 @@ function HeroWikiPage({ url_Bg, heroName }) {
         <div className="containHeroWiki">
           <div className="heroRef">
             <div className="boxInputName">
-              <button onClick={() => setIndex((oldIndex) => oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1)}><IoIosArrowBack /></button>          
-              <input placeholder={heroWiki[0].heroNames[index]} type="text" required=""></input>
-              <button onClick={() => setIndex((oldIndex) => oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0)}><IoIosArrowForward /></button>
+              <button onClick={() => handleButtonClick("back")}>
+                <IoIosArrowBack />
+              </button>
+              <input
+                placeholder={heroWiki[0].heroNames[index]}
+                type="text"
+                required=""
+              ></input>
+              <button onClick={() => handleButtonClick("forward")}>
+                <IoIosArrowForward />
+              </button>
             </div>
 
-            <img src={`public/HeroBG/${heroWiki[0].heroNames[index]}.png`} alt="Hero" />
+            <img
+              src={`public/HeroBG/${heroWiki[0].heroNames[index]}.png`}
+              alt="Hero"
+            />
 
             <div className="heroPath">
               <cite>{heroWiki[0].academicNotes[index][1][pathIndex]}</cite>
@@ -49,7 +71,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       defaultChecked={pathIndex === 0}
                       onChange={() => {
                         setPathIndex(pathIndex);
-                        console.log(`Input seleccionado: ${pathIndex}`);
                       }}
                     />
                     <label htmlFor={`value-${pathIndex + 1}`}>{path}</label>
