@@ -70,10 +70,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                 <ReactSearchAutocomplete
                   items={items}
-
-
                   onSelect={selectHero}
-
                   autoFocus
                   formatResult={formatResult}
                   placeholder={heroWiki[0].heroNames[index]}
@@ -81,7 +78,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                   
                   styling={{
-                    backgroundColor: "transparent",
+                    backgroundColor: "rgba(0, 0, 0, 0.8)",
                     color: "white",
                     border: "1px solid white",
                     borderRadius: "0px",
