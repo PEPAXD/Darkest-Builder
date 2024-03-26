@@ -56,36 +56,8 @@
   height: 95%;
   gap: 2rem;
 
-  input {
+  .heroSearchBar{
     width: 70%;
-    font-size: 1.8em;
-    text-align: center;
-    font-style: italic;
-
-    border: 2px solid transparent;
-    border-bottom-color: #777;
-    padding: 0.5rem 0;
-    outline: none;
-    background-color: transparent;
-    color: #777;
-    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-
-  input:focus,
-  input:hover {
-    outline: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    border-color: #7a9cc6;
-  }
-
-  input::placeholder {
-    color: #777;
-  }
-
-  input:focus::placeholder {
-    opacity: 0;
-    transition: opacity 0.3s;
   }
 
   img {

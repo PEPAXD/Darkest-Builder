@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./styles/HeroWikiPage.scss";
 import { heroWiki } from "../data/heroWiki.js";
+import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function HeroWikiPage({ url_Bg, heroName }) {
-  //FindIndex
   const [index, setIndex] = useState(0);
-
-  //PathHeroIndex
   const [pathIndex, setPathIndex] = useState(0);
   const [selectedPathIndex, setSelectedPathIndex] = useState(0);
 
@@ -19,8 +17,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setIndex(newIndex);
   }, [heroName]);
 
-  // ArrowNextBackHerodata
-  const handleButtonClick = (direction) => {
+  const ArrowNextBackArrayHero = (direction) => {
     setIndex((oldIndex) => {
       if (direction === "back") {
         return oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
@@ -33,6 +30,45 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSelectedPathIndex(0);
   };
 
+  //TODO: SEARCH BAR
+  const items = heroWiki[0].heroNames.map((name, index) => ({
+    id: index,
+    name,
+  }));
+
+  const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    console.log(string, results);
+  };
+
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result);
+  };
+
+  const selectHero = (item) => {
+    const selectedIndex = heroWiki[0].heroNames.indexOf(item.name);
+    
+    if (selectedIndex !== -1) {
+      setIndex(selectedIndex);
+    }
+  };
+
+  const handleOnFocus = () => {
+    console.log("Focused");
+  };
+
+  const formatResult = (item) => {
+    return (
+      <>
+        <span style={{ display: "block", textAlign: "left" }}>{item.name}</span>
+      </>
+    );
+  };
+
+  //TODO WIP ---------------------------------------------------
+
   return (
     <div className="wiki">
       <div
@@ -42,15 +78,24 @@ function HeroWikiPage({ url_Bg, heroName }) {
         <div className="containHeroWiki">
           <div className="heroRef">
             <div className="boxInputName">
-              <button onClick={() => handleButtonClick("back")}>
+              <button onClick={() => ArrowNextBackArrayHero("back")}>
                 <IoIosArrowBack />
               </button>
-              <input
-                placeholder={heroWiki[0].heroNames[index]}
-                type="text"
-                required=""
-              ></input>
-              <button onClick={() => handleButtonClick("forward")}>
+
+              <div className="heroSearchBar">
+                <ReactSearchAutocomplete
+                  items={items}
+                  onSearch={handleOnSearch}
+                  onHover={handleOnHover}
+                  onSelect={selectHero}
+                  onFocus={handleOnFocus}
+                  autoFocus
+                  formatResult={formatResult}
+                  placeholder={heroWiki[0].heroNames[index]}
+                />
+              </div>
+
+              <button onClick={() => ArrowNextBackArrayHero("forward")}>
                 <IoIosArrowForward />
               </button>
             </div>
