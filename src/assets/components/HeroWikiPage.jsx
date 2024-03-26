@@ -49,7 +49,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   const selectHero = (item) => {
     const selectedIndex = heroWiki[0].heroNames.indexOf(item.name);
-    
+
     if (selectedIndex !== -1) {
       setIndex(selectedIndex);
     }
@@ -82,7 +82,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <IoIosArrowBack />
               </button>
 
-              <div className="heroSearchBar">
+
                 <ReactSearchAutocomplete
                   items={items}
                   onSearch={handleOnSearch}
@@ -92,8 +92,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   autoFocus
                   formatResult={formatResult}
                   placeholder={heroWiki[0].heroNames[index]}
+                  className="heroSearchBar"
+                  
+                  styling={{
+                    backgroundColor: "transparent",
+                    color: "white",
+                    border: "1px solid white",
+                    borderRadius: "0px",
+                    hoverBackgroundColor: "#981a0c",
+                    iconColor: "white",
+                  }}
                 />
-              </div>
+
 
               <button onClick={() => ArrowNextBackArrayHero("forward")}>
                 <IoIosArrowForward />
