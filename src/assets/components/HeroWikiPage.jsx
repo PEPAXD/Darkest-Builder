@@ -10,6 +10,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   //PathHeroIndex
   const [pathIndex, setPathIndex] = useState(0);
+  const [selectedPathIndex, setSelectedPathIndex] = useState(0);
 
   useEffect(() => {
     const newIndex = heroWiki[0].heroNames.findIndex(
@@ -17,7 +18,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
     setIndex(newIndex);
   }, [heroName]);
-
 
   // ArrowNextBackHerodata
   const handleButtonClick = (direction) => {
@@ -28,6 +28,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
         return oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
       }
     });
+
+    setPathIndex(0);
+    setSelectedPathIndex(0);
   };
 
   return (
@@ -68,8 +71,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       name="value-radio"
                       id={`value-${pathIndex + 1}`}
                       type="radio"
-                      defaultChecked={pathIndex === 0}
+                      checked={pathIndex === selectedPathIndex}
                       onChange={() => {
+                        setSelectedPathIndex(pathIndex);
                         setPathIndex(pathIndex);
                       }}
                     />
