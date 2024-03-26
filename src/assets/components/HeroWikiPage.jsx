@@ -30,22 +30,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSelectedPathIndex(0);
   };
 
-  //TODO: SEARCH BAR
+  // SearchBar Functions
   const items = heroWiki[0].heroNames.map((name, index) => ({
     id: index,
     name,
   }));
-
-  const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
-    console.log(string, results);
-  };
-
-  const handleOnHover = (result) => {
-    // the item hovered
-    console.log(result);
-  };
 
   const selectHero = (item) => {
     const selectedIndex = heroWiki[0].heroNames.indexOf(item.name);
@@ -53,10 +42,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
     if (selectedIndex !== -1) {
       setIndex(selectedIndex);
     }
-  };
-
-  const handleOnFocus = () => {
-    console.log("Focused");
   };
 
   const formatResult = (item) => {
@@ -67,7 +52,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
-  //TODO WIP ---------------------------------------------------
+
 
   return (
     <div className="wiki">
@@ -85,14 +70,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                 <ReactSearchAutocomplete
                   items={items}
-                  onSearch={handleOnSearch}
-                  onHover={handleOnHover}
+
+
                   onSelect={selectHero}
-                  onFocus={handleOnFocus}
+
                   autoFocus
                   formatResult={formatResult}
                   placeholder={heroWiki[0].heroNames[index]}
                   className="heroSearchBar"
+
                   
                   styling={{
                     backgroundColor: "transparent",
