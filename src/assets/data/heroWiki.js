@@ -185,14 +185,15 @@ export const heroWiki = [
       [
         "Highwayman",
         {
-          description: "highly versatile hero that heavily focuses on dealing damage thanks to his ability to target the front Ranks as well as the back Ranks. His skillset places emphasis on damage and utility such as self-Buffs, Execution 1 finishers, and a unique skill to destroy or steal powerful Tokens from enemies.",
+          description:
+            "highly versatile hero that heavily focuses on dealing damage thanks to his ability to target the front Ranks as well as the back Ranks. His skillset places emphasis on damage and utility such as self-Buffs, Execution 1 finishers, and a unique skill to destroy or steal powerful Tokens from enemies.",
 
           Characteristics: {
             Rol: ["Damage Dealer and bleeder"],
             Strengths: {
-              "Reach": "Damage very flexible, he can hit any target",
-              "Consistency": "Damage, Reach and Mobility are consistent",
-              "Robbery": "Highway Robbery - very strong ability to steal tokens",
+              Reach: "Damage very flexible, he can hit any target",
+              Consistency: "Damage, Reach and Mobility are consistent",
+              Robbery: "Highway Robbery - very strong ability to steal tokens",
             },
             Weaknesses: {
               "No+Tokens": "No access to defensive tokens",
@@ -203,35 +204,32 @@ export const heroWiki = [
           },
 
           HowToPlay: {
-            "Early Game": [
-              "Use Open Vein to apply Bleed to the backline.",
-              "Use Wicked Slice to finish off enemies.",
-              "Use Duelist's Advance to activate Riposte.",
-            ],
-
-            "Mid Game": [
-              "Use Point Blank Shot to deal high damage to the front line.",
-              "Use Pistol Shot to finish off enemies.",
-              "Use Duelist's Advance to activate Riposte.",
-            ],
-
-            "Late Game": [
-              "Use Tracking Shot to increase your damage.",
-              "Use Duelist's Advance to activate Riposte.",
-              "Use Pistol Shot to finish off enemies.",
+            Tips: [
+              {
+                name: "Target Priority",
+                description: "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+              },
+              {
+                name: "Backup Plans",
+                description: "It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+              },
+              {
+                name: "Feed Buffs",
+                description: "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+              },
             ],
           },
-          
+
         },
       ],
 
       [
         "Grave-Robber",
         {
-          description: "The Grave Robber has some of the most flexible targeting and positioning amongst the Heroes. Combined with her fantastic self-sustain, Dodge Dd2 token dodgeplusand Dd2 token stealth, she suffers very little from enemy disruption despite her low Icon HP dd2 HP. Most of Grave robber Damage is very reliant on CRIT chance as such Grave Robber requires more planning than other heroes but can be very effective given the right circunstances.",
+          description:
+            "The Grave Robber has some of the most flexible targeting and positioning amongst the Heroes. Combined with her fantastic self-sustain, Dodge Dd2 token dodgeplusand Dd2 token stealth, she suffers very little from enemy disruption despite her low Icon HP dd2 HP. Most of Grave robber Damage is very reliant on CRIT chance as such Grave Robber requires more planning than other heroes but can be very effective given the right circunstances.",
 
           Characteristics: {
-
             Rol: ["Hero GameStyleRol"],
             Strengths: ["A", "B", "C"],
             Weaknesses: ["D", "E", "F"],
@@ -240,6 +238,5 @@ export const heroWiki = [
         },
       ],
     ],
-    
   },
 ];

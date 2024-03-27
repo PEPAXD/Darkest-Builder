@@ -186,32 +186,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <div className="howToPlay">
               <ul>
-                <li>Target Priority</li>
-                <p>
-                  The gameplay with the Highwayman is characterized by its
-                  direct approach and its ability to deal significant damage. It
-                  is crucial to direct his attacks towards the biggest threats
-                  on the enemy side. Therefore, it is essential for him to focus
-                  on eliminating important enemy units.
-                </p>
-
-                <li>Target Priority</li>
-                <p>
-                  The gameplay with the Highwayman is characterized by its
-                  direct approach and its ability to deal significant damage. It
-                  is crucial to direct his attacks towards the biggest threats
-                  on the enemy side. Therefore, it is essential for him to focus
-                  on eliminating important enemy units.
-                </p>
-
-                <li>Target Priority</li>
-                <p>
-                  The gameplay with the Highwayman is characterized by its
-                  direct approach and its ability to deal significant damage. It
-                  is crucial to direct his attacks towards the biggest threats
-                  on the enemy side. Therefore, it is essential for him to focus
-                  on eliminating important enemy units.
-                </p>
+                {heroWiki[0].heroStats[index][1].HowToPlay.Tips.map(
+                  (tip, i) => (
+                    <li key={i}>
+                      {tip.name}
+                      <p>{tip.description}</p>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
 

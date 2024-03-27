@@ -278,8 +278,8 @@
 
       p{
 
+        font-size: 1.2em;
         text-align: center;
-
       }
     }
   }
@@ -298,24 +298,23 @@
       align-items: flex-start;
       justify-content: center;
 
+      width: 95%;
       gap: 1rem;
+
 
       li{
         color: #fff;
-        font-size: 1.2em;
+        font-size: 1.4em;
         font-weight: 400;
         text-align: start;
         font-style: italic;
-        list-style-type: none;
-
-        &::before {
-          content: "♦";
-          margin-right: 1rem;
-        }
       }
 
       p{
-        padding-left: 5%;
+        margin-top: 0.4rem;
+        font-size: 0.7em;
+        padding-left: 2%;
+        font-style: normal;
       }
     }
   }
