@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   position: relative;
 
@@ -64,10 +64,35 @@
     }
   }
 
+.imgCont{
+  position: relative;
+
   img {
     height: 100%;
     width: auto;
   }
+
+  .ClassRole{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      gap: 0.2rem;
+
+      li{
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgb(122, 156, 198, 0.8) ;
+      }
+    }
+  }
+}
 
   .heroPath {
     display: flex;
@@ -175,9 +200,7 @@
   .Characteristics {
     display: flex;
     flex-direction: column;
-
     width: 100%;
-    background-color: #0d0d0d;
 
     h3 {
       width: 100%;
@@ -191,7 +214,8 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, auto);
       justify-items: center;
-
+      align-items: center;
+      
       i{
         color: #fff;
         font-size: 1.2em;
@@ -214,6 +238,12 @@
         
         padding: 1rem 0rem;
         border: 2px;
+      }
+
+      p{
+
+        text-align: center;
+
       }
     }
 

@@ -188,9 +188,11 @@ export const heroWiki = [
           description: "highly versatile hero that heavily focuses on dealing damage thanks to his ability to target the front Ranks as well as the back Ranks. His skillset places emphasis on damage and utility such as self-Buffs, Execution 1 finishers, and a unique skill to destroy or steal powerful Tokens from enemies.",
 
           Characteristics: {
-            Rol: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+            Rol: ["Damage Dealer and bleeder"],
             Strengths: ["Reach", "Consistency", "Robbery"],
             Weaknesses: ["No+Tokens", "Low ceiling", "wants Mastery"],
+            Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+
           },
         },
       ],
@@ -201,9 +203,11 @@ export const heroWiki = [
           description: "The Grave Robber has some of the most flexible targeting and positioning amongst the Heroes. Combined with her fantastic self-sustain, Dodge Dd2 token dodgeplusand Dd2 token stealth, she suffers very little from enemy disruption despite her low Icon HP dd2 HP. Most of Grave robber Damage is very reliant on CRIT chance as such Grave Robber requires more planning than other heroes but can be very effective given the right circunstances.",
 
           Characteristics: {
-            Rol: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+
+            Rol: ["Damage Dealer and bleeder"],
             Strengths: ["Reach", "Consistency", "Robbery"],
             Weaknesses: ["No+Tokens", "Low ceiling", "wants Mastery"],
+            Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
           },
         },
       ],
