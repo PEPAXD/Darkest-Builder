@@ -204,10 +204,10 @@ export const heroWiki = [
 
           Characteristics: {
 
-            Rol: ["Damage Dealer and bleeder"],
-            Strengths: ["Reach", "Consistency", "Robbery"],
-            Weaknesses: ["No+Tokens", "Low ceiling", "wants Mastery"],
-            Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+            Rol: ["Hero GameStyleRol"],
+            Strengths: ["A", "B", "C"],
+            Weaknesses: ["D", "E", "F"],
+            Class: ["A", "B", "C", "D"],
           },
         },
       ],
