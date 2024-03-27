@@ -189,11 +189,35 @@ export const heroWiki = [
 
           Characteristics: {
             Rol: ["Damage Dealer and bleeder"],
-            Strengths: ["Reach", "Consistency", "Robbery"],
+            Strengths: {
+              "Reach": "Damage very flexible, he can hit any target",
+              "Consistency": "Damage, Reach and Mobility are consistent",
+              "Robbery": "Highway Robbery - very strong ability to steal tokens",
+            },
             Weaknesses: ["No+Tokens", "Low ceiling", "wants Mastery"],
             Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
-
           },
+
+          HowToPlay: {
+            "Early Game": [
+              "Use Open Vein to apply Bleed to the backline.",
+              "Use Wicked Slice to finish off enemies.",
+              "Use Duelist's Advance to activate Riposte.",
+            ],
+
+            "Mid Game": [
+              "Use Point Blank Shot to deal high damage to the front line.",
+              "Use Pistol Shot to finish off enemies.",
+              "Use Duelist's Advance to activate Riposte.",
+            ],
+
+            "Late Game": [
+              "Use Tracking Shot to increase your damage.",
+              "Use Duelist's Advance to activate Riposte.",
+              "Use Pistol Shot to finish off enemies.",
+            ],
+          },
+          
         },
       ],
 

@@ -145,10 +145,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                 <i>"Strengths"</i>
                 <ul>
-                  {heroWiki[0].heroStats[
-                    index
-                  ][1].Characteristics.Strengths.map((rol, i) => (
-                    <li key={i}>{rol}</li>
+                  {Object.entries(heroWiki[0].heroStats[index][1].Characteristics.Strengths).map(([strength, description], i) => (
+                    <li key={i} title={description}>{strength}</li>
                   ))}
                 </ul>
 
