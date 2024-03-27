@@ -4,6 +4,7 @@ import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { Tooltip } from "react-tooltip";
 
 function HeroWikiPage({ url_Bg, heroName }) {
   const [index, setIndex] = useState(0);
@@ -145,9 +146,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                 <i>"Strengths"</i>
                 <ul>
-                  {Object.entries(heroWiki[0].heroStats[index][1].Characteristics.Strengths).map(([strength, description], i) => (
-                    <li key={i} title={description}>{strength}</li>
+                  {Object.entries(
+                    heroWiki[0].heroStats[index][1].Characteristics.Strengths
+                  ).map(([strength, description], i) => (
+                    <li key={i}>
+                      <a
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content={description}
+                      >
+                        {strength}
+                      </a>
+                    </li>
                   ))}
+                  <Tooltip id="my-tooltip"  className="my-tooltip" />
                 </ul>
 
                 <i>"Weaknesses"</i>

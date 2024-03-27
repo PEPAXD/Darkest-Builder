@@ -7,6 +7,19 @@
   height: 100vh;
 }
 
+.my-tooltip {
+  
+  background-color: #222 !important;
+  opacity: 1 !important;
+
+  font-weight: 400;
+
+  max-width: 20%;
+  white-space: pre-wrap; 
+  text-align: center;
+
+}
+
 .boxInputName {
   display: flex;
   flex-direction: row;
@@ -91,10 +104,12 @@
         font-weight: 600;
         text-transform: uppercase;
         color: rgb(122, 156, 198, 0.8) ;
+        
       }
     }
   }
 }
+
 
   .heroPath {
     display: flex;
@@ -217,8 +232,10 @@
       grid-template-rows: repeat(2, auto);
       justify-items: center;
       align-items: center;
-      
-      
+
+      padding-bottom: 1rem;
+      border: 2px solid #610804;
+
       i{
         color: #fff;
         font-size: 1.2em;
@@ -243,7 +260,12 @@
         padding-top: 1rem ;
         margin: 0rem 1rem;
         border: 2px;
+
+        cursor: default;
         
+        li:hover{
+          text-decoration: underline;
+        }
 
       }
 
