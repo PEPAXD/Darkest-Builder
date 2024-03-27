@@ -158,20 +158,65 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       </a>
                     </li>
                   ))}
-                  <Tooltip id="my-tooltip"  className="my-tooltip" />
+                  <Tooltip id="my-tooltip" className="my-tooltip" />
                 </ul>
 
                 <i>"Weaknesses"</i>
                 <ul>
-                  {heroWiki[0].heroStats[
-                    index
-                  ][1].Characteristics.Weaknesses.map((rol, i) => (
-                    <li key={i}>{rol}</li>
+                  {Object.entries(
+                    heroWiki[0].heroStats[index][1].Characteristics.Weaknesses
+                  ).map(([Weaknesses, description], i) => (
+                    <li key={i}>
+                      <a
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content={description}
+                      >
+                        {Weaknesses}
+                      </a>
+                    </li>
                   ))}
+                  <Tooltip id="my-tooltip" className="my-tooltip" />
                 </ul>
               </div>
             </div>
             <br />
+
+            <h2>How to Play</h2>
+            <hr />
+
+            <div className="howToPlay">
+              <ul>
+                <li>Target Priority</li>
+                <p>
+                  The gameplay with the Highwayman is characterized by its
+                  direct approach and its ability to deal significant damage. It
+                  is crucial to direct his attacks towards the biggest threats
+                  on the enemy side. Therefore, it is essential for him to focus
+                  on eliminating important enemy units.
+                </p>
+
+                <li>Target Priority</li>
+                <p>
+                  The gameplay with the Highwayman is characterized by its
+                  direct approach and its ability to deal significant damage. It
+                  is crucial to direct his attacks towards the biggest threats
+                  on the enemy side. Therefore, it is essential for him to focus
+                  on eliminating important enemy units.
+                </p>
+
+                <li>Target Priority</li>
+                <p>
+                  The gameplay with the Highwayman is characterized by its
+                  direct approach and its ability to deal significant damage. It
+                  is crucial to direct his attacks towards the biggest threats
+                  on the enemy side. Therefore, it is essential for him to focus
+                  on eliminating important enemy units.
+                </p>
+              </ul>
+            </div>
+
+            <br />
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               fuga commodi quo quis dicta. Quo distinctio, dolorum quod porro

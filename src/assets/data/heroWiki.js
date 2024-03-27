@@ -194,7 +194,11 @@ export const heroWiki = [
               "Consistency": "Damage, Reach and Mobility are consistent",
               "Robbery": "Highway Robbery - very strong ability to steal tokens",
             },
-            Weaknesses: ["No+Tokens", "Low ceiling", "wants Mastery"],
+            Weaknesses: {
+              "No+Tokens": "No access to defensive tokens",
+              "Low ceiling": "Doesn't have a super high damage ceiling",
+              "wants Mastery": "Needs to be mastered points to be effective",
+            },
             Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
           },
 

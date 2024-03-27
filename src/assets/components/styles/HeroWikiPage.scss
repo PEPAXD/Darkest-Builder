@@ -17,7 +17,6 @@
   max-width: 20%;
   white-space: pre-wrap; 
   text-align: center;
-
 }
 
 .boxInputName {
@@ -201,6 +200,12 @@
     font-weight: 700;
   }
 
+  h2{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+
   hr {
     width: 100%;
     border: 1px solid #fff;
@@ -219,11 +224,13 @@
     flex-direction: column;
     width: 100%;
 
+    background-color: rgb(0, 0, 0, 0.8);
+
     h3 {
       width: 100%;
       text-transform: uppercase;
       background-color: #610804;
-      padding: 0.6rem;
+      padding: 0.4rem;
     }
 
     .listStats {
@@ -234,7 +241,7 @@
       align-items: center;
 
       padding-bottom: 1rem;
-      border: 2px solid #610804;
+
 
       i{
         color: #fff;
@@ -275,7 +282,41 @@
 
       }
     }
+  }
 
-    
+  .howToPlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 95%;
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      gap: 1rem;
+
+      li{
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 400;
+        text-align: start;
+        font-style: italic;
+        list-style-type: none;
+
+        &::before {
+          content: "♦";
+          margin-right: 1rem;
+        }
+      }
+
+      p{
+        padding-left: 5%;
+      }
+    }
   }
 }
