@@ -200,8 +200,26 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="statsContain">
-              <h3>Stats</h3>
-
+              <div class="angry-grid">
+                <div id="item-0">
+                  <h3>{heroWiki[0].heroPaths[index][1][selectedPathIndex]}</h3>
+                </div>
+                <div id="item-1">&nbsp;</div>
+                <div id="item-2">&nbsp;</div>
+                <div id="item-3">&nbsp;</div>
+                <div id="item-4">&nbsp;</div>
+                <div id="item-5">&nbsp;</div>
+                <div id="item-6">&nbsp;</div>
+                <div id="item-7">&nbsp;</div>
+                <div id="item-8">&nbsp;</div>
+                <div id="item-9">&nbsp;</div>
+                <div id="item-10">&nbsp;</div>
+                <div id="item-11">&nbsp;</div>
+                <div id="item-12">&nbsp;</div>
+                <div id="item-13">&nbsp;</div>
+                <div id="item-14">&nbsp;</div>
+                <div id="item-15">&nbsp;</div>
+              </div>
             </div>
 
             <br />
