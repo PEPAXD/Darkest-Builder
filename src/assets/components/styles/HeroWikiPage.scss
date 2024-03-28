@@ -277,7 +277,6 @@
       }
 
       p{
-
         font-size: 1.2em;
         text-align: center;
       }
@@ -316,6 +315,23 @@
         padding-left: 2%;
         font-style: normal;
       }
+    }
+  }
+
+
+  .statsContain{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: rgb(0, 0, 0, 0.8);
+
+    h3 {
+      width: 100%;
+      text-transform: uppercase;
+      background-color: #610804;
+      padding: 0.4rem;
     }
   }
 }

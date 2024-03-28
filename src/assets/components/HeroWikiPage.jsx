@@ -199,6 +199,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
 
+            <div className="statsContain">
+              <h3>Stats</h3>
+
+            </div>
+
+            <br />
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               fuga commodi quo quis dicta. Quo distinctio, dolorum quod porro
