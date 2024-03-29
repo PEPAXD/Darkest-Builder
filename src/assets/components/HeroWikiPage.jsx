@@ -204,26 +204,57 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <div id="item-0">
                   <h3>{heroWiki[0].heroPaths[index][1][selectedPathIndex]}</h3>
                 </div>
-                <div id="item-1"><h4>Resistances</h4></div>
-                <div id="item-2">&nbsp;</div>
-                <div id="item-3">&nbsp;</div>
-                <div id="item-4">&nbsp;</div>
-                <div id="item-5">&nbsp;</div>
-                <div id="item-6">&nbsp;</div>
-                <div id="item-7">&nbsp;</div>
-                <div id="item-8">&nbsp;</div>
-                <div id="item-9">&nbsp;</div>
-                <div id="item-10">&nbsp;</div>
-                <div id="item-11">&nbsp;</div>
-                <div id="item-12">&nbsp;</div>
+                <div id="item-1">
+                  <h4>Resistances</h4>
+                </div>
+                <div id="item-2">
+                  <h5>BLEED 30%</h5>
+                </div>
+                <div id="item-3">
+                  <h5>BLIGHT 30%</h5>
+                </div>
+                <div id="item-4">
+                  <h5>BURN 30%</h5>
+                </div>
+                <div id="item-5">
+                  <h5>MOVE 30%</h5>
+                </div>
+                <div id="item-6">
+                  <h5>STUN 30%</h5>
+                </div>
+                <div id="item-7">
+                  <h5>DISEASE 30%</h5>
+                </div>
+                <div id="item-8">
+                  <h5>DEBUFF 30%</h5>
+                </div>
+                <div id="item-9">
+                  <h5>DEATH BLOW 30%</h5>
+                </div>
+                <div id="item-10">
+                  <h4>Movement</h4>
+                </div>
+                <div id="item-11">
+                  <h5>FORWARDS</h5>
+                  <span>{"2 >>"}</span>
+                </div>
+                <div id="item-12">
+                  <h5>BACKWARDS</h5>
+                  <span>{"2 <<"}</span>
+                </div>
 
                 <div id="item-13">
                   <h5>MAX HP</h5>
                   <span>35</span>
                 </div>
 
-                <div id="item-14">&nbsp;</div>
-                <div id="item-15"><h4>Base Stats</h4></div>
+                <div id="item-14">
+                  <h5>SPD</h5>
+                  <span>5</span>
+                </div>
+                <div id="item-15">
+                  <h4>Base Stats</h4>
+                </div>
               </div>
             </div>
 
