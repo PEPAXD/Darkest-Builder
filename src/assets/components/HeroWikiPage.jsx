@@ -204,7 +204,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <div id="item-0">
                   <h3>{heroWiki[0].heroPaths[index][1][selectedPathIndex]}</h3>
                 </div>
-                <div id="item-1">&nbsp;</div>
+                <div id="item-1"><h4>Resistances</h4></div>
                 <div id="item-2">&nbsp;</div>
                 <div id="item-3">&nbsp;</div>
                 <div id="item-4">&nbsp;</div>
@@ -216,9 +216,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <div id="item-10">&nbsp;</div>
                 <div id="item-11">&nbsp;</div>
                 <div id="item-12">&nbsp;</div>
-                <div id="item-13">&nbsp;</div>
+
+                <div id="item-13">
+                  <h5>MAX HP</h5>
+                  <span>35</span>
+                </div>
+
                 <div id="item-14">&nbsp;</div>
-                <div id="item-15">&nbsp;</div>
+                <div id="item-15"><h4>Base Stats</h4></div>
               </div>
             </div>
 

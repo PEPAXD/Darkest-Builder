@@ -313,173 +313,178 @@
     width: 80%;
 
     .angry-grid {
-      display: grid; 
-   
+      display: grid;
+
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      
-      gap: 1rem;
-   }
-     
-   #item-0 {
-   
-      background-color: red; 
+
+      gap: 0.5rem;
+
+      > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h3{
+        font-size: 1.4em;
+        text-align: left;
+        font-style: italic;
+        padding-left: 10%;
+      }
+
+      h4{
+        font-size: 1.1em;
+        text-transform: uppercase;
+      }
+
+      h5{
+        font-size: 1em;
+        font-weight: 400;
+      }
+
+      span{
+        font-weight: 100;
+      }
+    }
+
+    #item-0 {
       grid-row-start: 1;
       grid-column-start: 1;
-   
+
       grid-row-end: 2;
       grid-column-end: 3;
-      
-   }
-   #item-1 {
-   
-      background-color: #B9D666; 
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      background-color: transparent;
+      border-bottom: 1px solid #fff;
+    }
+    #item-1 {
       grid-row-start: 1;
       grid-column-start: 3;
-   
+
       grid-row-end: 2;
       grid-column-end: 7;
-      
-   }
-   #item-2 {
-   
-      background-color: #C7B8EF; 
+
+      background-color: #981a0c;
+    }
+    #item-2 {
+      background-color: #c7b8ef;
       grid-row-start: 2;
       grid-column-start: 3;
-   
+
       grid-row-end: 3;
       grid-column-end: 5;
-      
-   }
-   #item-3 {
-   
-      background-color: #57BC97; 
+    }
+    #item-3 {
+      background-color: #57bc97;
       grid-row-start: 2;
       grid-column-start: 5;
-   
+
       grid-row-end: 3;
       grid-column-end: 7;
-      
-   }
-   #item-4 {
-   
-      background-color: #BB987E; 
+    }
+    #item-4 {
+      background-color: #bb987e;
       grid-row-start: 3;
       grid-column-start: 3;
-   
+
       grid-row-end: 4;
       grid-column-end: 5;
-      
-   }
-   #item-5 {
-   
-      background-color: #85AC99; 
+    }
+    #item-5 {
+      background-color: #85ac99;
       grid-row-start: 3;
       grid-column-start: 5;
-   
+
       grid-row-end: 4;
       grid-column-end: 7;
-      
-   }
-   #item-6 {
-   
-      background-color: #5BE7ED; 
+    }
+    #item-6 {
+      background-color: #5be7ed;
       grid-row-start: 4;
       grid-column-start: 3;
-   
+
       grid-row-end: 5;
       grid-column-end: 5;
-      
-   }
-   #item-7 {
-   
-      background-color: #7CB87D; 
+    }
+    #item-7 {
+      background-color: #7cb87d;
       grid-row-start: 4;
       grid-column-start: 5;
-   
+
       grid-row-end: 5;
       grid-column-end: 7;
-      
-   }
-   #item-8 {
-   
-      background-color: #BFD598; 
+    }
+    #item-8 {
+      background-color: #bfd598;
       grid-row-start: 5;
       grid-column-start: 3;
-   
+
       grid-row-end: 6;
       grid-column-end: 5;
-      
-   }
-   #item-9 {
-   
-      background-color: #5957EB; 
+    }
+    #item-9 {
+      background-color: #5957eb;
       grid-row-start: 5;
       grid-column-start: 5;
-   
+
       grid-row-end: 6;
       grid-column-end: 7;
-      
-   }
-   #item-10 {
-   
-      background-color: #9D9BB9; 
+    }
+    #item-10 {
+      background-color: #9d9bb9;
       grid-row-start: 4;
       grid-column-start: 1;
-   
+
       grid-row-end: 5;
       grid-column-end: 3;
-      
-   }
-   #item-11 {
-   
-      background-color: #9B6E77; 
+    }
+    #item-11 {
+      background-color: #9b6e77;
       grid-row-start: 5;
       grid-column-start: 1;
-   
+
       grid-row-end: 6;
       grid-column-end: 2;
-      
-   }
-   #item-12 {
-   
-      background-color: #CDDD68; 
+    }
+    #item-12 {
+      background-color: #cddd68;
       grid-row-start: 5;
       grid-column-start: 2;
-   
+
       grid-row-end: 6;
       grid-column-end: 3;
-      
-   }
-   #item-13 {
-   
-      background-color: #6D79DB; 
+    }
+    #item-13 {
       grid-row-start: 3;
       grid-column-start: 1;
-   
+
       grid-row-end: 4;
       grid-column-end: 2;
-      
-   }
-   #item-14 {
-   
-      background-color: #659BDB; 
+
+      background-color: transparent;
+    }
+    #item-14 {
+      background-color: #659bdb;
       grid-row-start: 3;
       grid-column-start: 2;
-   
+
       grid-row-end: 4;
       grid-column-end: 3;
-      
-   }
-   #item-15 {
-   
-      background-color: #CDDB6A; 
+    }
+    #item-15 {
       grid-row-start: 2;
       grid-column-start: 1;
-   
+
       grid-row-end: 3;
       grid-column-end: 3;
-      
-   }
+      background-color: #981a0c;
+    }
   }
 }
