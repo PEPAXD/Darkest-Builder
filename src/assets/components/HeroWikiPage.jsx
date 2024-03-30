@@ -53,6 +53,25 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
+  const stats = [
+    { type: "BLEED", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "BLIGHT", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "BURN", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "MOVE", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "STUN", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "DISEASE", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "DEBUFF", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "DEATHBLOW", icon: "public\\icon\\Bleed_dd2.webp" },
+
+    { type: "", icon: "" },
+
+    { type: "FORWARDS", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "BAKCWARDS", icon: "public\\icon\\Bleed_dd2.webp" },
+
+    { type: "MAXHP", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "SPD", icon: "public\\icon\\Bleed_dd2.webp" },
+  ];
+
   return (
     <div className="wiki">
       <div
@@ -198,59 +217,29 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
 
             <br />
+            <h2>Hero Stats</h2>
+            <hr />
 
             <div className="statsContain">
-              <div class="angry-grid">
+              <div className="angry-grid">
                 <div id="item-0">
                   <h3>{heroWiki[0].heroPaths[index][1][selectedPathIndex]}</h3>
                 </div>
                 <div id="item-1">
                   <h4>Resistances</h4>
                 </div>
-                <div id="item-2">
-                  <h5>BLEED 30%</h5>
-                </div>
-                <div id="item-3">
-                  <h5>BLIGHT 30%</h5>
-                </div>
-                <div id="item-4">
-                  <h5>BURN 30%</h5>
-                </div>
-                <div id="item-5">
-                  <h5>MOVE 30%</h5>
-                </div>
-                <div id="item-6">
-                  <h5>STUN 30%</h5>
-                </div>
-                <div id="item-7">
-                  <h5>DISEASE 30%</h5>
-                </div>
-                <div id="item-8">
-                  <h5>DEBUFF 30%</h5>
-                </div>
-                <div id="item-9">
-                  <h5>DEATH BLOW 30%</h5>
-                </div>
+                {stats.map((stat, i) => (
+                  <div id={`item-${i + 2}`}>
+                    <img src={stat.icon} alt="" />
+                    <h5>
+                      {stat.type}{" "}
+                      {heroWiki[0].heroStats[index][1].stats[stat.type]}
+                      {i < 9 ? '%' : ''}
+                    </h5>
+                  </div>
+                ))}
                 <div id="item-10">
                   <h4>Movement</h4>
-                </div>
-                <div id="item-11">
-                  <h5>FORWARDS</h5>
-                  <span>{"2 >>"}</span>
-                </div>
-                <div id="item-12">
-                  <h5>BACKWARDS</h5>
-                  <span>{"2 <<"}</span>
-                </div>
-
-                <div id="item-13">
-                  <h5>MAX HP</h5>
-                  <span>35</span>
-                </div>
-
-                <div id="item-14">
-                  <h5>SPD</h5>
-                  <span>5</span>
                 </div>
                 <div id="item-15">
                   <h4>Base Stats</h4>
