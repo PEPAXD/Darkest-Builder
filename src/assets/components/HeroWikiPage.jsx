@@ -73,6 +73,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
     { type: "SPD", icon: "public\\icon\\Icon_speed_dd2.webp" },
   ];
 
+  const [isUpgradeActive, setUpgradeActive] = useState(false);
+
+  const toggleUpgrade = () => {
+    setUpgradeActive(!isUpgradeActive);
+  };
+
   return (
     <div className="wiki">
       <div
@@ -233,7 +239,24 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <div className="statsContain">
               <div className="angry-grid">
                 <div id="item-0">
-                  <h3></h3>
+                  <div className="upgradeButton">
+                    <div class="checkbox-wrapper-46">
+                      <input
+                        type="checkbox"
+                        id="cbx-46"
+                        class="inp-cbx"
+                        onChange={toggleUpgrade}
+                      />
+                      <label for="cbx-46" class="cbx">
+                        <span>
+                          <svg viewBox="0 0 12 10" height="10px" width="12px">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg>
+                        </span>
+                        <span>Upgraded</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
                 <div id="item-1">
                   <h4>Resistances</h4>
@@ -243,7 +266,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <img src={stat.icon} alt="" />
                     <h5>
                       {stat.type}{" "}
-                      {heroWiki[0].heroStats[index][1].stats[stat.type]}
+                      {isUpgradeActive
+                        ? heroWiki[0].heroStats[index][1].stats.upgrades[
+                            stat.type
+                          ]
+                        : heroWiki[0].heroStats[index][1].stats[stat.type]}
                       {i < 9 ? "%" : ""}
                     </h5>
                   </div>

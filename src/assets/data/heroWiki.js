@@ -250,6 +250,24 @@ export const heroWiki = [
 
             FORW: 2,
             BACK: 2,
+
+            upgrades: {
+              HP: 35,
+              SPD: 5,
+  
+              BLEED: 40,
+              BLIGHT: 30,
+              BURN: 30,
+              DISEASE: 40,
+              STUN: 40,
+              MOVE: 30,
+              DEBUFF: 20,
+              DEATHBLOW: 75,
+  
+              FORW: 2,
+              BACK: 2,
+            },
+
           },
         },
         
