@@ -67,7 +67,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     { type: "", icon: "" },
 
     { type: "FORW", icon: "public\\icon\\forward.webp" },
-    { type: "BACK", icon: "public\\icon\\backwards.webp"},
+    { type: "BACK", icon: "public\\icon\\backwards.webp" },
 
     { type: "HP", icon: "public\\icon\\Icon_HP_dd2.webp" },
     { type: "SPD", icon: "public\\icon\\Icon_speed_dd2.webp" },
@@ -218,19 +218,23 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
 
             <br />
-            <h2>Hero Stats</h2>
+            <h2>
+              Hero Skills and Stats - {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
+            </h2>
             <hr />
+            <cite>{"textXDDD"}</cite>
+            <br />
 
             <div className="statsContain">
               <div className="angry-grid">
                 <div id="item-0">
-                  <h3>{heroWiki[0].heroPaths[index][1][selectedPathIndex]}</h3>
+                  <h3></h3>
                 </div>
                 <div id="item-1">
                   <h4>Resistances</h4>
                 </div>
                 {stats.map((stat, i) => (
-                  <div id={`item-${i + 2}`}>
+                  <div id={`item-${i + 2}`} key={`item-${i + 2}`}>
                     <img src={stat.icon} alt="" />
                     <h5>
                       {stat.type}{" "}
@@ -247,8 +251,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </div>
               </div>
             </div>
-
             <br />
+
+            <div className="skillsContain"></div>
 
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

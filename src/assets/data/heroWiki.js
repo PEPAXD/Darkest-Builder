@@ -207,20 +207,35 @@ export const heroWiki = [
             Tips: [
               {
                 name: "Target Priority",
-                description: "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+                description:
+                  "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
               },
               {
                 name: "Backup Plans",
-                description: "It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+                description:
+                  "It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
               },
               {
                 name: "Feed Buffs",
-                description: "To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
+                description:
+                  "To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
               },
             ],
           },
 
-          stats:{
+          paths: [
+            [
+              "Highwayman",
+              [
+                '"Default skills. Rewards candles upon reaching the second Inn"',
+                '"Up close and personal - thats how the job gets done."',
+                '"I never miss."',
+                '"Lets go another round, then."',
+              ],
+            ],
+          ],
+
+          stats: {
             HP: 35,
             SPD: 5,
 
@@ -235,8 +250,7 @@ export const heroWiki = [
 
             FORW: 2,
             BACK: 2,
-          }
-
+          },
         },
       ],
 
