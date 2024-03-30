@@ -221,7 +221,7 @@ export const heroWiki = [
           },
 
           stats:{
-            MAXHP: 35,
+            HP: 35,
             SPD: 5,
 
             BLEED: 30,
@@ -233,8 +233,8 @@ export const heroWiki = [
             DEBUFF: 20,
             DEATHBLOW: 60,
 
-            FORWARDS: 2,
-            BACKWARDS: 2,
+            FORW: 2,
+            BACK: 2,
           }
 
         },

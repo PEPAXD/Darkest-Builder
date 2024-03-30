@@ -3,6 +3,7 @@ import { heroWiki } from "../data/heroWiki.js";
 import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
 
@@ -55,21 +56,21 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   const stats = [
     { type: "BLEED", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "BLIGHT", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "BURN", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "MOVE", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "STUN", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "DISEASE", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "DEBUFF", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "DEATHBLOW", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "MOVE", icon: "public\\icon\\Move_dd2.webp" },
+    { type: "BURN", icon: "public\\icon\\Burn_dd2.webp" },
+    { type: "STUN", icon: "public\\icon\\Stun_dd2.webp" },
+    { type: "BLIGHT", icon: "public\\icon\\Blight_dd2.webp" },
+    { type: "DEBUFF", icon: "public\\icon\\Debuff_dd2.webp" },
+    { type: "DISEASE", icon: "public\\icon\\Disease_dd2.webp" },
+    { type: "DEATHBLOW", icon: "public\\icon\\Deathsdoor_dd2.webp" },
 
     { type: "", icon: "" },
 
-    { type: "FORWARDS", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "BAKCWARDS", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "FORW", icon: "public\\icon\\forward.webp" },
+    { type: "BACK", icon: "public\\icon\\backwards.webp"},
 
-    { type: "MAXHP", icon: "public\\icon\\Bleed_dd2.webp" },
-    { type: "SPD", icon: "public\\icon\\Bleed_dd2.webp" },
+    { type: "HP", icon: "public\\icon\\Icon_HP_dd2.webp" },
+    { type: "SPD", icon: "public\\icon\\Icon_speed_dd2.webp" },
   ];
 
   return (
@@ -234,7 +235,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <h5>
                       {stat.type}{" "}
                       {heroWiki[0].heroStats[index][1].stats[stat.type]}
-                      {i < 9 ? '%' : ''}
+                      {i < 9 ? "%" : ""}
                     </h5>
                   </div>
                 ))}
