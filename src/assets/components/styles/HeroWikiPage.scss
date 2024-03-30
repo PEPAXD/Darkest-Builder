@@ -214,6 +214,11 @@
     text-align: left;
   }
 
+  cite{
+    font-size: 1.2em;
+  }
+
+
   .Characteristics {
     display: flex;
     flex-direction: column;
@@ -332,17 +337,6 @@
         padding-left: 5%;
       }
 
-      #item-2,
-      #item-3,
-      #item-4,
-      #item-5,
-      #item-6,
-      #item-7,
-      #item-8,
-      #item-9 {
-        
-        font-size: 1.2em;
-      }
 
       h3 {
         font-size: 1.4em;
@@ -357,7 +351,7 @@
       }
 
       h5 {
-        font-size: 0.8em;
+        font-size: 0.9em;
         font-weight: 400;
       }
 

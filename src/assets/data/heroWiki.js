@@ -191,8 +191,8 @@ export const heroWiki = [
           Characteristics: {
             Rol: ["Damage Dealer and bleeder"],
             Strengths: {
-              Reach: "Damage very flexible, he can hit any target",
-              Consistency: "Damage, Reach and Mobility are consistent",
+              "Reach": "Damage very flexible, he can hit any target",
+              "Consistency": "Damage, Reach and Mobility are consistent",
               Robbery: "Highway Robbery - very strong ability to steal tokens",
             },
             Weaknesses: {
@@ -228,9 +228,9 @@ export const heroWiki = [
               "Highwayman",
               [
                 '"Default skills. Rewards candles upon reaching the second Inn"',
-                '"Up close and personal - thats how the job gets done."',
-                '"I never miss."',
-                '"Lets go another round, then."',
+                '"A brawler focused on front rank combat and ripostes."',
+                '"A back rank role that emphasizes ranged skill use."',
+                '"A rank-flexible Bleed specialist."',
               ],
             ],
           ],
@@ -252,22 +252,86 @@ export const heroWiki = [
             BACK: 2,
           },
         },
+        
       ],
 
       [
         "Grave-Robber",
         {
           description:
-            "The Grave Robber has some of the most flexible targeting and positioning amongst the Heroes. Combined with her fantastic self-sustain, Dodge Dd2 token dodgeplusand Dd2 token stealth, she suffers very little from enemy disruption despite her low Icon HP dd2 HP. Most of Grave robber Damage is very reliant on CRIT chance as such Grave Robber requires more planning than other heroes but can be very effective given the right circunstances.",
+            "description Grave Robber",
 
           Characteristics: {
-            Rol: ["Hero GameStyleRol"],
-            Strengths: ["A", "B", "C"],
-            Weaknesses: ["D", "E", "F"],
-            Class: ["A", "B", "C", "D"],
+            Rol: ["AAA Damage Dealer and bleeder"],
+            Strengths: {
+              "AAA No+Tokens": "AAA Damage very flexible, he can hit any target",
+              "AAA No+ASD": "AAA Damage, Reach and Mobility are consistent",
+              "AAA No+DFE": "AAA Highway Robbery - very strong ability to steal tokens",
+            },
+            Weaknesses: {
+              "AAA No+Tokens": "AAA No access to defensive tokens",
+              "AAA Low ceiling": "AAA Doesn't have a super high damage ceiling",
+              "AAA wants Mastery": "AAA Needs to be mastered points to be effective",
+            },
+            Class: ["AAA ANY RANK", "AAA HIGH DMG", "AAA VERSATILE", "AAA RIPOSTE"],
+          },
+
+          HowToPlay: {
+            Tips: [
+              {
+                name: "AAA Target Priority",
+                description:
+                  "AAA The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+              },
+              {
+                name: "AAA Backup Plans",
+                description:
+                  "AAA It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+              },
+              {
+                name: "AAA Feed Buffs",
+                description:
+                  "AAA To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
+              },
+            ],
+          },
+
+          paths: [
+            [
+              "AAAA",
+              [
+                '"AAA Default skills. Rewards candles upon reaching the second Inn"',
+                '"AAA A brawler focused on front rank combat and ripostes."',
+                '"AAA A back rank role that emphasizes ranged skill use."',
+                '"AAA A rank-flexible Bleed specialist."',
+              ],
+            ],
+          ],
+
+          stats: {
+            HP: 434,
+            SPD: 235,
+
+            BLEED: 234,
+            BLIGHT: 234,
+            BURN: 234,
+            DISEASE: 234,
+            STUN: 234,
+            MOVE: 234,
+            DEBUFF: 234,
+            DEATHBLOW: 234,
+
+            FORW: 234,
+            BACK: 234,
           },
         },
+        
       ],
+
+      //TODO: ADD NEXT HERO Graves-Robber
+
+      
+      
     ],
   },
 ];

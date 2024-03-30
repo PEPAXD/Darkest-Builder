@@ -219,10 +219,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
             <h2>
-              Hero Skills and Stats - {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
+              Hero Skills and Stats -{" "}
+              {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
             </h2>
             <hr />
-            <cite>{"textXDDD"}</cite>
+
+            <cite>
+              {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
+            </cite>
+
             <br />
 
             <div className="statsContain">
