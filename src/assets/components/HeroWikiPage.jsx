@@ -285,7 +285,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
-            <div className="skillsContain"></div>
+            {/* 
+//TODO: WIP HEROSKILLS RADIO-BUTTONS ARRAY 
+*/}
+
+            <div className="skillsContain">
+              {heroWiki[0].heroStats[index][1].skills.map((skill) => (
+                <div className="imgContain" key={skill.id}>
+                  <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
+                  <i>{skill.name}</i>
+                </div>
+              ))}
+            </div>
+            <br />
 
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

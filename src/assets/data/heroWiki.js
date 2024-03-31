@@ -191,8 +191,8 @@ export const heroWiki = [
           Characteristics: {
             Rol: ["Damage Dealer and bleeder"],
             Strengths: {
-              "Reach": "Damage very flexible, he can hit any target",
-              "Consistency": "Damage, Reach and Mobility are consistent",
+              Reach: "Damage very flexible, he can hit any target",
+              Consistency: "Damage, Reach and Mobility are consistent",
               Robbery: "Highway Robbery - very strong ability to steal tokens",
             },
             Weaknesses: {
@@ -254,7 +254,7 @@ export const heroWiki = [
             upgrades: {
               HP: 35,
               SPD: 5,
-  
+
               BLEED: 40,
               BLIGHT: 30,
               BURN: 30,
@@ -263,35 +263,75 @@ export const heroWiki = [
               MOVE: 30,
               DEBUFF: 20,
               DEATHBLOW: 75,
-  
+
               FORW: 2,
               BACK: 2,
             },
-
           },
+
+          skills: [
+            {
+              id: 1,
+              name: "Wicked Slice",
+              img: "wickedslice",
+
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 2,
+              name: "BLA BLA BLA",
+              img: "pistolshot",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 3,
+              name: "BLA BLA BLA",
+              img: "duelistsadvance",
+              
+              stats: [
+
+              ],
+            },
+          ],
+
         },
-        
       ],
+
+      //*END OF HIGHWAYMAN
 
       [
         "Grave-Robber",
         {
-          description:
-            "description Grave Robber",
+          description: "description Grave Robber",
 
           Characteristics: {
             Rol: ["AAA Damage Dealer and bleeder"],
             Strengths: {
-              "AAA No+Tokens": "AAA Damage very flexible, he can hit any target",
+              "AAA No+Tokens":
+                "AAA Damage very flexible, he can hit any target",
               "AAA No+ASD": "AAA Damage, Reach and Mobility are consistent",
-              "AAA No+DFE": "AAA Highway Robbery - very strong ability to steal tokens",
+              "AAA No+DFE":
+                "AAA Highway Robbery - very strong ability to steal tokens",
             },
             Weaknesses: {
               "AAA No+Tokens": "AAA No access to defensive tokens",
               "AAA Low ceiling": "AAA Doesn't have a super high damage ceiling",
-              "AAA wants Mastery": "AAA Needs to be mastered points to be effective",
+              "AAA wants Mastery":
+                "AAA Needs to be mastered points to be effective",
             },
-            Class: ["AAA ANY RANK", "AAA HIGH DMG", "AAA VERSATILE", "AAA RIPOSTE"],
+            Class: [
+              "AAA ANY RANK",
+              "AAA HIGH DMG",
+              "AAA VERSATILE",
+              "AAA RIPOSTE",
+            ],
           },
 
           HowToPlay: {
@@ -341,30 +381,86 @@ export const heroWiki = [
 
             FORW: 234,
             BACK: 234,
+
+            upgrades: {
+              HP: 35,
+              SPD: 5,
+
+              BLEED: 40,
+              BLIGHT: 30,
+              BURN: 30,
+              DISEASE: 40,
+              STUN: 40,
+              MOVE: 30,
+              DEBUFF: 20,
+              DEATHBLOW: 75,
+
+              FORW: 2,
+              BACK: 2,
+            },
           },
+
+          
+          skills: [
+            {
+              id: 1,
+              name: "Pick to the Face",
+              img: "picktotheface",
+
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 2,
+              name: "Thrown Dagger",
+              img: "throwndagger",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 3,
+              name: "Flashing Daggers",
+              img: "flashingdaggers",
+              
+              stats: [
+
+              ],
+            },
+          ],
         },
-        
       ],
 
       [
         "Hellion",
         {
-          description:
-            "description Hellion",
+          description: "description Hellion",
 
           Characteristics: {
             Rol: ["BBB Damage Dealer and bleeder"],
             Strengths: {
-              "BBB No+Tokens": "BBB Damage very flexible, he can hit any target",
+              "BBB No+Tokens":
+                "BBB Damage very flexible, he can hit any target",
               "BBB No+ASD": "BBB Damage, Reach and Mobility are consistent",
-              "BBB No+DFE": "BBB Highway Robbery - very strong ability to steal tokens",
+              "BBB No+DFE":
+                "BBB Highway Robbery - very strong ability to steal tokens",
             },
             Weaknesses: {
               "BBB No+Tokens": "BBB No access to defensive tokens",
               "BBB Low ceiling": "BBB Doesn't have a super high damage ceiling",
-              "BBB wants Mastery": "BBB Needs to be mastered points to be effective",
+              "BBB wants Mastery":
+                "BBB Needs to be mastered points to be effective",
             },
-            Class: ["BBB ANY RANK", "BBB HIGH DMG", "BBB VERSATILE", "BBB RIPOSTE"],
+            Class: [
+              "BBB ANY RANK",
+              "BBB HIGH DMG",
+              "BBB VERSATILE",
+              "BBB RIPOSTE",
+            ],
           },
 
           HowToPlay: {
@@ -416,14 +512,9 @@ export const heroWiki = [
             BACK: 2,
           },
         },
-        
       ],
 
-
-      //TODO: ADD NEXT HERO Graves-Robber
-
-      
-      
+      //TODO: ADD NEXT HERO
     ],
   },
 ];
