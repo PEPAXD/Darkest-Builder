@@ -290,13 +290,24 @@ function HeroWikiPage({ url_Bg, heroName }) {
 */}
 
             <div className="skillsContain">
-              {heroWiki[0].heroStats[index][1].skills.map((skill) => (
-                <div className="imgContain" key={skill.id}>
-                  <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
-                  <i>{skill.name}</i>
-                </div>
-              ))}
+              <div className="skillsSetA">
+                {heroWiki[0].heroStats[index][1].skills.slice(0, 6).map((skill) => (
+                  <div className="imgContain" key={skill.id}>
+                    <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
+                    <i>{skill.name}</i>
+                  </div>
+                ))}
+              </div>
+              <div className="skillsSetB">
+                {heroWiki[0].heroStats[index][1].skills.slice(6).map((skill) => (
+                  <div className="imgContain" key={skill.id}>
+                    <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
+                    <i>{skill.name}</i>
+                  </div>
+                ))}
+              </div>
             </div>
+            <br />
             <br />
 
             <p>

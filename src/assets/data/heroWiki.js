@@ -282,7 +282,7 @@ export const heroWiki = [
 
             {
               id: 2,
-              name: "BLA BLA BLA",
+              name: "Pistol Shot",
               img: "pistolshot",
               
               stats: [
@@ -292,13 +292,102 @@ export const heroWiki = [
 
             {
               id: 3,
-              name: "BLA BLA BLA",
+              name: "Duelist's Advance",
               img: "duelistsadvance",
               
               stats: [
 
               ],
             },
+
+            {
+              id: 4,
+              name: "Tracking Shot",
+              img: "trackingshot",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 5,
+              name: "Take Aim",
+              img: "takeaim",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 6,
+              name: "Point Blank Shot",
+              img: "pointblankshot",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 7,
+              name: "Grapeshot Blast",
+              img: "grapeshotblast",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 8,
+              name: "Open Vein",
+              img: "openvein",
+              
+              stats: [
+
+              ],
+            },
+
+            
+            {
+              id: 9,
+              name: "Double Tap",
+              img: "doubletap",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 10,
+              name: "Highway Robbery",
+              img: "highwayrobbery",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 11,
+              name: "Double Cross",
+              img: "doublecross",
+              
+              stats: [
+
+              ],
+            },
+
+
+
+
+
+
+
+
           ],
 
         },
