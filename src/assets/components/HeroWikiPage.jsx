@@ -79,6 +79,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeActive(!isUpgradeActive);
   };
 
+  //SKILL SELECTION RADIOBUTTONS
+  const handleSkillSelect = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <div className="wiki">
       <div
@@ -240,14 +245,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <div className="angry-grid">
                 <div id="item-0">
                   <div className="upgradeButton">
-                    <div class="checkbox-wrapper-46">
+                    <div className="checkbox-wrapper-46">
                       <input
                         type="checkbox"
                         id="cbx-46"
-                        class="inp-cbx"
+                        className="inp-cbx"
                         onChange={toggleUpgrade}
                       />
-                      <label for="cbx-46" class="cbx">
+                      <label htmlFor="cbx-46" className="cbx">
                         <span>
                           <svg viewBox="0 0 12 10" height="10px" width="12px">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -291,22 +296,50 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <div className="skillsContain">
               <div className="skillsSetA">
-                {heroWiki[0].heroStats[index][1].skills.slice(0, 6).map((skill) => (
-                  <div className="imgContain" key={skill.id}>
-                    <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
-                    <i>{skill.name}</i>
-                  </div>
-                ))}
+                {heroWiki[0].heroStats[index][1].skills
+                  .slice(0, 6)
+                  .map((skill, i) => (
+                    <label className="imgContain" key={skill.id}>
+                      <input
+                        type="radio"
+                        name="skills"
+                        value={skill.name}
+                        defaultChecked={i === 0}
+                        style={{ display: "none" }}
+                        onClick={handleSkillSelect}
+                      />
+                      <img
+                        className="skills"
+                        src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
+                        alt={skill.name}
+                      />
+                      <i>{skill.name}</i>
+                    </label>
+                  ))}
               </div>
               <div className="skillsSetB">
-                {heroWiki[0].heroStats[index][1].skills.slice(6).map((skill) => (
-                  <div className="imgContain" key={skill.id}>
-                    <img className="skills" src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`} alt={skill.name} />
-                    <i>{skill.name}</i>
-                  </div>
-                ))}
+                {heroWiki[0].heroStats[index][1].skills
+                  .slice(6)
+                  .map((skill, i) => (
+                    <label className="imgContain" key={skill.id}>
+                      <input
+                        type="radio"
+                        name="skills"
+                        value={skill.name}
+                        style={{ display: "none" }}
+                        onClick={handleSkillSelect}
+                      />
+                      <img
+                        className="skills"
+                        src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
+                        alt={skill.name}
+                      />
+                      <i>{skill.name}</i>
+                    </label>
+                  ))}
               </div>
             </div>
+
             <br />
             <br />
 
