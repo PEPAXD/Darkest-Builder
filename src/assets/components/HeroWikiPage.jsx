@@ -79,10 +79,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeActive(!isUpgradeActive);
   };
 
+
   //SKILL SELECTION RADIOBUTTONS
+  const [selectedSkill, setSelectedSkill] = useState("");
+
   const handleSkillSelect = (event) => {
-    console.log(event.target.value);
+    setSelectedSkill(event.target.value);
   };
+
+
 
   return (
     <div className="wiki">
@@ -334,6 +339,31 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     </label>
                   ))}
               </div>
+            </div>
+
+            <br />
+
+            {/* //TODO: Add SkillsDataContainer */}
+
+            <div className="skillsInfoContainer">
+              <h4>{selectedSkill}</h4>
+              <br />
+
+                <div className="basicStats">
+                  <div className="type">A</div>
+                  <div className="Rank">B</div>
+                  <div className="target">C</div>
+                  <div className="Cooldown">D</div>
+                </div>
+
+
+              <br />
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                dolore, alias quas quasi quidem maxime fuga mollitia velit,
+                provident praesentium voluptatibus tenetur. Accusantium corporis
+                non voluptates sequi, dicta officia hic.
+              </p>
             </div>
 
             <br />

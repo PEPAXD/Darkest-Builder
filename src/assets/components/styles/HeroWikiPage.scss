@@ -587,7 +587,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      justify-content: center;  
+      justify-content: center;
     }
 
     .skillsSetB {
@@ -595,7 +595,6 @@
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
-
     }
 
     .imgContain {
@@ -630,8 +629,8 @@
           height: 100%;
         }
 
-        &:hover{
-        border: 2px solid #696a6c;
+        &:hover {
+          border: 2px solid #696a6c;
         }
       }
 
@@ -641,7 +640,7 @@
         text-transform: uppercase;
 
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
         white-space: nowrap;
         margin-bottom: 1rem;
       }
@@ -649,7 +648,29 @@
       input[type="radio"]:checked ~ i {
         color: #f5b92c;
       }
+    }
+  }
 
+  .skillsInfoContainer {
+    width: 100%;
+    background-color: #000;
+
+    .basicStats {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      width: 100%;
+      gap: 1rem;
+    }
+
+    h4 {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: 700;
+
+      background-color: #610804;
     }
   }
 }
