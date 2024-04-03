@@ -456,32 +456,32 @@ export const heroWiki = [
           ],
 
           stats: {
-            HP: 434,
-            SPD: 235,
+            HP: 29,
+            SPD: 5,
 
-            BLEED: 234,
-            BLIGHT: 234,
-            BURN: 234,
-            DISEASE: 234,
-            STUN: 234,
-            MOVE: 234,
-            DEBUFF: 234,
-            DEATHBLOW: 234,
+            BLEED: 30,
+            BLIGHT: 30,
+            BURN: 30,
+            DISEASE: 30,
+            STUN: 20,
+            MOVE: 20,
+            DEBUFF: 30,
+            DEATHBLOW: 60,
 
-            FORW: 234,
-            BACK: 234,
+            FORW: 2,
+            BACK: 2,
 
             upgrades: {
-              HP: 35,
-              SPD: 5,
+              HP: 29,
+              SPD: 7,
 
-              BLEED: 40,
-              BLIGHT: 30,
+              BLEED: 30,
+              BLIGHT: 40,
               BURN: 30,
-              DISEASE: 40,
-              STUN: 40,
-              MOVE: 30,
-              DEBUFF: 20,
+              DISEASE: 30,
+              STUN: 20,
+              MOVE: 20,
+              DEBUFF: 30,
               DEATHBLOW: 75,
 
               FORW: 2,
@@ -520,6 +520,88 @@ export const heroWiki = [
 
               ],
             },
+
+            {
+              id: 4,
+              name: "Poison Dart",
+              img: "poisondart",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 5,
+              name: "Absinthe",
+              img: "absinthe",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 6,
+              name: "Dead of Night",
+              img: "deadofnight",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 7,
+              name: "Glint in the Dark",
+              img: "glintinthedark",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 8,
+              name: "Lunge",
+              img: "lunge",
+              
+              stats: [
+
+              ],
+            },
+
+            
+            {
+              id: 9,
+              name: "Pirouette",
+              img: "pirouette",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 10,
+              name: "Repartee",
+              img: "repartee",
+              
+              stats: [
+
+              ],
+            },
+
+            {
+              id: 11,
+              name: "Shadow Fade",
+              img: "shadowfade",
+              
+              stats: [
+
+              ],
+            },
+            
           ],
         },
       ],

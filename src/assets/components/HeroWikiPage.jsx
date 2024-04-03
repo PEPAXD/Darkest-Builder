@@ -290,10 +290,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
-            {/* 
-//TODO: WIP HEROSKILLS RADIO-BUTTONS ARRAY 
-*/}
-
             <div className="skillsContain">
               <div className="skillsSetA">
                 {heroWiki[0].heroStats[index][1].skills
