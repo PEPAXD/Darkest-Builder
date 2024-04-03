@@ -17,15 +17,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
       (name) => name === heroName
     );
     setIndex(newIndex);
+    setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
     setIndex((oldIndex) => {
+      let newIndex;
       if (direction === "back") {
-        return oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
+        newIndex = oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
       } else if (direction === "forward") {
-        return oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
+        newIndex = oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
       }
+      setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
+      return newIndex;
     });
 
     setPathIndex(0);
@@ -81,7 +85,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
 
   //SKILL SELECTION RADIOBUTTONS
-  const [selectedSkill, setSelectedSkill] = useState("");
+  const [selectedSkill, setSelectedSkill] = useState(heroWiki[0].heroStats[index][1].skills[0].name);
 
   const handleSkillSelect = (event) => {
     setSelectedSkill(event.target.value);
