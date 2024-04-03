@@ -92,8 +92,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
   const [selectedSkill, setSelectedSkill] = useState(
     heroWiki[0].heroStats[index][1].skills[0].name
   );
-  const [selectedInput, setSelectedInput] = useState(0);
 
+  const [selectedInput, setSelectedInput] = useState(0);
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -102,8 +102,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
   //Rank/Target checkPOints
   const pointSlots = [1, 2, 3, 4];
   const rankChecksPoints = [4];
-  const targetChecksPoints = [1,2];
-
+  const targetChecksPoints = [1, 2];
 
   return (
     <div className="wiki">
@@ -310,53 +309,26 @@ function HeroWikiPage({ url_Bg, heroName }) {
               </div>
             </div>
             <br />
-
-            {/* //!: FixBug borderChecked Input bottom-row */}
-
+            
             <div className="skillsContain">
-              <div className="skillsSetA">
-                {heroWiki[0].heroStats[index][1].skills
-                  .slice(0, 6)
-                  .map((skill, i) => (
-                    <label className="imgContain" key={skill.id}>
-                      <input
-                        type="radio"
-                        name="skills"
-                        value={skill.name}
-                        checked={i === selectedInput}
-                        style={{ display: "none" }}
-                        onChange={(event) => handleSkillSelect(event, i)}
-                      />
-                      <img
-                        className="skills"
-                        src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
-                        alt={skill.name}
-                      />
-                      <i>{skill.name}</i>
-                    </label>
-                  ))}
-              </div>
-              <div className="skillsSetB">
-                {heroWiki[0].heroStats[index][1].skills
-                  .slice(6)
-                  .map((skill, i) => (
-                    <label className="imgContain" key={skill.id}>
-                      <input
-                        type="radio"
-                        name="skills"
-                        value={skill.name}
-                        style={{ display: "none" }}
-                        onChange={(event) => handleSkillSelect(event, i)}
-                      />
-                      <img
-                        className="skills"
-                        src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
-                        alt={skill.name}
-                      />
-                      <i>{skill.name}</i>
-                    </label>
-                  ))}
-              </div>
+              {heroWiki[0].heroStats[index][1].skills.map((skill, i) => (
+                <label className="imgContain" key={skill.id}>
+                  <input
+                    type="radio"
+                    name="skills"
+                    value={skill.name}
+                    checked={i === selectedInput}
+                    style={{ display: "none" }}
+                    onChange={(event) => handleSkillSelect(event, i)}
+                  />
+                  <img
+                    className="skills"
+                    src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
+                    alt={skill.name}
+                  />
+                  <i>{skill.name}</i>
+                </label>
+              ))}
             </div>
 
             <br />
@@ -386,7 +358,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                           <div
                             className="checkmark"
                             id={
-                              rankChecksPoints.includes(number) ? "rankCheck" : ""
+                              rankChecksPoints.includes(number)
+                                ? "rankCheck"
+                                : ""
                             }
                             key={number}
                           />
@@ -405,7 +379,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                           <div
                             className="checkmark"
                             id={
-                              targetChecksPoints.includes(number) ? "targetCheck" : ""
+                              targetChecksPoints.includes(number)
+                                ? "targetCheck"
+                                : ""
                             }
                             key={number}
                           />
