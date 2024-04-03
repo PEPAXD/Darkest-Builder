@@ -3,7 +3,9 @@ import { heroWiki } from "../data/heroWiki.js";
 import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { TbClockBolt } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
+
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
@@ -417,8 +419,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <b>Cooldown</b>
                     <div>
                       <br />
-                      <GiSwordman />
-                      <i> Melee</i>
+                      <TbClockBolt />0
                     </div>
                   </li>
                 </ul>
