@@ -691,14 +691,6 @@
         }
 
         .checkBoxStyles{
-
-          .container input {
-            position: absolute;
-            opacity: 0;
-            height: 0;
-            width: 0;
-          }
-
           .container {
             display: flex;
             align-items: center;
@@ -710,22 +702,32 @@
             user-select: none;
             padding: 4px;
             border-radius: 25px;
-          }
 
-          .checkmark {
-            position: relative;
-            top: 0;
-            left: 0;
-            height: 1.3em;
-            width: 1.3em;
-            border-radius: 1rem;
-            background-color: #333;
-            transition: 0.1s;
-          }
+            input {
+              position: absolute;
+              opacity: 0;
+              height: 0;
+              width: 0;
+            }
 
-          .container input:checked ~ .checkmark {
-            background-color: #AA8C45;
-            box-shadow: 0 0 10px #AA8C45;
+            .checkmark {
+              position: relative;
+              top: 0;
+              left: 0;
+              height: 1.3em;
+              width: 1.3em;
+              border-radius: 1rem;
+              background-color: #333;
+              transition: 0.1s;
+            }
+
+            #rankCheck{
+              background-color: #AA8C45;
+            }
+
+            #targetCheck{
+              background-color: #2A6383;
+            }
           }
         }
       }

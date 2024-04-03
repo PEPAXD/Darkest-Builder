@@ -6,7 +6,6 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { TbClockBolt } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
 
-
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
 
@@ -99,6 +98,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
   };
+
+  //Rank/Target checkPOints
+  const pointSlots = [1, 2, 3, 4];
+  const rankChecksPoints = [4];
+  const targetChecksPoints = [1,2];
+
 
   return (
     <div className="wiki">
@@ -306,7 +311,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
-                          
             {/* //!: FixBug borderChecked Input bottom-row */}
 
             <div className="skillsContain">
@@ -377,19 +381,16 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <b>Rank</b>
                     <div>
                       <br />
-
-                      <label class="container">
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
-
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
-
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
-
-                        <input type="checkbox" checked="checked"></input>
-                        <div class="checkmark"></div>
+                      <label className="container">
+                        {pointSlots.map((number) => (
+                          <div
+                            className="checkmark"
+                            id={
+                              rankChecksPoints.includes(number) ? "rankCheck" : ""
+                            }
+                            key={number}
+                          />
+                        ))}
                       </label>
                     </div>
                   </li>
@@ -398,19 +399,17 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <b>Target</b>
                     <div>
                       <br />
-                    
-                      <label class="container">
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
 
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
-
-                        <input type="checkbox" checked=""></input>
-                        <div class="checkmark"></div>
-
-                        <input type="checkbox" checked="checked"></input>
-                        <div class="checkmark"></div>
+                      <label className="container">
+                        {pointSlots.map((number) => (
+                          <div
+                            className="checkmark"
+                            id={
+                              targetChecksPoints.includes(number) ? "targetCheck" : ""
+                            }
+                            key={number}
+                          />
+                        ))}
                       </label>
                     </div>
                   </li>
@@ -425,7 +424,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </ul>
               </div>
 
-                    <br />
+              <br />
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                 dolore, alias quas quasi quidem maxime fuga mollitia velit,
