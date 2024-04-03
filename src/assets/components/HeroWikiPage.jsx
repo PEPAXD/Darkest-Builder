@@ -24,15 +24,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setIndex((oldIndex) => {
       let newIndex;
       if (direction === "back") {
-        newIndex = oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
+        newIndex =
+          oldIndex > 0 ? oldIndex - 1 : heroWiki[0].heroNames.length - 1;
       } else if (direction === "forward") {
-        newIndex = oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
+        newIndex =
+          oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
       }
       setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
       return newIndex;
     });
 
     setPathIndex(0);
+    setSelectedInput(0);
     setSelectedPathIndex(0);
   };
 
@@ -83,15 +86,16 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeActive(!isUpgradeActive);
   };
 
-
   //SKILL SELECTION RADIOBUTTONS
-  const [selectedSkill, setSelectedSkill] = useState(heroWiki[0].heroStats[index][1].skills[0].name);
+  const [selectedSkill, setSelectedSkill] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].name
+  );
+  const [selectedInput, setSelectedInput] = useState(0);
 
-  const handleSkillSelect = (event) => {
+  const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
+    setSelectedInput(i);
   };
-
-
 
   return (
     <div className="wiki">
@@ -309,9 +313,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         type="radio"
                         name="skills"
                         value={skill.name}
-                        defaultChecked={i === 0}
+                        checked={i === selectedInput}
                         style={{ display: "none" }}
-                        onClick={handleSkillSelect}
+                        onChange={(event) => handleSkillSelect(event, i)}
                       />
                       <img
                         className="skills"
@@ -332,7 +336,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         name="skills"
                         value={skill.name}
                         style={{ display: "none" }}
-                        onClick={handleSkillSelect}
+                        onChange={(event) => handleSkillSelect(event, i)}
                       />
                       <img
                         className="skills"
@@ -353,13 +357,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <h4>{selectedSkill}</h4>
               <br />
 
-                <div className="basicStats">
-                  <div className="type">A</div>
-                  <div className="Rank">B</div>
-                  <div className="target">C</div>
-                  <div className="Cooldown">D</div>
-                </div>
-
+              <div className="basicStats">
+                <div className="type">A</div>
+                <div className="Rank">B</div>
+                <div className="target">C</div>
+                <div className="Cooldown">D</div>
+              </div>
 
               <br />
               <p>
