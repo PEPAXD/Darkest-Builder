@@ -3,6 +3,7 @@ import { heroWiki } from "../data/heroWiki.js";
 import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
@@ -303,6 +304,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
+                          
+            {/* //!: FixBug borderChecked Input bottom-row */}
+
             <div className="skillsContain">
               <div className="skillsSetA">
                 {heroWiki[0].heroStats[index][1].skills
@@ -355,16 +359,72 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <div className="skillsInfoContainer">
               <h4>{selectedSkill}</h4>
-              <br />
 
               <div className="basicStats">
-                <div className="type">A</div>
-                <div className="Rank">B</div>
-                <div className="target">C</div>
-                <div className="Cooldown">D</div>
+                <ul>
+                  <li>
+                    <b>Type</b>
+                    <div>
+                      <br />
+                      <GiSwordman />
+                      <i> Melee</i>
+                    </div>
+                  </li>
+
+                  <li className="checkBoxStyles">
+                    <b>Rank</b>
+                    <div>
+                      <br />
+
+                      <label class="container">
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked="checked"></input>
+                        <div class="checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+
+                  <li className="checkBoxStyles">
+                    <b>Target</b>
+                    <div>
+                      <br />
+                    
+                      <label class="container">
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked=""></input>
+                        <div class="checkmark"></div>
+
+                        <input type="checkbox" checked="checked"></input>
+                        <div class="checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+
+                  <li>
+                    <b>Cooldown</b>
+                    <div>
+                      <br />
+                      <GiSwordman />
+                      <i> Melee</i>
+                    </div>
+                  </li>
+                </ul>
               </div>
 
-              <br />
+                    <br />
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                 dolore, alias quas quasi quidem maxime fuga mollitia velit,
