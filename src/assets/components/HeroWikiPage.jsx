@@ -89,14 +89,21 @@ function HeroWikiPage({ url_Bg, heroName }) {
   };
 
   //SKILL SELECTION RADIOBUTTONS
+  const [selectedInput, setSelectedInput] = useState(0);
+
   const [selectedSkill, setSelectedSkill] = useState(
     heroWiki[0].heroStats[index][1].skills[0].name
   );
 
-  const [selectedInput, setSelectedInput] = useState(0);
+  //TODO:WIP
+  const [typeSkill, setTypeSkill] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.type
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
+    setTypeSkill(heroWiki[0].heroStats[index][1].skills[i].stats.type);
   };
 
   //Rank/Target checkPOints
@@ -309,7 +316,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
               </div>
             </div>
             <br />
-            
+
             <div className="skillsContain">
               {heroWiki[0].heroStats[index][1].skills.map((skill, i) => (
                 <label className="imgContain" key={skill.id}>
@@ -345,7 +352,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <div>
                       <br />
                       <GiSwordman />
-                      <i> Melee</i>
+                      <i> {typeSkill}</i>
                     </div>
                   </li>
 

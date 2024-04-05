@@ -275,121 +275,108 @@ export const heroWiki = [
               name: "Wicked Slice",
               img: "wickedslice",
 
-              stats: [
-
-              ],
+              stats: {
+                type: "Melee",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
+              
             },
 
             {
               id: 2,
               name: "Pistol Shot",
               img: "pistolshot",
-              
-              stats: [
 
-              ],
+              stats: {
+                type: "AAA",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
               id: 3,
               name: "Duelist's Advance",
               img: "duelistsadvance",
-              
-              stats: [
 
-              ],
+              stats: {
+                type: "BBB",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
               id: 4,
               name: "Tracking Shot",
               img: "trackingshot",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 5,
               name: "Take Aim",
               img: "takeaim",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 6,
               name: "Point Blank Shot",
               img: "pointblankshot",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 7,
               name: "Grapeshot Blast",
               img: "grapeshotblast",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 8,
               name: "Open Vein",
               img: "openvein",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
-            
             {
               id: 9,
               name: "Double Tap",
               img: "doubletap",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 10,
               name: "Highway Robbery",
               img: "highwayrobbery",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 11,
               name: "Double Cross",
               img: "doublecross",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
-
-
-
-
-
-
-
-
           ],
-
         },
       ],
 
@@ -489,119 +476,112 @@ export const heroWiki = [
             },
           },
 
-          
           skills: [
             {
               id: 1,
               name: "Pick to the Face",
               img: "picktotheface",
 
-              stats: [
-
-              ],
+              stats: {
+                type: "CCC",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
               id: 2,
               name: "Thrown Dagger",
               img: "throwndagger",
-              
-              stats: [
 
-              ],
+              stats: {
+                type: "DDD",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
               id: 3,
               name: "Flashing Daggers",
               img: "flashingdaggers",
-              
-              stats: [
 
-              ],
+              stats: {
+                type: "EEE",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
               id: 4,
               name: "Poison Dart",
               img: "poisondart",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 5,
               name: "Absinthe",
               img: "absinthe",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 6,
               name: "Dead of Night",
               img: "deadofnight",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 7,
               name: "Glint in the Dark",
               img: "glintinthedark",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 8,
               name: "Lunge",
               img: "lunge",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
-            
             {
               id: 9,
               name: "Pirouette",
               img: "pirouette",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 10,
               name: "Repartee",
               img: "repartee",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
 
             {
               id: 11,
               name: "Shadow Fade",
               img: "shadowfade",
-              
-              stats: [
 
-              ],
+              stats: [],
             },
-            
           ],
         },
       ],
