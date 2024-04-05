@@ -20,6 +20,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
     setIndex(newIndex);
     setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
+    setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -33,6 +34,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
           oldIndex < heroWiki[0].heroNames.length - 1 ? oldIndex + 1 : 0;
       }
       setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
+      setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
       return newIndex;
     });
 
@@ -351,7 +353,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <b>Type</b>
                     <div>
                       <br />
-                      <GiSwordman />
+                      {typeSkill === "Melee" ? (
+                        <GiSwordman />
+                      ) : typeSkill === "Ranged" ? (
+                        <GiBowman />
+                      ) : null}
                       <i> {typeSkill}</i>
                     </div>
                   </li>

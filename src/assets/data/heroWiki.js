@@ -291,7 +291,7 @@ export const heroWiki = [
               img: "pistolshot",
 
               stats: {
-                type: "AAA",
+                type: "Ranged",
                 Rank: [1],
                 Target: [1, 2],
                 Cooldown: 0,
