@@ -277,7 +277,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
-                Rank: [1],
+                Rank: [2, 3, 4],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -291,7 +291,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-                Rank: [1],
+                Rank: [1, 2, 3],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -305,7 +305,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
-                Rank: [1],
+                Rank: [1, 2, 3],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -319,7 +319,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-                Rank: [1],
+                Rank: [1, 2, 3, 4],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -333,6 +333,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Buff",
+                Rank: [1, 2, 3, 4],
               },
             },
 
@@ -343,6 +344,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
+                Rank: [4],
               },
             },
 
@@ -353,6 +355,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
+                Rank: [1, 2, 3, 4],
               },
             },
 
@@ -363,6 +366,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
+                Rank: [2, 3, 4],
               },
             },
 
@@ -373,6 +377,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
+                Rank: [2, 3],
               },
             },
 
@@ -383,6 +388,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
+                Rank: [1, 2, 3],
               },
             },
 
@@ -393,6 +399,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
+                Rank: [3, 4],
               },
             },
           ],
@@ -503,7 +510,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
-                Rank: [1],
+                Rank: [2, 3, 4],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -517,7 +524,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-                Rank: [1],
+                Rank: [1, 2, 3],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -531,7 +538,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-                Rank: [1],
+                Rank: [1, 2, 3],
                 Target: [1, 2],
                 Cooldown: 0,
                 Uses: NaN,
@@ -545,6 +552,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
+                Rank: [1, 2, 3],
               },
             },
 
@@ -555,6 +563,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Buff",
+                Rank: [1, 2, 3, 4],
               },
             },
 
@@ -565,6 +574,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
+                Rank: [1, 2, 3, 4],
               },
             },
 
@@ -575,7 +585,8 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-              }
+                Rank: [2, 3, 4],
+              },
             },
 
             {
@@ -585,7 +596,8 @@ export const heroWiki = [
 
               stats: {
                 type: "Melee",
-              }
+                Rank: [1, 2],
+              },
             },
 
             {
@@ -595,7 +607,8 @@ export const heroWiki = [
 
               stats: {
                 type: "Ranged",
-              }
+                Rank: [3, 4],
+              },
             },
 
             {
@@ -605,7 +618,8 @@ export const heroWiki = [
 
               stats: {
                 type: "Buff",
-              }
+                Rank: [1, 2, 3, 4],
+              },
             },
 
             {
@@ -615,7 +629,8 @@ export const heroWiki = [
 
               stats: {
                 type: "Buff",
-              }
+                Rank: [3, 4],
+              },
             },
           ],
         },

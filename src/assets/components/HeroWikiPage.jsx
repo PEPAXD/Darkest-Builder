@@ -8,6 +8,7 @@ import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
+import { set } from "firebase/database";
 
 function HeroWikiPage({ url_Bg, heroName }) {
   const [index, setIndex] = useState(0);
@@ -21,6 +22,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setIndex(newIndex);
     setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
     setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
+    setrankChecksPoints(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -35,6 +37,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
       }
       setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
       setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
+      setrankChecksPoints(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank);
       return newIndex;
     });
 
@@ -97,21 +100,25 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].name
   );
 
-  //TODO:WIP
   const [typeSkill, setTypeSkill] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.type
   );
+
+  //Rank/target checkPoints
+  const pointSlots = [1, 2, 3, 4];
+  const [rankChecksPoints, setrankChecksPoints ] = useState(heroWiki[0].heroStats[index][1].skills[0].stats.Rank);
+
+
+
+  const [targetChecksPoints, setTargetChecksPoints] = useState([1, 2]);
+
 
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
     setTypeSkill(heroWiki[0].heroStats[index][1].skills[i].stats.type);
+    setrankChecksPoints(heroWiki[0].heroStats[index][1].skills[i].stats.Rank);
   };
-
-  //Rank/Target checkPOints
-  const pointSlots = [1, 2, 3, 4];
-  const rankChecksPoints = [4];
-  const targetChecksPoints = [1, 2];
 
   return (
     <div className="wiki">
