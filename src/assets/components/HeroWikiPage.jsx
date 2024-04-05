@@ -8,7 +8,6 @@ import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
-import { set } from "firebase/database";
 
 function HeroWikiPage({ url_Bg, heroName }) {
   const [index, setIndex] = useState(0);
@@ -22,7 +21,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setIndex(newIndex);
     setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
     setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
-    setrankChecksPoints(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank);
+    setrankChecksPoints(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank
+    );
+    setTargetChecksPoints(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
+    );
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -37,7 +41,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
       }
       setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
       setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
-      setrankChecksPoints(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank);
+      setrankChecksPoints(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.Rank
+      );
+      setTargetChecksPoints(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
+      );
       return newIndex;
     });
 
@@ -106,18 +115,21 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   //Rank/target checkPoints
   const pointSlots = [1, 2, 3, 4];
-  const [rankChecksPoints, setrankChecksPoints ] = useState(heroWiki[0].heroStats[index][1].skills[0].stats.Rank);
-
-
-
-  const [targetChecksPoints, setTargetChecksPoints] = useState([1, 2]);
-
+  const [rankChecksPoints, setrankChecksPoints] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.Rank
+  );
+  const [targetChecksPoints, setTargetChecksPoints] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.Target
+  );
 
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
     setTypeSkill(heroWiki[0].heroStats[index][1].skills[i].stats.type);
     setrankChecksPoints(heroWiki[0].heroStats[index][1].skills[i].stats.Rank);
+    setTargetChecksPoints(
+      heroWiki[0].heroStats[index][1].skills[i].stats.Target
+    );
   };
 
   return (
@@ -373,7 +385,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   <li className="checkBoxStyles">
                     <b>Rank</b>
                     <div className="dataStat">
-
                       <label className="container">
                         {pointSlots.map((number) => (
                           <div
@@ -393,30 +404,40 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   <li className="checkBoxStyles">
                     <b>Target</b>
                     <div className="dataStat">
-
                       <label className="container">
-                        {pointSlots.map((number) => (
+                        {targetChecksPoints !== "Self" ? (
+                          pointSlots.map((number) => (
+                            <div
+                              className="checkmark"
+                              id={
+                                targetChecksPoints.includes(number)
+                                  ? "targetCheck"
+                                  : ""
+                              }
+                              key={number}
+                            />
+                          ))
+                        ) : (
                           <div
-                            className="checkmark"
-                            id={
-                              targetChecksPoints.includes(number)
-                                ? "targetCheck"
-                                : ""
-                            }
-                            key={number}
-                          />
-                        ))}
+                            style={{
+                              backgroundColor: "#1CAC78",
+                              color: "white",
+                              padding: "0rem 2rem",
+                              fontStyle: "italic",
+                            }}
+                          >
+                            Self
+                          </div>
+                        )}
                       </label>
                     </div>
                   </li>
 
                   <li>
-
                     <b>Cooldown</b>
                     <div className="dataStat">
-                      <TbClockBolt style={{ fontSize: '1.5em' }} />0
+                      <TbClockBolt style={{ fontSize: "1.5em" }} />0
                     </div>
-
                   </li>
                 </ul>
               </div>
