@@ -282,7 +282,6 @@ export const heroWiki = [
                 Cooldown: 0,
                 Uses: NaN,
               },
-              
             },
 
             {
@@ -305,7 +304,7 @@ export const heroWiki = [
               img: "duelistsadvance",
 
               stats: {
-                type: "BBB",
+                type: "Melee",
                 Rank: [1],
                 Target: [1, 2],
                 Cooldown: 0,
@@ -318,7 +317,13 @@ export const heroWiki = [
               name: "Tracking Shot",
               img: "trackingshot",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+                Rank: [1],
+                Target: [1, 2],
+                Cooldown: 0,
+                Uses: NaN,
+              },
             },
 
             {
@@ -326,7 +331,9 @@ export const heroWiki = [
               name: "Take Aim",
               img: "takeaim",
 
-              stats: [],
+              stats: {
+                type: "Buff",
+              },
             },
 
             {
@@ -334,7 +341,9 @@ export const heroWiki = [
               name: "Point Blank Shot",
               img: "pointblankshot",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              },
             },
 
             {
@@ -342,7 +351,9 @@ export const heroWiki = [
               name: "Grapeshot Blast",
               img: "grapeshotblast",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              },
             },
 
             {
@@ -350,7 +361,9 @@ export const heroWiki = [
               name: "Open Vein",
               img: "openvein",
 
-              stats: [],
+              stats: {
+                type: "Melee",
+              },
             },
 
             {
@@ -358,7 +371,9 @@ export const heroWiki = [
               name: "Double Tap",
               img: "doubletap",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              },
             },
 
             {
@@ -366,7 +381,9 @@ export const heroWiki = [
               name: "Highway Robbery",
               img: "highwayrobbery",
 
-              stats: [],
+              stats: {
+                type: "Melee",
+              },
             },
 
             {
@@ -374,7 +391,9 @@ export const heroWiki = [
               name: "Double Cross",
               img: "doublecross",
 
-              stats: [],
+              stats: {
+                type: "Melee",
+              },
             },
           ],
         },
@@ -483,7 +502,7 @@ export const heroWiki = [
               img: "picktotheface",
 
               stats: {
-                type: "CCC",
+                type: "Melee",
                 Rank: [1],
                 Target: [1, 2],
                 Cooldown: 0,
@@ -497,7 +516,7 @@ export const heroWiki = [
               img: "throwndagger",
 
               stats: {
-                type: "DDD",
+                type: "Ranged",
                 Rank: [1],
                 Target: [1, 2],
                 Cooldown: 0,
@@ -511,7 +530,7 @@ export const heroWiki = [
               img: "flashingdaggers",
 
               stats: {
-                type: "EEE",
+                type: "Ranged",
                 Rank: [1],
                 Target: [1, 2],
                 Cooldown: 0,
@@ -524,7 +543,9 @@ export const heroWiki = [
               name: "Poison Dart",
               img: "poisondart",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              },
             },
 
             {
@@ -532,7 +553,9 @@ export const heroWiki = [
               name: "Absinthe",
               img: "absinthe",
 
-              stats: [],
+              stats: {
+                type: "Buff",
+              },
             },
 
             {
@@ -540,7 +563,9 @@ export const heroWiki = [
               name: "Dead of Night",
               img: "deadofnight",
 
-              stats: [],
+              stats: {
+                type: "Melee",
+              },
             },
 
             {
@@ -548,7 +573,9 @@ export const heroWiki = [
               name: "Glint in the Dark",
               img: "glintinthedark",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              }
             },
 
             {
@@ -556,7 +583,9 @@ export const heroWiki = [
               name: "Lunge",
               img: "lunge",
 
-              stats: [],
+              stats: {
+                type: "Melee",
+              }
             },
 
             {
@@ -564,7 +593,9 @@ export const heroWiki = [
               name: "Pirouette",
               img: "pirouette",
 
-              stats: [],
+              stats: {
+                type: "Ranged",
+              }
             },
 
             {
@@ -572,7 +603,9 @@ export const heroWiki = [
               name: "Repartee",
               img: "repartee",
 
-              stats: [],
+              stats: {
+                type: "Buff",
+              }
             },
 
             {
@@ -580,7 +613,9 @@ export const heroWiki = [
               name: "Shadow Fade",
               img: "shadowfade",
 
-              stats: [],
+              stats: {
+                type: "Buff",
+              }
             },
           ],
         },

@@ -3,7 +3,7 @@ import { heroWiki } from "../data/heroWiki.js";
 import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { TbClockBolt } from "react-icons/tb";
+import { TbClockBolt, TbArrowBigUpLinesFilled } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
@@ -351,12 +351,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <ul>
                   <li>
                     <b>Type</b>
-                    <div>
-                      <br />
+                    <div className="dataStat">
                       {typeSkill === "Melee" ? (
                         <GiSwordman />
                       ) : typeSkill === "Ranged" ? (
                         <GiBowman />
+                      ) : typeSkill === "Buff" ? (
+                        <TbArrowBigUpLinesFilled />
                       ) : null}
                       <i> {typeSkill}</i>
                     </div>
@@ -364,8 +365,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                   <li className="checkBoxStyles">
                     <b>Rank</b>
-                    <div>
-                      <br />
+                    <div className="dataStat">
+
                       <label className="container">
                         {pointSlots.map((number) => (
                           <div
@@ -384,8 +385,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                   <li className="checkBoxStyles">
                     <b>Target</b>
-                    <div>
-                      <br />
+                    <div className="dataStat">
 
                       <label className="container">
                         {pointSlots.map((number) => (
@@ -404,11 +404,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   </li>
 
                   <li>
+
                     <b>Cooldown</b>
-                    <div>
-                      <br />
-                      <TbClockBolt />0
+                    <div className="dataStat">
+                      <TbClockBolt style={{ fontSize: '1.5em' }} />0
                     </div>
+
                   </li>
                 </ul>
               </div>

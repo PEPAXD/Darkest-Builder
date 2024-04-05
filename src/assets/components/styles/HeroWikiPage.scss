@@ -664,6 +664,10 @@
           width: 100%;
           list-style: none;
 
+          .dataStat{
+            margin-top: 10%;
+          }
+
           b {
             font-size: 1.2em;
             padding-bottom: 0.1rem;
@@ -671,11 +675,11 @@
           }
 
           svg {
-            font-size: 1.5em;
+            font-size: 1.2em;
           }
 
           i {
-            font-size: 1.2em;
+            font-size: 1.4em;
           }
         }
 
