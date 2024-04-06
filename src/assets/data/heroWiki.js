@@ -279,8 +279,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [2, 3, 4],
                 Target: [1, 2],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -293,8 +292,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3],
                 Target: [2, 3, 4],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -307,8 +305,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [1, 2, 3],
                 Target: [1, 2, 3],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -321,8 +318,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2, 3, 4],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -335,7 +331,7 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
-
+                Cooldown: 2,
               },
             },
 
@@ -348,6 +344,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [4],
                 Target: [1],
+                Cooldown: NaN,
 
               },
             },
@@ -361,7 +358,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2],
-
+                Cooldown: NaN,
 
               },
             },
@@ -375,7 +372,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [2, 3, 4],
                 Target: [1, 2],
-
+                Cooldown: NaN,
 
               },
             },
@@ -389,6 +386,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [2, 3],
                 Target: [2, 3],
+                Cooldown: NaN,
 
               },
             },
@@ -402,6 +400,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [1, 2, 3],
                 Target: [1, 2, 3],
+                Cooldown: 1,
 
               },
             },
@@ -415,6 +414,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [3, 4],
                 Target: [1, 2],
+                Cooldown: NaN,
 
               },
             },
@@ -528,8 +528,7 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [2,3,4],
                 Target: [1, 2],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -542,8 +541,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3],
                 Target: [2, 3, 4],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -556,8 +554,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3],
                 Target: [2, 3],
-                Cooldown: 0,
-                Uses: NaN,
+                Cooldown: NaN,
               },
             },
 
@@ -570,6 +567,7 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [1, 2, 3],
                 Target: [1, 2, 3, 4],
+                Cooldown: NaN,
 
               },
             },
@@ -583,6 +581,8 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
+                Cooldown: NaN,
+
               },
             },
 
@@ -595,6 +595,8 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2, 3, 4],
+                Cooldown: NaN,
+
 
               },
             },
@@ -608,6 +610,8 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [2, 3, 4],
                 Target: [1, 2, 3],
+                Cooldown: NaN,
+
 
 
               },
@@ -622,6 +626,8 @@ export const heroWiki = [
                 type: "Melee",
                 Rank: [1, 2],
                 Target: [1, 2, 3],
+                Cooldown: NaN,
+
               },
             },
 
@@ -634,6 +640,8 @@ export const heroWiki = [
                 type: "Ranged",
                 Rank: [3, 4],
                 Target: [1, 2],
+                Cooldown: 1,
+
 
               },
             },
@@ -647,6 +655,8 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
+                Cooldown: 2,
+
 
               },
             },
@@ -660,6 +670,8 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [3, 4],
                 Target: "Self",
+                Cooldown: 2,
+
               },
             },
           ],

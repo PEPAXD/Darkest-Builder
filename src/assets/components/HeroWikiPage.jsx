@@ -27,6 +27,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetChecksPoints(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
     );
+    setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -47,6 +48,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setTargetChecksPoints(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
       );
+      setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
+
+
       return newIndex;
     });
 
@@ -122,6 +126,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.Target
   );
 
+  //Cooldown
+  const [cooldown, setCooldown] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.Cooldown
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -130,6 +139,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetChecksPoints(
       heroWiki[0].heroStats[index][1].skills[i].stats.Target
     );
+    setCooldown(heroWiki[0].heroStats[index][1].skills[i].stats.Cooldown);
   };
 
   return (
@@ -433,12 +443,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     </div>
                   </li>
 
-                  <li>
-                    <b>Cooldown</b>
-                    <div className="dataStat">
-                      <TbClockBolt style={{ fontSize: "1.5em" }} />0
-                    </div>
-                  </li>
+                  {!isNaN(cooldown) && (
+                    <li>
+                      <b>Cooldown</b>
+                      <div className="dataStat">
+                        <TbClockBolt style={{ fontSize: "1.5em" }} />
+                        <i> {cooldown}</i>
+                      </div>
+                    </li>
+                  )}
                 </ul>
               </div>
 
