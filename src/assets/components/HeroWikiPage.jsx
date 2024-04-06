@@ -28,6 +28,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
     );
     setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
+    setSkillOverview(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
+    );
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -49,6 +52,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
       );
       setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
+      setSkillOverview(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
+      );
 
       return newIndex;
     });
@@ -144,7 +150,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.Target
     );
     setCooldown(heroWiki[0].heroStats[index][1].skills[i].stats.Cooldown);
-    setSkillOverview(heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew);
+    setSkillOverview(
+      heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew
+    );
   };
 
   return (
@@ -461,9 +469,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
               </div>
 
               <p>{skillOverview}</p>
+
+{/* //TODO: Add DAMAGE, STRESS, HEALING, and other stats */}
+
+              <h4>Hero Lore</h4>
             </div>
 
-            <br />
+
+
+
             <br />
 
             <p>

@@ -326,7 +326,7 @@ export const heroWiki = [
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
 
-                skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Dd2 Combo token and Removes Stealth token as an added bonus."
+                skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus."
               },
             },
 
@@ -340,6 +340,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
                 Cooldown: 2,
+
+                skillOverwiew: "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS."
               },
             },
 
@@ -354,6 +356,7 @@ export const heroWiki = [
                 Target: [1],
                 Cooldown: NaN,
 
+                skillOverwiew: "is a highly devastating skill, but has rather strict Rank requirement (Only can be used in Rank 1). Makes good combo with another Dancing heroes."
               },
             },
 
@@ -367,6 +370,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2],
                 Cooldown: NaN,
+
+                skillOverwiew: "Multi-hit attack. Due to the Low Base DMG is preferably used to remove Tokens and to finish off enemies at low health. Combined with takeaimTake skill can be used as a Pseudo Stress Healer (chance to heal Stress two times)"
 
               },
             },
@@ -382,6 +387,8 @@ export const heroWiki = [
                 Target: [1, 2],
                 Cooldown: NaN,
 
+                skillOverwiew: "Moderate Damage skill that hits the front ranks. Althought the direct damage is not high, the skill shines when the Target has Combo token. it doubles Bleed."
+
               },
             },
 
@@ -395,6 +402,8 @@ export const heroWiki = [
                 Rank: [2, 3],
                 Target: [2, 3],
                 Cooldown: NaN,
+
+                skillOverwiew: "High damage skill that hits the Middle-ranks. (when upgraded Execution 1 ), and deals more DMG when the enemy is a low HP. Works as a main DMG Skill, as a Finisher and is most effective the more health has the enemy."
 
               },
             },
@@ -410,6 +419,7 @@ export const heroWiki = [
                 Target: [1, 2, 3],
                 Cooldown: 1,
 
+                skillOverwiew: "is extremely useful against enemies that can apply positive Tokens on themselves or allies, as it can remove these Tokens and destroy enemies' advantages to alleviate combat risks. With the skill upgraded, the Highwayman can also steal powerful Tokens to increase his damage and defense"
               },
             },
 
@@ -423,6 +433,8 @@ export const heroWiki = [
                 Rank: [3, 4],
                 Target: [1, 2],
                 Cooldown: NaN,
+
+                skillOverwiew: "Can apply Vulnerable Token to enemies and Add Block token to Self. Is best pair with other heroes that can use Vulnerable token. Take Aim can make this Skill more effective as Crits token."
 
               },
             },
@@ -537,6 +549,8 @@ export const heroWiki = [
                 Rank: [2,3,4],
                 Target: [1, 2],
                 Cooldown: NaN,
+
+                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance."
               },
             },
 
@@ -550,6 +564,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3],
                 Target: [2, 3, 4],
                 Cooldown: NaN,
+
+                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance."
               },
             },
 
@@ -563,6 +579,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3],
                 Target: [2, 3],
                 Cooldown: NaN,
+
+                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance."
               },
             },
 
@@ -576,6 +594,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3],
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
+
+                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance."
 
               },
             },

@@ -38,16 +38,22 @@ function Header() {
           </li>
 
           <li>
+            <a href="#">Regions</a>
+          </li>
+          <li>
             <a href="#">Enemies</a>
           </li>
           <li>
             <a href="#">Builds</a>
           </li>
           <li>
-            <a href="#">Backstories</a>
+            <a href="#">dark-City</a>
           </li>
           <li>
-            <a href="#">TierList</a>
+            <a href="#">Hero-TierList</a>
+          </li>
+          <li>
+            <a href="#">Fandom</a>
           </li>
         </ul>
       </nav>
