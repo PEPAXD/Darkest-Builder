@@ -280,6 +280,8 @@ export const heroWiki = [
                 Rank: [2, 3, 4],
                 Target: [1, 2],
                 Cooldown: NaN,
+
+                skillOverwiew: "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow."
               },
             },
 
@@ -293,6 +295,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3],
                 Target: [2, 3, 4],
                 Cooldown: NaN,
+
+                skillOverwiew: "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4."
               },
             },
 
@@ -306,6 +310,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3],
                 Target: [1, 2, 3],
                 Cooldown: NaN,
+
+                skillOverwiew: "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill."
               },
             },
 
@@ -319,6 +325,8 @@ export const heroWiki = [
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
+
+                skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Dd2 Combo token and Removes Stealth token as an added bonus."
               },
             },
 

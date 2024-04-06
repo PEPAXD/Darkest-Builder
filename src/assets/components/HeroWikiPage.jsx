@@ -50,7 +50,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
       );
       setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
 
-
       return newIndex;
     });
 
@@ -131,6 +130,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.Cooldown
   );
 
+  //skillOverwiew
+  const [skillOverview, setSkillOverview] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.skillOverwiew
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -140,6 +144,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.Target
     );
     setCooldown(heroWiki[0].heroStats[index][1].skills[i].stats.Cooldown);
+    setSkillOverview(heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew);
   };
 
   return (
@@ -455,13 +460,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </ul>
               </div>
 
-              <br />
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-                dolore, alias quas quasi quidem maxime fuga mollitia velit,
-                provident praesentium voluptatibus tenetur. Accusantium corporis
-                non voluptates sequi, dicta officia hic.
-              </p>
+              <p>{skillOverview}</p>
             </div>
 
             <br />
