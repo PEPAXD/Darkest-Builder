@@ -281,7 +281,11 @@ export const heroWiki = [
                 Target: [1, 2],
                 Cooldown: NaN,
 
-                skillOverwiew: "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow."
+                skillOverwiew: "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow.",
+
+                damage: [3, 5],
+                crit: 15,
+                targetDebuff: "Bleed",
               },
             },
 
@@ -296,7 +300,11 @@ export const heroWiki = [
                 Target: [2, 3, 4],
                 Cooldown: NaN,
 
-                skillOverwiew: "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4."
+                skillOverwiew: "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4.",
+
+                damage: [1, 2],
+                crit: 15,
+                targetDebuff: "Bleed",
               },
             },
 
@@ -311,7 +319,11 @@ export const heroWiki = [
                 Target: [1, 2, 3],
                 Cooldown: NaN,
 
-                skillOverwiew: "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill."
+                skillOverwiew: "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill.",
+
+                damage: [2, 3],
+                crit: 15,
+                targetDebuff: "Bleed",
               },
             },
 
@@ -326,7 +338,12 @@ export const heroWiki = [
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
 
-                skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus."
+                skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus.",
+
+                damage: [3, 4],
+                crit: 15,
+                targetDebuff: "Bleed",
+
               },
             },
 
@@ -341,7 +358,11 @@ export const heroWiki = [
                 Target: "Self",
                 Cooldown: 2,
 
-                skillOverwiew: "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS."
+                skillOverwiew: "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS.",
+
+                damage: [4, 5],
+                crit: 15,
+                targetDebuff: "Bleed",
               },
             },
 
@@ -565,7 +586,11 @@ export const heroWiki = [
                 Target: [2, 3, 4],
                 Cooldown: NaN,
 
-                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance."
+                skillOverwiew: "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance.",
+
+                damage: [3, 5],
+                crit: 15,
+                targetDebuff: "Bleed",
               },
             },
 

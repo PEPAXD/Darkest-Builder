@@ -31,6 +31,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSkillOverview(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
     );
+    setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -55,6 +56,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setSkillOverview(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
       );
+      setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
 
       return newIndex;
     });
@@ -141,6 +143,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.skillOverwiew
   );
 
+  //tableDataSkill
+  const [damage, setDamage] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.damage
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -153,6 +160,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSkillOverview(
       heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew
     );
+    setDamage(heroWiki[0].heroStats[index][1].skills[i].stats.damage);
   };
 
   return (
@@ -476,7 +484,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <div id="table-0">DAMAGE</div>
                     <div id="table-1">CRIT</div>
                     <div id="table-2">TARGET</div>
-                    <div id="table-3">6-8</div>
+
+                    <div id="table-3">
+                      {damage && `${damage[0]}-${damage[1]}`}
+                    </div>
                     <div id="table-4">30%</div>
                     <div id="table-5">Execution 2</div>
                   </div>
