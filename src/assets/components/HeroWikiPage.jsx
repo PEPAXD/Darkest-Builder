@@ -492,6 +492,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
               </div>
             </div>
 
+            <br />
+
             <h2>TopTrinkeds</h2>
             <hr />
             <p>
