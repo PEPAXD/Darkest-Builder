@@ -384,8 +384,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
 
-            {/* //TODO: Add SkillsDataContainer */}
-
             <div className="skillsInfoContainer">
               <h4>{selectedSkill}</h4>
 
@@ -470,33 +468,32 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
               <p>{skillOverview}</p>
 
-              {/* //TODO: Add DAMAGE, STRESS, HEALING, and other stats */}
+              <div className="statsContainer">
+                <div className="statsDataGrid">
+                  <h4>Stats Data Table</h4>
 
-              <div className="statsDataGrid">
-                <h4>Stats Data Table</h4>
+                  <div class="angry-grid">
+                    <div id="table-0">DAMAGE</div>
+                    <div id="table-1">CRIT</div>
+                    <div id="table-2">TARGET</div>
+                    <div id="table-3">6-8</div>
+                    <div id="table-4">30%</div>
+                    <div id="table-5">Execution 2</div>
+                  </div>
 
-                <div class="angry-grid">
-                  <div id="item-0">DAMAGE</div>
-                  <div id="item-1">CRIT</div>
-                  <div id="item-2">TARGET</div>
-                  <div id="item-3">6-8</div>
-                  <div id="item-4">30%</div>
-                  <div id="item-5">Execution 2</div>
+                  <h4>Upgrade</h4>
+
+                  <div class="angry-grid-upgrade">
+                    <div id="table-6">6-8</div>
+                    <div id="table-7">30%</div>
+                    <div id="table-8">Execution 2</div>
+                  </div>
                 </div>
-
-                <h4>Upgrade</h4>
-                
-                <div class="angry-grid-upgrade">
-                  <div id="item-0">6-8</div>
-                  <div id="item-1">30%</div>
-                  <div id="item-2">Execution 2</div>
-                </div>
-                
               </div>
             </div>
 
-            <br />
-
+            <h2>TopTrinkeds</h2>
+            <hr />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               fuga commodi quo quis dicta. Quo distinctio, dolorum quod porro
