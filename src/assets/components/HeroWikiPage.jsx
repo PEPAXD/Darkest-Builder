@@ -40,6 +40,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetDebuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
     );
+    setUpgradeDamage(
+      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
+    );
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -72,6 +75,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
       );
       setTargetDebuff(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
+      );
+      setUpgradeDamage(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
       );
 
       return newIndex;
@@ -173,6 +179,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
   );
 
+  //upgradesData
+  const dataUpgrade =
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade;
+  const [upgradeDamage, setUpgradeDamage] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -189,6 +202,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setCritic(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.crit);
     setTargetDebuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.target
+    );
+    setUpgradeDamage(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.damage
     );
   };
 
@@ -504,6 +520,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
               </div>
 
               <p>{skillOverview}</p>
+              <br />
 
               <div className="statsContainer">
                 <div className="statsDataGrid">
@@ -522,8 +539,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                       return displayValue !== null ? (
                         <div className="tableNumber" key={key}>
+                          <br />
                           <i>{key.toUpperCase()}</i>
                           <p>{displayValue}</p>
+                          <br />
+
                         </div>
                       ) : null;
                     })}
@@ -531,11 +551,28 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
                   <h4>Upgrade</h4>
 
-                  <div class="angry-grid-upgrade">
-                    <div id="table-6">6-8</div>
-                    <div id="table-7">30%</div>
-                    <div id="table-8">Execution 2</div>
+                  <div className="upgradeTable">
+                    {Object.entries(dataUpgrade).map(([key, value]) => {
+                      let displayValue = null;
+                      if (key === "damage" && upgradeDamage !== null) {
+                        displayValue = `${upgradeDamage[0]}-${upgradeDamage[1]}`;
+                      } else if (key === "crit" && crit !== null) {
+                        displayValue = `${crit}%`;
+                      } else if (key === "target" && targetDebuff !== null) {
+                        displayValue = targetDebuff;
+                      }
+
+                      return displayValue !== null ? (
+                        <div className="tableNumber" key={key}>
+                          <br />
+                          <i>{key.toUpperCase()}</i>
+                          <p>{displayValue}</p>
+                          <br />
+                        </div>
+                      ) : null;
+                    })}
                   </div>
+                  <br />
                 </div>
               </div>
             </div>

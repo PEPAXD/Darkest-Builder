@@ -289,6 +289,11 @@ export const heroWiki = [
                   crit: 15,
                   target: "Execution",
                   
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 20,
+                    target: "Execution",
+                  },
                 },
               },
             },
@@ -311,6 +316,12 @@ export const heroWiki = [
                   damage: [3, 6],
                   crit: 10,
                   target: "Add Daze with Combo",
+
+                  upgrade: {
+                    damage: [8, 9],
+                    crit: 20,
+                    target: "Execution",
+                  },
                 },
               },
             },
@@ -333,6 +344,12 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: null,
+
+                  upgrade: {
+                    damage: [9, 9],
+                    crit: 20,
+                    target: null,
+                  },
                 },
               },
             },
