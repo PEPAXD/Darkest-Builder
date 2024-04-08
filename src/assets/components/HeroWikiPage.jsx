@@ -9,6 +9,9 @@ import { GiBowman, GiSwordman } from "react-icons/gi";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
 
+import DataTable from "./dataTable.jsx";
+
+
 function HeroWikiPage({ url_Bg, heroName }) {
   const [index, setIndex] = useState(0);
   const [pathIndex, setPathIndex] = useState(0);
@@ -40,21 +43,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetDebuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
     );
+    setSelfBuff(heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self);
     setUpgradeDamage(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
     );
     setUpgradeCrit(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
-    )
+    );
     setUpgradeTargetDebuff(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
-    )
-    setSelfBuff(
-      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
     );
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
-    )
+    );
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -88,21 +89,21 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setTargetDebuff(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
       );
+      setSelfBuff(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+      );
       setUpgradeDamage(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
       );
       setUpgradeCrit(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
-      )
+      );
       setUpgradeTargetDebuff(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
-      )
-      setSelfBuff(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
       );
       setUpgradeSelfBuff(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
-      )
+      );
 
       return newIndex;
     });
@@ -220,11 +221,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
   );
 
   const [upgradeTargetDebuff, setUpgradeTargetDebuff] = useState(
-    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
   );
 
   const [upgradeSelfBuff, setUpgradeSelfBuff] = useState(
-    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
   );
 
   const handleSkillSelect = (event, i) => {
@@ -244,6 +245,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetDebuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.target
     );
+    setSelfBuff(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.self);
     setUpgradeDamage(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.damage
     );
@@ -252,13 +254,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
     setUpgradeTargetDebuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.target
-    )
-    setSelfBuff(
-      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.self
     );
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.self
-    )
+    );
   };
 
   return (
@@ -579,57 +578,24 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <div className="statsDataGrid">
                   <h4>Stats Data Table</h4>
 
-                  <div className="dataTable">
-                    {Object.entries(dataStats).map(([key, value]) => {
-                      let displayValue = null;
-                      if (key === "damage" && damage !== null) {
-                        displayValue = `${damage[0]}-${damage[1]}`;
-                      } else if (key === "crit" && crit !== null) {
-                        displayValue = `${crit}%`;
-                      } else if (key === "target" && targetDebuff !== null) {
-                        displayValue = targetDebuff;
-                      } else if (key === "self" && selfBuff !== null) {
-                        displayValue = selfBuff;
-                      }
-
-
-                      return displayValue !== null ? (
-                        <div className="tableNumber" key={key}>
-                          <br />
-                          <i>{key.toUpperCase()}</i>
-                          <p>{displayValue}</p>
-                          <br />
-
-                        </div>
-                      ) : null;
-                    })}
-                  </div>
+                  <DataTable
+                    dataStats={dataStats}
+                    damage={damage}
+                    crit={crit}
+                    targetDebuff={targetDebuff}
+                    selfBuff={selfBuff}
+                  />
 
                   <h4>Upgrade</h4>
 
-                  <div className="upgradeTable">
-                    {Object.entries(dataUpgrade).map(([key, value]) => {
-                      let displayValue = null;
-                      if (key === "damage" && upgradeDamage !== null) {
-                        displayValue = `${upgradeDamage[0]}-${upgradeDamage[1]}`;
-                      } else if (key === "crit" && upgradeCrit !== null) {
-                        displayValue = `${upgradeCrit}%`;
-                      } else if (key === "target" && upgradeTargetDebuff !== null) {
-                        displayValue = upgradeTargetDebuff;
-                      } else if (key === "self" && upgradeSelfBuff !== null) {
-                        displayValue = upgradeSelfBuff;
-                      }
-
-                      return displayValue !== null ? (
-                        <div className="tableNumber" key={key}>
-                          <br />
-                          <i>{key.toUpperCase()}</i>
-                          <p>{displayValue}</p>
-                          <br />
-                        </div>
-                      ) : null;
-                    })}
-                  </div>
+                  <DataTable
+                    dataStats={dataStats}
+                    damage={damage}
+                    crit={crit}
+                    targetDebuff={targetDebuff}
+                    selfBuff={selfBuff}
+                  />
+                  
                   <br />
                 </div>
               </div>
