@@ -318,9 +318,9 @@ export const heroWiki = [
                   target: "Add Daze with Combo",
 
                   upgrade: {
-                    damage: [8, 9],
-                    crit: 20,
-                    target: "Execution",
+                    damage: [5, 8],
+                    crit: 15,
+                    target: "Add Stun with Combo",
                   },
                 },
               },
@@ -346,8 +346,8 @@ export const heroWiki = [
                   target: null,
 
                   upgrade: {
-                    damage: [9, 9],
-                    crit: 20,
+                    damage: [4, 6],
+                    crit: 10,
                     target: null,
                   },
                 },
@@ -372,6 +372,12 @@ export const heroWiki = [
                   damage: null,
                   crit: null,
                   target: "Ignores Dodge and Sthealth, Add Combo",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
+                  },
                 },
               },
             },
@@ -394,6 +400,12 @@ export const heroWiki = [
                   damage: null,
                   crit: null,
                   target: null,
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: null,
+                  },
                 },
               },
             },
@@ -416,6 +428,12 @@ export const heroWiki = [
                   damage: [6, 10],
                   crit: 10,
                   target: "Knockback 1, Add Combo",
+
+                  upgrade: {
+                    damage: [10, 13],
+                    crit: 15,
+                    target: "Knockback 1, Add Combo",
+                  },
                 },
               },
             },
@@ -438,6 +456,12 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: "---",
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 10,
+                    target: "-2 Speed",
+                  },
                 },
               },
             },
@@ -460,6 +484,12 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: "Bleed x2/x4 when Combo",
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 10,
+                    target: "Bleed x3/x6 when Combo",
+                  },
                 },
               },
             },
@@ -482,6 +512,12 @@ export const heroWiki = [
                   damage: [4, 8],
                   crit: 5,
                   target: "30% DMG when Target HP < 30%",
+
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 10,
+                    target: "30% DMG when Target HP < 50%",
+                  },
                 },
               },
             },
@@ -505,6 +541,12 @@ export const heroWiki = [
                   crit: 5,
                   target:
                     "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
+
+                    upgrade: {
+                      damage: null,
+                      crit: 5,
+                      target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
+                    },
                 },
               },
             },
@@ -527,6 +569,12 @@ export const heroWiki = [
                   damage: [2, 4],
                   crit: 5,
                   target: "Ignores block, Add Vulnerable",
+
+                  upgrade: {
+                    damage: [3, 5],
+                    crit: 10,
+                    target: "Ignores block, Add Vulnerable x2",
+                  },
                 },
               },
             },

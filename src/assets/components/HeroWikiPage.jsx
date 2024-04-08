@@ -43,6 +43,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeDamage(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
     );
+    setUpgradeCrit(
+      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+    )
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -79,6 +82,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setUpgradeDamage(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
       );
+      setUpgradeCrit(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+      )
 
       return newIndex;
     });
@@ -182,8 +188,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
   //upgradesData
   const dataUpgrade =
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade;
+
   const [upgradeDamage, setUpgradeDamage] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
+  );
+
+  const [upgradeCrit, setUpgradeCrit] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
   );
 
   const handleSkillSelect = (event, i) => {
@@ -205,6 +216,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
     setUpgradeDamage(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.damage
+    );
+    setUpgradeCrit(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.crit
     );
   };
 
@@ -556,8 +570,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       let displayValue = null;
                       if (key === "damage" && upgradeDamage !== null) {
                         displayValue = `${upgradeDamage[0]}-${upgradeDamage[1]}`;
-                      } else if (key === "crit" && crit !== null) {
-                        displayValue = `${crit}%`;
+                      } else if (key === "crit" && upgradeCrit !== null) {
+                        displayValue = `${upgradeCrit}%`;
                       } else if (key === "target" && targetDebuff !== null) {
                         displayValue = targetDebuff;
                       }
