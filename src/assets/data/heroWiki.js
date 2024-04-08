@@ -283,9 +283,9 @@ export const heroWiki = [
 
                 skillOverwiew: "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow.",
 
-                damage: [3, 5],
+                damage: [4, 8],
                 crit: 15,
-                targetDebuff: "Bleed",
+                targetDebuff: "Execution",
               },
             },
 
@@ -302,9 +302,9 @@ export const heroWiki = [
 
                 skillOverwiew: "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4.",
 
-                damage: [1, 2],
-                crit: 15,
-                targetDebuff: "Bleed",
+                damage: [3, 6],
+                crit: 10,
+                targetDebuff: "Add Daze with Combo",
               },
             },
 
@@ -321,9 +321,9 @@ export const heroWiki = [
 
                 skillOverwiew: "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill.",
 
-                damage: [2, 3],
-                crit: 15,
-                targetDebuff: "Bleed",
+                damage: [3, 5],
+                crit: 5,
+                targetDebuff: NaN,
               },
             },
 
@@ -340,10 +340,9 @@ export const heroWiki = [
 
                 skillOverwiew: "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus.",
 
-                damage: [3, 4],
-                crit: 15,
-                targetDebuff: "Bleed",
-
+                damage: NaN,
+                crit: NaN,
+                targetDebuff: "Ignores Dodge and Sthealth, Add Combo",
               },
             },
 
@@ -360,9 +359,9 @@ export const heroWiki = [
 
                 skillOverwiew: "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS.",
 
-                damage: [4, 5],
-                crit: 15,
-                targetDebuff: "Bleed",
+                damage: NaN,
+                crit: NaN,
+                targetDebuff: NaN,
               },
             },
 
@@ -377,7 +376,11 @@ export const heroWiki = [
                 Target: [1],
                 Cooldown: NaN,
 
-                skillOverwiew: "is a highly devastating skill, but has rather strict Rank requirement (Only can be used in Rank 1). Makes good combo with another Dancing heroes."
+                skillOverwiew: "is a highly devastating skill, but has rather strict Rank requirement (Only can be used in Rank 1). Makes good combo with another Dancing heroes.",
+
+                damage: [6,10],
+                crit: 10,
+                targetDebuff: "Knockback 1, Add Combo",
               },
             },
 
@@ -392,7 +395,11 @@ export const heroWiki = [
                 Target: [1, 2],
                 Cooldown: NaN,
 
-                skillOverwiew: "Multi-hit attack. Due to the Low Base DMG is preferably used to remove Tokens and to finish off enemies at low health. Combined with takeaimTake skill can be used as a Pseudo Stress Healer (chance to heal Stress two times)"
+                skillOverwiew: "Multi-hit attack. Due to the Low Base DMG is preferably used to remove Tokens and to finish off enemies at low health. Combined with takeaimTake skill can be used as a Pseudo Stress Healer (chance to heal Stress two times)",
+
+                damage: [3,5],
+                crit: 5,
+                targetDebuff: "---",
 
               },
             },
@@ -408,7 +415,11 @@ export const heroWiki = [
                 Target: [1, 2],
                 Cooldown: NaN,
 
-                skillOverwiew: "Moderate Damage skill that hits the front ranks. Althought the direct damage is not high, the skill shines when the Target has Combo token. it doubles Bleed."
+                skillOverwiew: "Moderate Damage skill that hits the front ranks. Althought the direct damage is not high, the skill shines when the Target has Combo token. it doubles Bleed.",
+
+                damage: [3, 5],
+                crit: 5,
+                targetDebuff: "Bleed x2/x4 when Combo",
 
               },
             },
@@ -424,7 +435,11 @@ export const heroWiki = [
                 Target: [2, 3],
                 Cooldown: NaN,
 
-                skillOverwiew: "High damage skill that hits the Middle-ranks. (when upgraded Execution 1 ), and deals more DMG when the enemy is a low HP. Works as a main DMG Skill, as a Finisher and is most effective the more health has the enemy."
+                skillOverwiew: "High damage skill that hits the Middle-ranks. (when upgraded Execution 1 ), and deals more DMG when the enemy is a low HP. Works as a main DMG Skill, as a Finisher and is most effective the more health has the enemy.",
+
+                damage: [4,8],
+                crit: 5,
+                targetDebuff: "30% DMG when Target HP < 30%",
 
               },
             },
@@ -440,7 +455,11 @@ export const heroWiki = [
                 Target: [1, 2, 3],
                 Cooldown: 1,
 
-                skillOverwiew: "is extremely useful against enemies that can apply positive Tokens on themselves or allies, as it can remove these Tokens and destroy enemies' advantages to alleviate combat risks. With the skill upgraded, the Highwayman can also steal powerful Tokens to increase his damage and defense"
+                skillOverwiew: "is extremely useful against enemies that can apply positive Tokens on themselves or allies, as it can remove these Tokens and destroy enemies' advantages to alleviate combat risks. With the skill upgraded, the Highwayman can also steal powerful Tokens to increase his damage and defense",
+
+                damage: NaN,
+                crit: 5,
+                targetDebuff: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
               },
             },
 
@@ -455,7 +474,11 @@ export const heroWiki = [
                 Target: [1, 2],
                 Cooldown: NaN,
 
-                skillOverwiew: "Can apply Vulnerable Token to enemies and Add Block token to Self. Is best pair with other heroes that can use Vulnerable token. Take Aim can make this Skill more effective as Crits token."
+                skillOverwiew: "Can apply Vulnerable Token to enemies and Add Block token to Self. Is best pair with other heroes that can use Vulnerable token. Take Aim can make this Skill more effective as Crits token.",
+
+                damage: [2,4],
+                crit: 5,
+                targetDebuff: "Ignores block, Add Vulnerable",
 
               },
             },

@@ -32,6 +32,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
     );
     setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
+    setCritic(heroWiki[0].heroStats[newIndex][1].skills[0].stats.crit);
+    setTargetDebuff(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.targetDebuff
+    );
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -57,6 +61,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
       );
       setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
+      setCritic(heroWiki[0].heroStats[newIndex][1].skills[0].stats.crit);
+      setTargetDebuff(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.targetDebuff
+      );
 
       return newIndex;
     });
@@ -148,6 +156,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.damage
   );
 
+  const [crit, setCritic] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.crit
+  );
+
+  const [targetDebuff, setTargetDebuff] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.targetDebuff
+  );
+
   const handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
@@ -161,6 +177,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew
     );
     setDamage(heroWiki[0].heroStats[index][1].skills[i].stats.damage);
+    setCritic(heroWiki[0].heroStats[index][1].skills[i].stats.crit);
+    setTargetDebuff(
+      heroWiki[0].heroStats[index][1].skills[i].stats.targetDebuff
+    );
   };
 
   return (
@@ -488,8 +508,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     <div id="table-3">
                       {damage && `${damage[0]}-${damage[1]}`}
                     </div>
-                    <div id="table-4">30%</div>
-                    <div id="table-5">Execution 2</div>
+                    <div id="table-4">{crit}%</div>
+                    <div id="table-5">{targetDebuff}</div>
                   </div>
 
                   <h4>Upgrade</h4>
