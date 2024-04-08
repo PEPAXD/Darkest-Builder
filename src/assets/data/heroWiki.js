@@ -288,11 +288,13 @@ export const heroWiki = [
                   damage: [4, 8],
                   crit: 15,
                   target: "Execution",
-                  
+                  self: null,
+
                   upgrade: {
                     damage: [6, 9],
                     crit: 20,
                     target: "Execution",
+                    self: null,
                   },
                 },
               },
@@ -316,11 +318,13 @@ export const heroWiki = [
                   damage: [3, 6],
                   crit: 10,
                   target: "Add Daze with Combo",
+                  self: null,
 
                   upgrade: {
                     damage: [5, 8],
                     crit: 15,
                     target: "Add Stun with Combo",
+                    self: null,
                   },
                 },
               },
@@ -344,11 +348,13 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: null,
+                  self: "Forward 1, Add Riposte x2",
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: null,
+                    self: "Forward 1, Add Riposte x3, Add Dodge",
                   },
                 },
               },
@@ -372,11 +378,14 @@ export const heroWiki = [
                   damage: null,
                   crit: null,
                   target: "Ignores Dodge and Sthealth, Add Combo",
+                  self: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
-                    target: "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
+                    target:
+                      "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
+                    self: null,
                   },
                 },
               },
@@ -400,11 +409,13 @@ export const heroWiki = [
                   damage: null,
                   crit: null,
                   target: null,
+                  self: "Add Crit, Remove Blind",
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: null,
+                    self: "Add Crit x2, Remove Blind",
                   },
                 },
               },
@@ -428,11 +439,13 @@ export const heroWiki = [
                   damage: [6, 10],
                   crit: 10,
                   target: "Knockback 1, Add Combo",
+                  self: "Back 1",
 
                   upgrade: {
                     damage: [10, 13],
                     crit: 15,
                     target: "Knockback 1, Add Combo",
+                    self: "Back 1",
                   },
                 },
               },
@@ -456,11 +469,13 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: "---",
+                  self: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "-2 Speed",
+                    self: null,
                   },
                 },
               },
@@ -484,11 +499,13 @@ export const heroWiki = [
                   damage: [3, 5],
                   crit: 5,
                   target: "Bleed x2/x4 when Combo",
+                  self: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "Bleed x3/x6 when Combo",
+                    self: null,
                   },
                 },
               },
@@ -512,11 +529,13 @@ export const heroWiki = [
                   damage: [4, 8],
                   crit: 5,
                   target: "30% DMG when Target HP < 30%",
+                  self: null,
 
                   upgrade: {
                     damage: [6, 9],
                     crit: 10,
                     target: "30% DMG when Target HP < 50%",
+                    self: null,
                   },
                 },
               },
@@ -539,14 +558,15 @@ export const heroWiki = [
                 dataStats: {
                   damage: null,
                   crit: 5,
-                  target:
-                    "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
+                  target: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
+                  self: "---",
 
-                    upgrade: {
-                      damage: null,
-                      crit: 5,
-                      target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
-                    },
+                  upgrade: {
+                    damage: null,
+                    crit: 5,
+                    target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
+                    self: "+5% Crit",
+                  },
                 },
               },
             },
@@ -569,11 +589,13 @@ export const heroWiki = [
                   damage: [2, 4],
                   crit: 5,
                   target: "Ignores block, Add Vulnerable",
+                  self: "Add Block",
 
                   upgrade: {
                     damage: [3, 5],
                     crit: 10,
                     target: "Ignores block, Add Vulnerable x2",
+                    self: "Add Block",
                   },
                 },
               },
@@ -692,6 +714,21 @@ export const heroWiki = [
 
                 skillOverwiew:
                   "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance.",
+
+                dataStats: {
+                  damage: [4, 7],
+                  crit: 15,
+                  target: "Ignores block, +50% Crit with Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: [4, 10],
+                    crit: 20,
+                    target:
+                      "Ignores block, +50% Crit with Combo, Remove Block on Crit",
+                    self: null,
+                  },
+                },
               },
             },
 

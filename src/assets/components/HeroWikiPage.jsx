@@ -46,6 +46,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeCrit(
       heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
     )
+    setUpgradeTargetDebuff(
+      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
+    )
+    setSelfBuff(
+      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+    );
+    setUpgradeSelfBuff(
+      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
+    )
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -84,6 +93,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
       );
       setUpgradeCrit(
         heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+      )
+      setUpgradeTargetDebuff(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
+      )
+      setSelfBuff(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+      );
+      setUpgradeSelfBuff(
+        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
       )
 
       return newIndex;
@@ -185,6 +203,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
   );
 
+  const [selfBuff, setSelfBuff] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+  );
+
   //upgradesData
   const dataUpgrade =
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade;
@@ -195,6 +217,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   const [upgradeCrit, setUpgradeCrit] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+  );
+
+  const [upgradeTargetDebuff, setUpgradeTargetDebuff] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
+  );
+
+  const [upgradeSelfBuff, setUpgradeSelfBuff] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
   );
 
   const handleSkillSelect = (event, i) => {
@@ -220,6 +250,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeCrit(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.crit
     );
+    setUpgradeTargetDebuff(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.target
+    )
+    setSelfBuff(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.self
+    );
+    setUpgradeSelfBuff(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.self
+    )
   };
 
   return (
@@ -549,7 +588,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         displayValue = `${crit}%`;
                       } else if (key === "target" && targetDebuff !== null) {
                         displayValue = targetDebuff;
+                      } else if (key === "self" && selfBuff !== null) {
+                        displayValue = selfBuff;
                       }
+
 
                       return displayValue !== null ? (
                         <div className="tableNumber" key={key}>
@@ -572,8 +614,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         displayValue = `${upgradeDamage[0]}-${upgradeDamage[1]}`;
                       } else if (key === "crit" && upgradeCrit !== null) {
                         displayValue = `${upgradeCrit}%`;
-                      } else if (key === "target" && targetDebuff !== null) {
-                        displayValue = targetDebuff;
+                      } else if (key === "target" && upgradeTargetDebuff !== null) {
+                        displayValue = upgradeTargetDebuff;
+                      } else if (key === "self" && upgradeSelfBuff !== null) {
+                        displayValue = upgradeSelfBuff;
                       }
 
                       return displayValue !== null ? (
