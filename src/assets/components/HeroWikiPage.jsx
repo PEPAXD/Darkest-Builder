@@ -31,10 +31,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSkillOverview(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
     );
-    setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
-    setCritic(heroWiki[0].heroStats[newIndex][1].skills[0].stats.crit);
+    setDamage(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.damage
+    );
+    setCritic(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.crit
+    );
     setTargetDebuff(
-      heroWiki[0].heroStats[newIndex][1].skills[0].stats.targetDebuff
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
     );
   }, [heroName]);
 
@@ -60,10 +64,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setSkillOverview(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
       );
-      setDamage(heroWiki[0].heroStats[newIndex][1].skills[0].stats.damage);
-      setCritic(heroWiki[0].heroStats[newIndex][1].skills[0].stats.crit);
+      setDamage(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.damage
+      );
+      setCritic(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.crit
+      );
       setTargetDebuff(
-        heroWiki[0].heroStats[newIndex][1].skills[0].stats.targetDebuff
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
       );
 
       return newIndex;
@@ -151,17 +159,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.skillOverwiew
   );
 
-  //tableDataSkill
+  //dataStatsArray
+  const dataStats = heroWiki[0].heroStats[index][1].skills[0].stats.dataStats;
   const [damage, setDamage] = useState(
-    heroWiki[0].heroStats[index][1].skills[0].stats.damage
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.damage
   );
 
   const [crit, setCritic] = useState(
-    heroWiki[0].heroStats[index][1].skills[0].stats.crit
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.crit
   );
 
   const [targetDebuff, setTargetDebuff] = useState(
-    heroWiki[0].heroStats[index][1].skills[0].stats.targetDebuff
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
   );
 
   const handleSkillSelect = (event, i) => {
@@ -176,10 +185,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSkillOverview(
       heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew
     );
-    setDamage(heroWiki[0].heroStats[index][1].skills[i].stats.damage);
-    setCritic(heroWiki[0].heroStats[index][1].skills[i].stats.crit);
+    setDamage(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.damage);
+    setCritic(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.crit);
     setTargetDebuff(
-      heroWiki[0].heroStats[index][1].skills[i].stats.targetDebuff
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.target
     );
   };
 
@@ -500,16 +509,24 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 <div className="statsDataGrid">
                   <h4>Stats Data Table</h4>
 
-                  <div class="angry-grid">
-                    <div id="table-0">DAMAGE</div>
-                    <div id="table-1">CRIT</div>
-                    <div id="table-2">TARGET</div>
+                  <div className="dataTable">
+                    {Object.entries(dataStats).map(([key, value]) => {
+                      let displayValue = null;
+                      if (key === "damage" && damage !== null) {
+                        displayValue = `${damage[0]}-${damage[1]}`;
+                      } else if (key === "crit" && crit !== null) {
+                        displayValue = `${crit}%`;
+                      } else if (key === "target" && targetDebuff !== null) {
+                        displayValue = targetDebuff;
+                      }
 
-                    <div id="table-3">
-                      {damage && `${damage[0]}-${damage[1]}`}
-                    </div>
-                    <div id="table-4">{crit}%</div>
-                    <div id="table-5">{targetDebuff}</div>
+                      return displayValue !== null ? (
+                        <div className="tableNumber" key={key}>
+                          <i>{key.toUpperCase()}</i>
+                          <p>{displayValue}</p>
+                        </div>
+                      ) : null;
+                    })}
                   </div>
 
                   <h4>Upgrade</h4>
