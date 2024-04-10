@@ -43,18 +43,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetDebuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
     );
-    setSelfBuff(heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self);
+    setSelfBuff(heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self);
     setUpgradeDamage(
-      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.damage
     );
     setUpgradeCrit(
-      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.crit
     );
     setUpgradeTargetDebuff(
-      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.target
     );
     setUpgradeSelfBuff(
-      heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
     );
   }, [heroName]);
 
@@ -90,19 +90,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
       );
       setSelfBuff(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self
       );
       setUpgradeDamage(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.damage
       );
       setUpgradeCrit(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.crit
       );
       setUpgradeTargetDebuff(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.target
       );
       setUpgradeSelfBuff(
-        heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
       );
 
       return newIndex;
