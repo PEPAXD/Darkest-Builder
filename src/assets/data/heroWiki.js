@@ -232,13 +232,14 @@ export const heroWiki = [
                 '"A back rank role that emphasizes ranged skill use."',
                 '"A rank-flexible Bleed specialist."',
               ],
-              {
-                A: [11],
-                B: [0, 1, 3, 5, 6],
-                C: [1, 2, 3, 4, 5],
-                D: [2, 3, 4, 5, 6],
-              },
             ],
+          ],
+
+          pathStacks: [
+            [11], 
+            [4, 6, 7, 8, 10], 
+            [9, 10, 4, 5], 
+            [1, 3, 4, 8, 9]
           ],
 
           stats: {

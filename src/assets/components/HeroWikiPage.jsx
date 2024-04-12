@@ -59,6 +59,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
     );
+    setPathSkillsStack(heroWiki[0].heroStats[0][1].pathStacks[0]);
   }, [heroName]);
 
   const ArrowNextBackArrayHero = (direction) => {
@@ -111,6 +112,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
           .self
       );
+      setPathSkillsStack(heroWiki[0].heroStats[0][1].pathStacks[0]);
 
       return newIndex;
     });
@@ -270,8 +272,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   //TODO WIP
   const [pathSkillsStack, setPathSkillsStack] = useState(
-    heroWiki[0].heroStats[index][1].paths[0][2].A
+    heroWiki[0].heroStats[0][1].pathStacks[0]
   );
+
+  useEffect(() => {
+    console.log(pathSkillsStack);
+  }, [pathSkillsStack]);
 
   return (
     <div className="wiki">
@@ -340,6 +346,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       onChange={() => {
                         setSelectedPathIndex(pathIndex);
                         setPathIndex(pathIndex);
+                        setPathSkillsStack(
+                          heroWiki[0].heroStats[0][1].pathStacks[pathIndex]
+                        );
                       }}
                     />
                     <label htmlFor={`value-${pathIndex + 1}`}>{path}</label>
