@@ -495,6 +495,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   key={skill.id}
                   style={{
                     position: "relative", // Necesario para posicionar el pseudoelemento
+                    opacity: pathSkillsStack.includes(i) || pathSkillsStack == 11 ? 1 : 0.2,
                   }}
                 >
                   <input
