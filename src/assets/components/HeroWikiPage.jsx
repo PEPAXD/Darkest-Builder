@@ -509,6 +509,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     className="skills"
                     src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
                     alt={skill.name}
+
                   />
                   <i>{skill.name}</i>
                   {pathSkillsStack.includes(i) && (

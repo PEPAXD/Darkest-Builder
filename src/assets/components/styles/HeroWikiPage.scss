@@ -597,7 +597,7 @@
       cursor: pointer;
 
       input[type="radio"]:checked ~ img {
-        border: 2px ridge #d5ae52;
+        border: 2px ridge cyan;
       }
 
       .skills {
@@ -638,7 +638,7 @@
       }
 
       input[type="radio"]:checked ~ i {
-        color: #f5b92c;
+        color: cyan;
       }
     }
   }
