@@ -7,7 +7,7 @@ function HeroWiki() {
   const heroName = location.state.heroName;
 
   useEffect(() => {
-    document.title = 'Wiki-'+heroName;
+    document.title = 'Wiki - Darkest Builder';
 
     if (location.pathname === '/herowiki') {
       document.querySelector('.App').style.overflowY = 'hidden';

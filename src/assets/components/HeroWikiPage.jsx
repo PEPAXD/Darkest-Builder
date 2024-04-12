@@ -11,7 +11,6 @@ import { Tooltip } from "react-tooltip";
 
 import DataTable from "./dataTable.jsx";
 
-
 function HeroWikiPage({ url_Bg, heroName }) {
   const [index, setIndex] = useState(0);
   const [pathIndex, setPathIndex] = useState(0);
@@ -43,15 +42,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setTargetDebuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.target
     );
-    setSelfBuff(heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self);
+    setSelfBuff(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self
+    );
     setUpgradeDamage(
-      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.damage
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+        .damage
     );
     setUpgradeCrit(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.crit
     );
     setUpgradeTargetDebuff(
-      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.target
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+        .target
     );
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
@@ -93,16 +96,20 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self
       );
       setUpgradeDamage(
-        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.damage
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+          .damage
       );
       setUpgradeCrit(
-        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.crit
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+          .crit
       );
       setUpgradeTargetDebuff(
-        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.target
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+          .target
       );
       setUpgradeSelfBuff(
-        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+          .self
       );
 
       return newIndex;
@@ -192,7 +199,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   //dataStatsArray
   const dataStats = heroWiki[0].heroStats[index][1].skills[0].stats.dataStats;
-  
+
   const [damage, setDamage] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.damage
   );
@@ -260,6 +267,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.self
     );
   };
+
+  //TODO WIP
+  const [pathSkillsStack, setPathSkillsStack] = useState(
+    heroWiki[0].heroStats[index][1].paths[0][2].A
+  );
 
   return (
     <div className="wiki">
@@ -469,7 +481,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <div className="skillsContain">
               {heroWiki[0].heroStats[index][1].skills.map((skill, i) => (
-                <label className="imgContain" key={skill.id}>
+                <label
+                  className="imgContain"
+                  key={skill.id}
+                  style={{
+                    position: "relative", // Necesario para posicionar el pseudoelemento
+                  }}
+                >
                   <input
                     type="radio"
                     name="skills"
@@ -484,6 +502,20 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     alt={skill.name}
                   />
                   <i>{skill.name}</i>
+                  {pathSkillsStack.includes(i) && (
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderLeft: "10px solid transparent",
+                        borderRight: "10px solid transparent",
+                        borderTop: "10px solid cyan",
+                        position: "absolute",
+                        top: 0,
+                        left: "calc(50% - 10px)",
+                      }}
+                    />
+                  )}
                 </label>
               ))}
             </div>
@@ -596,9 +628,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     targetDebuff={upgradeTargetDebuff}
                     selfBuff={upgradeSelfBuff}
                   />
-                  
-                  <br />
                 </div>
+
+                <br />
               </div>
             </div>
 
@@ -606,7 +638,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <h2>TopTrinkeds</h2>
             <hr />
-            
           </div>
         </div>
       </div>

@@ -232,6 +232,12 @@ export const heroWiki = [
                 '"A back rank role that emphasizes ranged skill use."',
                 '"A rank-flexible Bleed specialist."',
               ],
+              {
+                A: [11],
+                B: [0, 1, 3, 5, 6],
+                C: [1, 2, 3, 4, 5],
+                D: [2, 3, 4, 5, 6],
+              },
             ],
           ],
 
@@ -744,11 +750,23 @@ export const heroWiki = [
                 Cooldown: NaN,
 
                 skillOverwiew:
-                  "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance.",
+                  "is Grave Robber's Ranged option, can hit back-lines and certain front-lines. It can bypass guarded Guards or Dodge tokens when have Stealth. Very deadly combined with +50% CRIT on Combo Token.",
 
-                damage: [3, 5],
-                crit: 15,
-                targetDebuff: "Bleed",
+                dataStats: {
+                  damage: [3, 6],
+                  crit: 15,
+                  target:
+                    "Ignores Guarded and Dodge when self Stealth, +50% Crit with Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: [4, 8],
+                    crit: 30,
+                    target:
+                      "Ignores Guarded and Dodge when self Stealth, +50% Crit with Combo",
+                    self: null,
+                  },
+                },
               },
             },
 
@@ -764,7 +782,21 @@ export const heroWiki = [
                 Cooldown: NaN,
 
                 skillOverwiew:
-                  "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance.",
+                  "is Grave Robber's Ranged cleave. Due to it's low Base damage is better used as a token-clearing and to finish off low HP Targets.",
+
+                dataStats: {
+                  damage: [3, 5],
+                  crit: 15,
+                  target: "---",
+                  self: null,
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 20,
+                    target: "Ignores dodge when self Stealth.",
+                    self: null,
+                  },
+                },
               },
             },
 
@@ -780,7 +812,21 @@ export const heroWiki = [
                 Cooldown: NaN,
 
                 skillOverwiew:
-                  "is Grave Robber's Melee option to deal with frontliners. Ignores and Remove Block token. Is very effective with Combo token since it gives an extra CRIT chance.",
+                  "Source of Blight. Can hit all Ranks and it benefits greatly from the crit chance due to Blight (Extra Duration/Ignore Blight RES).",
+
+                dataStats: {
+                  damage: [2, 4],
+                  crit: 5,
+                  target: "x2 Blight, +50% Crit with Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: [2, 5],
+                    crit: 10,
+                    target: "x4 Blight, +50% Crit with Combo",
+                    self: null,
+                  },
+                },
               },
             },
 
@@ -793,7 +839,24 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
-                Cooldown: NaN,
+                Cooldown: 3,
+
+                skillOverwiew:
+                  "Panic button. Heals HP and applies Dodge and speed tokens. It is a self-sustain for Grave robber.",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Add x3 Dodge, Speed, HP < 33% = Heal 33%",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Add x3 Dodge, Speed, HP < 33% = Heal 33%",
+                  },
+                },
               },
             },
 
