@@ -1,60 +1,81 @@
 .pathContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+
+  h4 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    width: 100%;
+    background-color: #610804;
+    border: 1px solid #000;
+
+  }
+
+  .pathSkills {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    background-color: #000;
+    width: 100%;
 
-    h4 {
-      color: #fff;
-      font-size: 1.4em;
-      font-weight: 700;
+    border: 1px solid #333;
+    gap: 0.5rem;
 
-      width: 100%;
-      background-color: #610804;
-      border: 1px solid #000;
+    img {
+      width: 30%;
+      margin: 0.5rem 0rem 0.5rem 0.5rem;
     }
 
-    .pathSkills {
+    .pathData {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: center;
 
-      border: 1px solid #333;
-      gap: 0.5rem;
+      width: 100%;
+      padding: 1rem 0rem;
 
-
-      img {
-        width: 30%;
-        margin: 0.5rem 0rem 0.5rem 0.5rem;
-      }
-
-      .pathData {
+      ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
 
-        width: 70%;
-        padding: 1rem 0.5rem;
-        
-        ul {
+        width: 100%;
+        gap: 0.2rem;
+
+        li {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          justify-content: center;
+          justify-content: flex-start;
 
-          gap: 0.2rem;
+          width: 100%;
+          padding-left: 5%;
 
-          li {
-            font-size: 0.8em;
-            font-weight: 400;
-            list-style: none;
+          font-size: 0.8em;
+          font-weight: 400;
+          list-style: none;
 
+          h5 {
+            font-size: 1em;
+            font-weight: 700;
+
+            color: #7490A8;
+          }
+
+          span {
+            margin-left: 5%;
           }
         }
       }
     }
   }
+}
