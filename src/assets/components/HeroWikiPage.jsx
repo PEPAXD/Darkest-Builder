@@ -474,7 +474,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <h2>Hero Paths</h2>
             <hr />
-            
+
+            <cite>
+              (Note: Hero Paths are planned to be changed to skill changes
+              instead of stat changes in future updates.)
+            </cite>
+
             <br />
 
             <div className="pathContainer">
@@ -487,15 +492,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   />
 
                   <div className="pathData">
-                    <cite>"I am no coward - come make your end!"</cite>
-
                     <ul>
                       <li>+20% Max HP</li>
                       <li>If Rank = 1: +25% DMG</li>
                       <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed dd2 3 (25%)</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed (25%)</li>
                     </ul>
                   </div>
                 </div>
@@ -509,15 +510,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   />
 
                   <div className="pathData">
-                    <cite>"I am no coward - come make your end!"</cite>
-
                     <ul>
                       <li>+20% Max HP</li>
                       <li>If Rank = 1: +25% DMG</li>
                       <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed dd2 3 (25%)</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed (25%)</li>
                     </ul>
                   </div>
                 </div>
@@ -531,15 +528,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   />
 
                   <div className="pathData">
-                    <cite>"I am no coward - come make your end!"</cite>
-
                     <ul>
                       <li>+20% Max HP</li>
                       <li>If Rank = 1: +25% DMG</li>
                       <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed dd2 3 (25%)</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed (25%)</li>
                     </ul>
                   </div>
                 </div>

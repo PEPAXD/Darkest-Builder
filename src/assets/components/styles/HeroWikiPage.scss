@@ -62,7 +62,7 @@
 
   position: relative;
 
-  width: 40%;
+  width: 35%;
   height: 95%;
   gap: 2rem;
 
@@ -178,7 +178,7 @@
   justify-content: flex-start;
   text-align: center;
 
-  width: 60%;
+  width: 65%;
   max-height: 100%;
   overflow-y: auto;
 
@@ -800,49 +800,46 @@
 
       width: 100%;
       background-color: #610804;
+      border: 1px solid #000;
     }
 
     .pathSkills {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: space-between;
 
       border: 1px solid #333;
+      gap: 0.5rem;
+
 
       img {
-        width: 40%;
-        padding: 1rem 0.5rem;
-      }
-
-      cite {
-        font-size: 0.9em;
-        font-weight: 600;
-        text-align: center;
-        padding: 1rem 0.1rem;
-
-        color: #99ccff;
+        width: 30%;
+        margin: 0.5rem 0rem 0.5rem 0.5rem;
       }
 
       .pathData {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
-
+        width: 70%;
+        padding: 1rem 0.5rem;
+        
         ul {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
 
-          gap: 0.1rem;
+          gap: 0.2rem;
 
           li {
             font-size: 0.8em;
             font-weight: 400;
             list-style: none;
+
           }
         }
       }
