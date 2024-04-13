@@ -303,6 +303,7 @@ export const heroWiki = [
                     target: "Execution",
                     self: null,
                   },
+
                 },
               },
             },

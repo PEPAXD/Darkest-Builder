@@ -16,6 +16,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
   const [pathIndex, setPathIndex] = useState(0);
   const [selectedPathIndex, setSelectedPathIndex] = useState(0);
 
+  const [pathSkillsStack, setPathSkillsStack] = useState(
+    heroWiki[0].heroStats[0][1].pathStacks[0]
+  );
+
   useEffect(() => {
     const newIndex = heroWiki[0].heroNames.findIndex(
       (name) => name === heroName
@@ -270,15 +274,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
-  //TODO WIP
-  const [pathSkillsStack, setPathSkillsStack] = useState(
-    heroWiki[0].heroStats[0][1].pathStacks[0]
-  );
-
-  useEffect(() => {
-    console.log(pathSkillsStack);
-  }, [pathSkillsStack]);
-
   return (
     <div className="wiki">
       <div
@@ -475,11 +470,85 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 )}
               </ul>
             </div>
+            <br />
+
+            <h2>Hero Paths</h2>
+            <hr />
+            
+            <br />
+
+            <div className="pathContainer">
+              <div>
+                <h4>{heroWiki[0].heroPaths[index][1][1]}</h4>
+                <div className="pathSkills">
+                  <img
+                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
+                    alt=""
+                  />
+
+                  <div className="pathData">
+                    <cite>"I am no coward - come make your end!"</cite>
+
+                    <ul>
+                      <li>+20% Max HP</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed dd2 3 (25%)</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4>{heroWiki[0].heroPaths[index][1][2]}</h4>
+                <div className="pathSkills">
+                  <img
+                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
+                    alt=""
+                  />
+
+                  <div className="pathData">
+                    <cite>"I am no coward - come make your end!"</cite>
+
+                    <ul>
+                      <li>+20% Max HP</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed dd2 3 (25%)</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4>{heroWiki[0].heroPaths[index][1][3]}</h4>
+                <div className="pathSkills">
+                  <img
+                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
+                    alt=""
+                  />
+
+                  <div className="pathData">
+                    <cite>"I am no coward - come make your end!"</cite>
+
+                    <ul>
+                      <li>+20% Max HP</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                      <li>Turn Start: Bleed dd2 3 (25%)</li>
+                      <li>If Rank = 1: +25% DMG</li>
+                      <li>-33% Bleed dd2 Chance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <br />
             <h2>
-              Hero Skills and Paths -{" "}
-              {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
+              Hero Skills - {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
             </h2>
             <hr />
 
@@ -533,7 +602,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </label>
               ))}
             </div>
-
 
             <br />
 
@@ -634,20 +702,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     selfBuff={selfBuff}
                   />
 
-                  <h4>Upgrade</h4>
-
-                  <DataTable
-                    dataStats={dataUpgrade}
-                    damage={upgradeDamage}
-                    crit={upgradeCrit}
-                    targetDebuff={upgradeTargetDebuff}
-                    selfBuff={upgradeSelfBuff}
-                  />
-
-                  <h4 style={{ backgroundColor: "#2a6383" }}>
-                    Unique Paths -
-                    {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
-                  </h4>
+                  <h4 style={{ backgroundColor: "#2a6383" }}>Upgrade</h4>
 
                   <DataTable
                     dataStats={dataUpgrade}

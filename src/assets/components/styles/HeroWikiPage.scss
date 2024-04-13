@@ -617,8 +617,7 @@
           width: 100%;
           height: 100%;
 
-           // Ejemplo de estilo
-           
+          // Ejemplo de estilo
         }
 
         &:hover {
@@ -755,7 +754,6 @@
 
         border: 1px solid #222;
 
-
         .dataTable {
           display: flex;
           flex-direction: row;
@@ -770,13 +768,12 @@
 
             width: 100%;
 
-
-            i{
+            i {
               font-size: 1.4em;
               border-bottom: 1px solid #fff;
             }
 
-            p{
+            p {
               text-align: center;
               font-size: 1.2em;
               font-weight: 100;
@@ -785,7 +782,70 @@
         }
       }
     }
+  }
 
-    //new Class
+  //new Class
+  .pathContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000;
+
+    h4 {
+      color: #fff;
+      font-size: 1.4em;
+      font-weight: 700;
+
+      width: 100%;
+      background-color: #610804;
+    }
+
+    .pathSkills {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+
+      border: 1px solid #333;
+
+      img {
+        width: 40%;
+        padding: 1rem 0.5rem;
+      }
+
+      cite {
+        font-size: 0.9em;
+        font-weight: 600;
+        text-align: center;
+        padding: 1rem 0.1rem;
+
+        color: #99ccff;
+      }
+
+      .pathData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          gap: 0.1rem;
+
+          li {
+            font-size: 0.8em;
+            font-weight: 400;
+            list-style: none;
+          }
+        }
+      }
+    }
   }
 }
