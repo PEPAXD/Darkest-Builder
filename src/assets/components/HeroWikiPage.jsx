@@ -410,35 +410,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
-            <h2>How to Play</h2>
-            <hr />
-
-            <div className="howToPlay">
-              <ul>
-                {heroWiki[0].heroStats[index][1].HowToPlay.Tips.map(
-                  (tip, i) => (
-                    <li key={i}>
-                      {tip.name}
-                      <p>{tip.description}</p>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-
-            <br />
-            <h2>
-              Hero Skills and Stats -{" "}
-              {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
-            </h2>
-            <hr />
-
-            <cite>
-              {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
-            </cite>
-
-            <br />
-
             <div className="statsContain">
               <div className="angry-grid">
                 <div id="item-0">
@@ -486,6 +457,36 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </div>
               </div>
             </div>
+
+            <br />
+
+            <h2>How to Play</h2>
+            <hr />
+
+            <div className="howToPlay">
+              <ul>
+                {heroWiki[0].heroStats[index][1].HowToPlay.Tips.map(
+                  (tip, i) => (
+                    <li key={i}>
+                      {tip.name}
+                      <p>{tip.description}</p>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+
+            <br />
+            <h2>
+              Hero Skills and Paths -{" "}
+              {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
+            </h2>
+            <hr />
+
+            <cite>
+              {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
+            </cite>
+
             <br />
 
             <div className="skillsContain">
@@ -494,8 +495,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   className="imgContain"
                   key={skill.id}
                   style={{
-                    position: "relative", // Necesario para posicionar el pseudoelemento
-                    opacity: pathSkillsStack.includes(i) || pathSkillsStack == 11 ? 1 : 0.2,
+                    position: "relative",
+                    opacity:
+                      pathSkillsStack.includes(i) || pathSkillsStack == 11
+                        ? 1
+                        : 0.2,
                   }}
                 >
                   <input
@@ -510,7 +514,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     className="skills"
                     src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
                     alt={skill.name}
-
                   />
                   <i>{skill.name}</i>
                   {pathSkillsStack.includes(i) && (
@@ -530,6 +533,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </label>
               ))}
             </div>
+
 
             <br />
 
@@ -631,6 +635,19 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   />
 
                   <h4>Upgrade</h4>
+
+                  <DataTable
+                    dataStats={dataUpgrade}
+                    damage={upgradeDamage}
+                    crit={upgradeCrit}
+                    targetDebuff={upgradeTargetDebuff}
+                    selfBuff={upgradeSelfBuff}
+                  />
+
+                  <h4 style={{ backgroundColor: "#2a6383" }}>
+                    Unique Paths -
+                    {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
+                  </h4>
 
                   <DataTable
                     dataStats={dataUpgrade}
