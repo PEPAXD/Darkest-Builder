@@ -7,6 +7,7 @@ import { TbClockBolt, TbArrowBigUpLinesFilled } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import PathSkills from "./PathSkills.jsx";
 import { Tooltip } from "react-tooltip";
 
 import DataTable from "./dataTable.jsx";
@@ -483,60 +484,30 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="pathContainer">
-              <div>
-                <h4>{heroWiki[0].heroPaths[index][1][1]}</h4>
-                <div className="pathSkills">
-                  <img
-                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
-                    alt=""
-                  />
-
-                  <div className="pathData">
-                    <ul>
-                      <li>+20% Max HP</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed (25%)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4>{heroWiki[0].heroPaths[index][1][2]}</h4>
-                <div className="pathSkills">
-                  <img
-                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
-                    alt=""
-                  />
-
-                  <div className="pathData">
-                    <ul>
-                      <li>+20% Max HP</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed (25%)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4>{heroWiki[0].heroPaths[index][1][3]}</h4>
-                <div className="pathSkills">
-                  <img
-                    src="public\HeroIcons\paths\Highwayman\Dd2_path_ravager.webp"
-                    alt=""
-                  />
-
-                  <div className="pathData">
-                    <ul>
-                      <li>+20% Max HP</li>
-                      <li>If Rank = 1: +25% DMG</li>
-                      <li>-33% Bleed dd2 Chance</li>
-                      <li>Turn Start: Bleed (25%)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <PathSkills
+                index={index}
+                heroWiki={heroWiki}
+                pathN={1}
+                imgPath={
+                  "public/HeroIcons/paths/Highwayman/Dd2_path_ravager.webp"
+                }
+              />
+              <PathSkills
+                index={index}
+                heroWiki={heroWiki}
+                pathN={2}
+                imgPath={
+                  "public/HeroIcons/paths/Highwayman/Dd2_path_berserker.webp"
+                }
+              />
+              <PathSkills
+                index={index}
+                heroWiki={heroWiki}
+                pathN={3}
+                imgPath={
+                  "public/HeroIcons/paths/Highwayman/Dd2_path_carcass.webp"
+                }
+              />
             </div>
 
             <br />
