@@ -13,8 +13,7 @@
 
     width: 100%;
     background-color: #610804;
-    border: 1px solid #000;
-
+    border: 3px solid #000;
   }
 
   .pathSkills {
@@ -24,6 +23,8 @@
     justify-content: flex-start;
 
     width: 100%;
+    min-height: 17rem;
+    border: 3px solid #000;
 
     gap: 0.5rem;
 
@@ -67,7 +68,7 @@
             font-size: 1em;
             font-weight: 700;
 
-            color: #7490A8;
+            color: #7490a8;
           }
 
           span {

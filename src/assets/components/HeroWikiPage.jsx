@@ -480,12 +480,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <h2>Hero Paths</h2>
             <hr />
 
-            <cite>
-              (Note: Hero Paths are planned to be changed in future updates.)
-            </cite>
-
-            <br />
-
             <div className="pathContainer">
               <PathSkills
                 index={index}
@@ -493,6 +487,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 pathN={1}
                 skills={heroWiki[0].heroStats[index][1].paths[0][2]}
                 imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`}
+                borderStyle={selectedPathIndex === 1}
               />
               <PathSkills
                 index={index}
@@ -500,6 +495,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 pathN={2}
                 skills={heroWiki[0].heroStats[index][1].paths[0][3]}
                 imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`}
+                borderStyle={selectedPathIndex === 2}
               />
               <PathSkills
                 index={index}
@@ -507,19 +503,13 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 pathN={3}
                 skills={heroWiki[0].heroStats[index][1].paths[0][4]}
                 imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`}
+                borderStyle={selectedPathIndex === 3}
               />
             </div>
-
-            <br />
-            <h2>
-              Hero Skills - {heroWiki[0].heroPaths[index][1][selectedPathIndex]}
-            </h2>
-            <hr />
-
+            
             <cite>
               {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
             </cite>
-
             <br />
 
             <div className="skillsContain">
