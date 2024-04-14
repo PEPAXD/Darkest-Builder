@@ -232,14 +232,33 @@ export const heroWiki = [
                 '"A back rank role that emphasizes ranged skill use."',
                 '"A rank-flexible Bleed specialist."',
               ],
+              [
+                ["Rank = 1", "+25% DMG"],
+                ["Rank = 3", "-25% DMG"],
+                ["Rank = 4", "-50% DMG"],
+                ["Point Blank Shot", "Add Riposte"],
+              ],
+              [
+                ["Ranged Skills", "+25% DMG"],
+                ["Melee Skills", "-25% DMG"],
+                ["Buff Self", "+3 Speed"],
+                ["Grapeshot Blast Skills", "Add Strength"],
+              ],
+              [
+                ["Buff Self", "+15% MaxHP"],
+                ["Ranged Skills", "-75% DMG"],
+                ["On Hit Debuff Target", "-10% Bleed RES"],
+                ["Highway Robbery", "Steal 1 Positive Token"],
+                ["Double Cross", "Remove 1 Block"],
+              ],
             ],
           ],
 
           pathStacks: [
-            [11], 
-            [0, 2, 4, 6, 10], 
-            [1, 5, 6, 8, 4], 
-            [3, 4, 7, 9, 10]
+            [11],
+            [0, 2, 4, 6, 10],
+            [1, 5, 6, 8, 4],
+            [3, 4, 7, 9, 10],
           ],
 
           stats: {
@@ -303,7 +322,6 @@ export const heroWiki = [
                     target: "Execution",
                     self: null,
                   },
-
                 },
               },
             },
@@ -670,6 +688,25 @@ export const heroWiki = [
                 '"AAA A brawler focused on front rank combat and ripostes."',
                 '"AAA A back rank role that emphasizes ranged skill use."',
                 '"AAA A rank-flexible Bleed specialist."',
+              ],
+              [
+                ["AAA Rank = 1", "+25% DMG"],
+                ["AAA Rank = 3", "-25% DMG"],
+                ["AAA Rank = 4", "-50% DMG"],
+                ["AAA Point Blank Shot", "Add Riposte"],
+              ],
+              [
+                ["AAA Ranged Skills", "+25% DMG"],
+                ["AAA Melee Skills", "-25% DMG"],
+                ["AAA Buff Self", "+3 Speed"],
+                ["AAA Grapeshot Blast Skills", "Add Strength"],
+              ],
+              [
+                ["AAA Buff Self", "+15% MaxHP"],
+                ["AAA Ranged Skills", "-75% DMG"],
+                ["AAA On Hit Debuff Target", "-10% Bleed RES"],
+                ["AAA Highway Robbery", "Steal 1 Positive Token"],
+                ["AAA Double Cross", "Remove 1 Block"],
               ],
             ],
           ],

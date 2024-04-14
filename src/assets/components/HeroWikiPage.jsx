@@ -275,6 +275,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
+  useEffect(() => {
+    console.log(heroWiki[0].heroStats[index][1].paths[0][3]);
+  });
+
   return (
     <div className="wiki">
       <div
@@ -477,8 +481,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <hr />
 
             <cite>
-              (Note: Hero Paths are planned to be changed to skill changes
-              instead of stat changes in future updates.)
+              (Note: Hero Paths are planned to be changed in future updates.)
             </cite>
 
             <br />
@@ -488,26 +491,22 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 index={index}
                 heroWiki={heroWiki}
                 pathN={1}
-                imgPath={
-                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`
-                }
+                skills={heroWiki[0].heroStats[index][1].paths[0][2]}
+                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`}
               />
               <PathSkills
                 index={index}
                 heroWiki={heroWiki}
                 pathN={2}
-                imgPath={
-                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`
-                }
+                skills={heroWiki[0].heroStats[index][1].paths[0][3]}
+                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`}
               />
-              
               <PathSkills
                 index={index}
                 heroWiki={heroWiki}
                 pathN={3}
-                imgPath={
-                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`
-                }
+                skills={heroWiki[0].heroStats[index][1].paths[0][4]}
+                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`}
               />
             </div>
 
