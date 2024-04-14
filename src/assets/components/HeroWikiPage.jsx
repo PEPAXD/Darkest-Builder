@@ -489,7 +489,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 heroWiki={heroWiki}
                 pathN={1}
                 imgPath={
-                  "public/HeroIcons/paths/Highwayman/Dd2_path_rogue.webp"
+                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`
                 }
               />
               <PathSkills
@@ -497,7 +497,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 heroWiki={heroWiki}
                 pathN={2}
                 imgPath={
-                  "public/HeroIcons/paths/Highwayman/Dd2_path_sharpshot.webp"
+                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`
                 }
               />
               
@@ -506,7 +506,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 heroWiki={heroWiki}
                 pathN={3}
                 imgPath={
-                  "public/HeroIcons/paths/Highwayman/Dd2_path_yellowhand.webp"
+                  `public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`
                 }
               />
             </div>
