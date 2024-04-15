@@ -506,7 +506,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 borderStyle={selectedPathIndex === 3}
               />
             </div>
-            
+
             <cite>
               {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
             </cite>
@@ -675,6 +675,35 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <h2>TopTrinkeds</h2>
             <hr />
+
+            <br />
+
+            <div className="trinkedsContainer">
+
+                <div class="angry-grid">
+                  <div id="item-0">IMAGE</div>
+                  <div id="item-1">DESCRIPTION</div>
+                  <div id="item-2">NAME</div>
+                </div>
+
+
+              <div className="trinkedContain">
+                <img src="https://picsum.photos/200/200" alt="Picsum Image" />
+                <div className="trinkedInfo">
+                  <h5>NAME</h5>
+                  <i>Rarity</i>
+                  <span>const</span>
+                </div>
+                <div className="trinkedDescription">
+                  <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
