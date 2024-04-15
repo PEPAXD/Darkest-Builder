@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles/TrinkedItem.scss";
 
-function TrinkedItem() {
+function TrinkedItem({imgPath}) {
   return (
     <div className="trinkedElement">
       <div class="angry-grid">
         <div id="item-0">
-          <img src="https://picsum.photos/200/200" alt="Picsum Image" />
+          <img src={imgPath} alt="trinketRef" />
         </div>
 
         <div id="item-1">

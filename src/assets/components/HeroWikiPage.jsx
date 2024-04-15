@@ -689,9 +689,15 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </div>
               </div>
 
-              <TrinkedItem />
-              <TrinkedItem />
-              <TrinkedItem />
+              <TrinkedItem 
+               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
+               />
+              <TrinkedItem 
+               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
+               />
+              <TrinkedItem 
+               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
+               />
             </div>
 
             <br />
