@@ -7,8 +7,10 @@ import { TbClockBolt, TbArrowBigUpLinesFilled } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import PathSkills from "./PathSkills.jsx";
 import { Tooltip } from "react-tooltip";
+
+import PathSkills from "./PathSkills.jsx";
+import TrinkedItem from "./TrinkedItem.jsx";
 
 import DataTable from "./dataTable.jsx";
 
@@ -679,31 +681,29 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="trinkedsContainer">
-
+              <div className="columTitleTrinkeds">
                 <div class="angry-grid">
-                  <div id="item-0">IMAGE</div>
-                  <div id="item-1">DESCRIPTION</div>
-                  <div id="item-2">NAME</div>
-                </div>
-
-
-              <div className="trinkedContain">
-                <img src="https://picsum.photos/200/200" alt="Picsum Image" />
-                <div className="trinkedInfo">
-                  <h5>NAME</h5>
-                  <i>Rarity</i>
-                  <span>const</span>
-                </div>
-                <div className="trinkedDescription">
-                  <ul>
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>D</li>
-                  </ul>
+                  <div id="item-0">Trinket</div>
+                  <div id="item-1">Description</div>
+                  <div id="item-2">Rarity</div>
                 </div>
               </div>
+
+              <TrinkedItem />
+              <TrinkedItem />
+              <TrinkedItem />
             </div>
+
+            <br />
+            <h2>HeroComps</h2>
+            <hr />
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+              animi reiciendis asperiores corporis tenetur eaque nostrum quo,
+              in, vero atque praesentium earum. Commodi quos est ipsa
+              exercitationem facilis in consequatur.
+            </p>
           </div>
         </div>
       </div>

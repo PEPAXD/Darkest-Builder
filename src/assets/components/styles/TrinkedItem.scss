@@ -1,0 +1,69 @@
+//COMPONENTE TRINKED ELEMENT
+.trinkedElement {
+    .angry-grid {
+      display: grid;
+
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      gap: 0px;
+      height: 100%;
+      width: 100%;
+
+      #item-0 {
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+        grid-row-end: 2;
+        grid-column-end: 3;
+
+        border: 1px solid #222;
+
+        img{
+          width: 100%;
+          height: 100%;
+        
+          padding: 0.5rem;
+        }
+      }
+      #item-1 {
+        grid-row-start: 1;
+        grid-column-start: 5;
+
+        grid-row-end: 2;
+        grid-column-end: 11;
+
+        border: 1px solid #222;
+
+        
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+
+        padding-left: 5%;
+
+        ul{
+          li{
+            list-style: none;
+            font-style: italic;
+          }
+        }
+
+      }
+      #item-2 {
+        grid-row-start: 1;
+        grid-column-start: 3;
+
+        grid-row-end: 2;
+        grid-column-end: 5;
+
+        border: 1px solid #222;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }

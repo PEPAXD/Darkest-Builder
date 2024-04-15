@@ -795,85 +795,51 @@
 
     background-color: rgb(0, 0, 0, 0.8);
 
-    .angry-grid {
-      display: grid;
-
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-      gap: 0px;
-      height: 100%;
-      width: 100%;
-    }
-
-    #item-0 {
-      background-color: #eb87ba;
-      grid-row-start: 1;
-      grid-column-start: 1;
-
-      grid-row-end: 2;
-      grid-column-end: 4;
-    }
-    #item-1 {
-      background-color: #6d767a;
-      grid-row-start: 1;
-      grid-column-start: 6;
-
-      grid-row-end: 2;
-      grid-column-end: 11;
-    }
-    #item-2 {
-      background-color: #7d68e9;
-      grid-row-start: 1;
-      grid-column-start: 4;
-
-      grid-row-end: 2;
-      grid-column-end: 6;
-    }
-
-    .trinkedContain {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
+    .columTitleTrinkeds {
       width: 100%;
 
-      background-color: #000;
-      border: 2px solid #fff;
+      .angry-grid {
+        display: grid;
 
-      img {
-        padding: 2%;
-      }
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-      .trinkedInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 40%;
-        min-height: 15rem;
-
-        border: 2px solid #fff;
-      }
-
-      .trinkedDescription {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-
+        gap: 0px;
+        height: 100%;
         width: 100%;
-        min-height: 15rem;
 
-        border: 2px solid #fff;
+        background-color: #610804;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
 
-        ul {
-          padding-left: 7%;
-          li {
-            list-style: none;
-          }
+        background-color: rgb(97, 8, 4);
+
+        #item-0 {
+          grid-row-start: 1;
+          grid-column-start: 1;
+
+          grid-row-end: 2;
+          grid-column-end: 3;
+
+          border-right: 2px solid #000;
+        }
+        #item-1 {
+          grid-row-start: 1;
+          grid-column-start: 5;
+
+          grid-row-end: 2;
+          grid-column-end: 11;
+
+          border-left: 2px solid #000;
+
+        }
+        #item-2 {
+          grid-row-start: 1;
+          grid-column-start: 3;
+
+          grid-row-end: 2;
+          grid-column-end: 5;
         }
       }
     }
