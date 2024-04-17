@@ -229,18 +229,20 @@ export const heroWiki = [
             description: [
               [
                 ["Buff", "+5% DMG per Positive Token"],
-                ["Highway Robbery", "Riposte x2 (50%)"],
+                ["Highway Robbery", "Add Riposte x2 (50%)"],
                 ["Debuff", "If Relics > 100: -15% CRIT"],
               ],
               [
-                ["Ranged Skills", "+25% DMG"],
-                ["Melee Skills", "-25% DMG"],
-                ["Buff Self", "+3 Speed"],
-                ["Grapeshot Blast Skills", "Add Strength"],
+                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                [
+                  "Duelist's Advance",
+                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                ],
               ],
               [
-                ["Buff Self", "+15% MaxHP"],
-
+                ["Melee Skills", "+15% CRIT"],
+                ["Open Vein", "+2 Bleed Dealt"],
+                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
               ],
             ],
           },
