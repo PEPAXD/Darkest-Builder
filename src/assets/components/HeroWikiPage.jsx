@@ -277,9 +277,16 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
+  //TODO WIP TRINKETS ---> NEW PASS ADD TO DATABASE.JS
+  //const trinketNames = ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"];
+
+  const [trinketName, setTrinketNames] = useState(
+    heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds
+  );
+
   useEffect(() => {
-    console.log(heroWiki[0].heroStats[index][1].paths[0][3]);
-  });
+    console.log(trinketName);
+  }, [index]);
 
   return (
     <div className="wiki">
@@ -675,29 +682,23 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
 
-            <h2>TopTrinkeds</h2>
+            <h2>Hero Trinkets</h2>
             <hr />
-
-            <br />
-
             <div className="trinkedsContainer">
               <div className="columTitleTrinkeds">
-                <div class="angry-grid">
+                <div className="angry-grid">
                   <div id="item-0">Trinket</div>
                   <div id="item-1">Description</div>
                   <div id="item-2">Rarity</div>
                 </div>
               </div>
 
-              <TrinkedItem 
-               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
-               />
-              <TrinkedItem 
-               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
-               />
-              <TrinkedItem 
-               imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/Cursed_Coin.webp`}
-               />
+              {trinketName.map((name) => (
+                <TrinkedItem
+                  key={name}
+                  imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/${name}.webp`}
+                />
+              ))}
             </div>
 
             <br />

@@ -4,7 +4,7 @@ import "./styles/TrinkedItem.scss";
 function TrinkedItem({imgPath}) {
   return (
     <div className="trinkedElement">
-      <div class="angry-grid">
+      <div className="angry-grid">
         <div id="item-0">
           <img src={imgPath} alt="trinketRef" />
         </div>

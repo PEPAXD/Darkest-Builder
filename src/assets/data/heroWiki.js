@@ -223,6 +223,10 @@ export const heroWiki = [
             ],
           },
 
+          heroTrinkeds: {
+            trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+          },
+
           paths: [
             [
               "Highwayman",
