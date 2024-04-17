@@ -704,6 +704,30 @@ export const heroWiki = [
             ],
           },
 
+          heroTrinkeds: {
+            trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+
+            description: [
+              [
+                ["Buff", "+5% DMG per Positive Token"],
+                ["Highway Robbery", "Add Riposte x2 (50%)"],
+                ["Debuff", "If Relics > 100: -15% CRIT"],
+              ],
+              [
+                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                [
+                  "Duelist's Advance",
+                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                ],
+              ],
+              [
+                ["Melee Skills", "+15% CRIT"],
+                ["Open Vein", "+2 Bleed Dealt"],
+                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
+              ],
+            ],
+          },
+
           paths: [
             [
               "AAAA",

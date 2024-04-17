@@ -75,7 +75,7 @@ export default function HomePage({ url_Bg }) {
         style={{ background: `url(${url_Bg}) no-repeat center top/cover` }}
       >
 
-        <div className="snow"></div>
+        {/* <div className="snow"></div> */}
          
 
         <div className="homeContain">
