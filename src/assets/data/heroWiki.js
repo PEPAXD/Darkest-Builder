@@ -225,6 +225,24 @@ export const heroWiki = [
 
           heroTrinkeds: {
             trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+
+            description: [
+              [
+                ["Buff", "+5% DMG per Positive Token"],
+                ["Highway Robbery", "Riposte x2 (50%)"],
+                ["Debuff", "If Relics > 100: -15% CRIT"],
+              ],
+              [
+                ["Ranged Skills", "+25% DMG"],
+                ["Melee Skills", "-25% DMG"],
+                ["Buff Self", "+3 Speed"],
+                ["Grapeshot Blast Skills", "Add Strength"],
+              ],
+              [
+                ["Buff Self", "+15% MaxHP"],
+
+              ],
+            ],
           },
 
           paths: [

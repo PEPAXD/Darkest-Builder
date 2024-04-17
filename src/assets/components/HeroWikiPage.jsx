@@ -687,11 +687,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
                 </div>
               </div>
 
-              {trinketImg.map((name) => (
+              {trinketImg.map((name, i) => (
                 <TrinkedItem
                   key={name}
                   imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/${name}.webp`}
                   trinketName={name.replace(/_/g, " ")}
+                  description={
+                    heroWiki[0].heroStats[index][1].heroTrinkeds.description[i]
+                  }
                 />
               ))}
             </div>

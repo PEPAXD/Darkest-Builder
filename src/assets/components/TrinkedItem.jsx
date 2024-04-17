@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/TrinkedItem.scss";
 
-function TrinkedItem({ imgPath, trinketName }) {
+function TrinkedItem({ imgPath, trinketName, description }) {
   return (
     <div className="trinkedElement">
       <div className="angry-grid">
@@ -11,17 +11,12 @@ function TrinkedItem({ imgPath, trinketName }) {
 
         <div className="descriptionTrinket" id="item-1">
           <ul>
-            <li>
-              <h5>Turn Start:</h5>
-              <p>If First in Turn Order Crit-Token 66%</p>
-            </li>
-            <li>
-              <h5>Self:</h5>
-              <p>
-                Duelist's Advance Skill: Immobilize-Token 66% vs Creature: -90%
-                Healing Received from Skills
-              </p>
-            </li>
+            {description.map((desc, index) => (
+              <li key={index}>
+                <h5>{desc[0]}</h5>
+                <p>{desc[1]}</p>
+              </li>
+            ))}
           </ul>
         </div>
 
