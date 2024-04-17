@@ -278,15 +278,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
   };
 
   //TODO WIP TRINKETS ---> NEW PASS ADD TO DATABASE.JS
-  //const trinketNames = ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"];
-
-  const [trinketName, setTrinketNames] = useState(
+  const [trinketImg, setTrinketImg] = useState(
     heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds
   );
-
-  useEffect(() => {
-    console.log(trinketName);
-  }, [index]);
 
   return (
     <div className="wiki">
@@ -687,16 +681,17 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <div className="trinkedsContainer">
               <div className="columTitleTrinkeds">
                 <div className="angry-grid">
-                  <div id="item-0">Trinket</div>
+                  <div id="item-0">Image</div>
                   <div id="item-1">Description</div>
-                  <div id="item-2">Rarity</div>
+                  <div id="item-2">Trinket</div>
                 </div>
               </div>
 
-              {trinketName.map((name) => (
+              {trinketImg.map((name) => (
                 <TrinkedItem
                   key={name}
                   imgPath={`public/HeroIcons/trinkeds/${heroWiki[0].heroNames[index]}/${name}.webp`}
+                  trinketName={name.replace(/_/g, " ")}
                 />
               ))}
             </div>
