@@ -708,9 +708,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="friends">
+              
               <HeroComps />
               <HeroComps />
               <HeroComps />
+
+
             </div>
 
             <br />
@@ -726,14 +729,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   </p>
                 </li>
                 <li>
-                  <h5>Good damage and range</h5>
+                  <h5>Bleed Sinergy</h5>
                   <p>
                     Interesante sinergia con el sangrado, resultar efectiva en
                     combate para sumar stacks.
                   </p>
                 </li>
                 <li>
-                  <h5>Good damage and range</h5>
+                  <h5>move combo</h5>
                   <p>
                     En situaciones donde el posicionamiento adelantado es
                     crucial, si Hellion es desplazada hacia atrás, Highwayman

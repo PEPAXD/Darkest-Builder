@@ -3,7 +3,7 @@ import "./styles/HeroComps.scss";
 
 function HeroComps() {
   return (
-    <div>
+    <div >
       <div className="heroFriend">
         <div className="friendContainer">
           <img src="public\HeroProfile\faceHero\hellion-portrait.png" alt="" />

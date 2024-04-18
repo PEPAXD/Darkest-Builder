@@ -1,12 +1,11 @@
-.friends{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    width: 100%;
-    gap: 5%;
-}
+.friends {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
+  width: 100%;
+  gap: 5%;
+}
 
 .heroFriend {
   display: flex;
@@ -20,7 +19,7 @@
   i {
     font-weight: 500;
     font-size: 2rem;
-    color: #ffffffc0
+    color: #ffffffc0;
   }
 
   .friendContainer {
@@ -36,9 +35,23 @@
     background-color: #000;
     transform: rotate(45deg);
 
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.8);
+    }
+
     img {
       width: 130%;
       transform: rotate(-45deg);
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        width: 140%;
+        transform: translate(-3%, -3%) rotate(-45deg);
+      }
     }
   }
 }
