@@ -11,6 +11,7 @@ import { Tooltip } from "react-tooltip";
 
 import PathSkills from "./PathSkills.jsx";
 import TrinkedItem from "./TrinkedItem.jsx";
+import HeroComps from "./HeroComps.jsx";
 
 import DataTable from "./dataTable.jsx";
 
@@ -700,14 +701,94 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
 
             <br />
-            <h2>HeroComps</h2>
+            <h2>Heros Teammates</h2>
             <hr />
 
+            <br />
+            <br />
+
+            <div className="friends">
+              <HeroComps />
+              <HeroComps />
+              <HeroComps />
+            </div>
+
+            <br />
+
+            <div className="teammateDescription">
+              <ul>
+                <li>
+                  <h5>Good damage and range</h5>
+                  <p>
+                    Destaca como una excelente aliada, principalmente por su
+                    buen rango y daño considerable. Aunque, a diferencia del
+                    Highwayman, enfrenta dificultades en el rango 3.
+                  </p>
+                </li>
+                <li>
+                  <h5>Good damage and range</h5>
+                  <p>
+                    Interesante sinergia con el sangrado, resultar efectiva en
+                    combate para sumar stacks.
+                  </p>
+                </li>
+                <li>
+                  <h5>Good damage and range</h5>
+                  <p>
+                    En situaciones donde el posicionamiento adelantado es
+                    crucial, si Hellion es desplazada hacia atrás, Highwayman
+                    puede utilizar Point Blank Shot para devolverla al primer
+                    rango..
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              animi reiciendis asperiores corporis tenetur eaque nostrum quo,
-              in, vero atque praesentium earum. Commodi quos est ipsa
-              exercitationem facilis in consequatur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus
+              risus at ultrices mi. Fringilla urna porttitor rhoncus dolor purus
+              non enim praesent elementum. Viverra accumsan in nisl nisi.
+              Egestas erat imperdiet sed euismod nisi porta lorem. Dolor sit
+              amet consectetur adipiscing elit duis. Scelerisque fermentum dui
+              faucibus in ornare quam viverra. Enim sed faucibus turpis in eu
+              mi. Vitae et leo duis ut diam quam. Auctor neque vitae tempus
+              quam. In ornare quam viverra orci sagittis eu volutpat odio
+              facilisis. Pharetra vel turpis nunc eget lorem. Cras ornare arcu
+              dui vivamus arcu felis bibendum ut. Hendrerit gravida rutrum
+              quisque non tellus orci. Ridiculus mus mauris vitae ultricies leo
+              integer. Aliquet eget sit amet tellus cras adipiscing enim eu
+              turpis. Habitant morbi tristique senectus et netus et malesuada
+              fames. A lacus vestibulum sed arcu non odio euismod lacinia.
+              Lacinia at quis risus sed. Lacinia quis vel eros donec ac. Diam in
+              arcu cursus euismod quis viverra nibh cras pulvinar. Diam donec
+              adipiscing tristique risus nec feugiat in fermentum posuere. Donec
+              massa sapien faucibus et molestie ac feugiat sed. Consectetur a
+              erat nam at lectus urna duis. Libero justo laoreet sit amet cursus
+              sit. Pharetra massa massa ultricies mi quis hendrerit dolor magna.
+              Nunc vel risus commodo viverra maecenas accumsan lacus vel.
+              Pharetra massa massa ultricies mi quis hendrerit. Massa tincidunt
+              dui ut ornare lectus sit amet est placerat. Imperdiet massa
+              tincidunt nunc pulvinar sapien. Nunc sed velit dignissim sodales
+              ut eu sem. Velit egestas dui id ornare arcu odio ut. Urna duis
+              convallis convallis tellus id interdum velit laoreet id. Lacinia
+              at quis risus sed vulputate odio ut. Sed blandit libero volutpat
+              sed cras ornare arcu dui. Vitae semper quis lectus nulla at.
+              Cursus turpis massa tincidunt dui ut ornare lectus sit amet.
+              Suspendisse potenti nullam ac tortor vitae. Arcu cursus euismod
+              quis viverra nibh cras pulvinar mattis nunc. Commodo viverra
+              maecenas accumsan lacus vel facilisis volutpat est velit. Erat
+              velit scelerisque in dictum non. Imperdiet proin fermentum leo vel
+              orci. In ante metus dictum at tempor commodo. Pellentesque
+              habitant morbi tristique senectus et netus et. Eget mauris
+              pharetra et ultrices neque ornare. Massa enim nec dui nunc. Amet
+              cursus sit amet dictum sit amet justo. Ultrices neque ornare
+              aenean euismod elementum nisi quis eleifend. Neque gravida in
+              fermentum et sollicitudin ac.
             </p>
           </div>
         </div>

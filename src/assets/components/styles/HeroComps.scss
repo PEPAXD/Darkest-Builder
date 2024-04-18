@@ -1,0 +1,44 @@
+.friends{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    width: 100%;
+    gap: 5%;
+}
+
+
+.heroFriend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+  margin-bottom: 1rem;
+
+  i {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #ffffffc0
+  }
+
+  .friendContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 10rem;
+    height: 10rem;
+
+    border: 2px solid #505455;
+
+    background-color: #000;
+    transform: rotate(45deg);
+
+    img {
+      width: 130%;
+      transform: rotate(-45deg);
+    }
+  }
+}
