@@ -1,14 +1,17 @@
 import React from "react";
 import "./styles/HeroComps.scss";
 
-function HeroComps() {
+function HeroComps({ heroname, activeHero }) {
   return (
-    <div >
+    <div>
       <div className="heroFriend">
-        <div className="friendContainer">
-          <img src="public\HeroProfile\faceHero\hellion-portrait.png" alt="" />
+        <div
+          className="friendContainer"
+          style={{ border: activeHero ? "2px solid Cyan" : "2px solid #505455" }}
+        >
+          <img src={`public/HeroProfile/faceHero/${heroname}-portrait.png`} />
         </div>
-        <i>hellion</i>
+        <i>{heroname}</i>
       </div>
     </div>
   );

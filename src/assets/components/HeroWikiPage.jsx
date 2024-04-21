@@ -283,6 +283,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds
   );
 
+  //TODO WIP TEAMMATES ---> RADIOBUTTONS SELECTS
+  const heroes = ["hellion", "jester", "vestal"];
+  const [activeHero, setActiveHero] = useState(heroes[0]);
+
+  const handleHeroChange = (event) => {
+    setActiveHero(event.target.value);
+  };
+
   return (
     <div className="wiki">
       <div
@@ -708,13 +716,25 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="friends">
-              
-              <HeroComps />
-              <HeroComps />
-              <HeroComps />
-
-
-            </div>
+      {heroes.map((hero) => (
+        <div key={hero}>
+          <input
+            type="radio"
+            id={hero}
+            name="hero"
+            value={hero}
+            checked={activeHero === hero}
+            onChange={handleHeroChange}
+          />
+          <label htmlFor={hero}>
+            <HeroComps
+              heroname={hero}
+              activeHero={activeHero === hero}
+            />
+          </label>
+        </div>
+      ))}
+    </div>
 
             <br />
 
