@@ -842,46 +842,5 @@
     }
   }
 
-  .teammateDescription {
-    display: flex;
-    flex-direction: column;
-
-    width: 95%;
-
-    border: 1px solid #505455;
-    padding: 2rem 0rem;
-
-    background-color: rgba(0, 0, 0, 0.8);
-
-    ul {
-      display: flex;
-      flex-direction: column;
-
-      margin: 0rem 5%;
-      gap: 2.2rem;
-
-      font-size: 1.2em;
-
-      li {
-        font-style: italic;
-        text-align: left;
-        width: 100%;
-        list-style: none;
-
-        h5 {
-          font-weight: 600;
-          text-transform: uppercase;
-          color: #7490a8;
-          border-bottom: 1px solid #7490a8;
-        }
-
-        p {
-          padding-left: 2%;
-          font-size: 1em;
-          margin: 1%;
-          color: rgba($color: #fff, $alpha: 0.9);
-        }
-      }
-    }
-  }
+ 
 }

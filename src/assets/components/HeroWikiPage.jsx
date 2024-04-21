@@ -12,6 +12,7 @@ import { Tooltip } from "react-tooltip";
 import PathSkills from "./PathSkills.jsx";
 import TrinkedItem from "./TrinkedItem.jsx";
 import HeroComps from "./HeroComps.jsx";
+import HeroCompsDescriptions from "./HeroCompsDescriptions.jsx";
 
 import DataTable from "./dataTable.jsx";
 
@@ -744,12 +745,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <div className="teammateDescription">
               <ul>
                 <li>
-                  <h5>Good damage and range</h5>
-                  <p>
-                    Destaca como una excelente aliada, principalmente por su
-                    buen rango y daño considerable. Aunque, a diferencia del
-                    Highwayman, enfrenta dificultades en el rango 3.
-                  </p>
+                  <HeroCompsDescriptions
+                    title={heroWiki[0].heroStats[index][1].teemmates.description[0][0][0]}
+                    description={heroWiki[0].heroStats[index][1].teemmates.description[0][0][1]}
+                  />
                 </li>
                 <li>
                   <h5>Bleed Sinergy</h5>
