@@ -285,6 +285,32 @@ export const heroWiki = [
             [3, 4, 7, 9, 10],
           ],
 
+          teemmates: {
+            friends: ["Hellion", "Vestal", "Jester"],
+
+            description: [
+              [
+                ["GOOD DAMAGE AND RANGE", "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
+
+                ["BLEED SINERGY", "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
+
+                ["MOVE COMBO", "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
+              ],
+              [
+                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                [
+                  "Duelist's Advance",
+                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                ],
+              ],
+              [
+                ["Melee Skills", "+15% CRIT"],
+                ["Open Vein", "+2 Bleed Dealt"],
+                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
+              ],
+            ],
+          },
+
           stats: {
             HP: 35,
             SPD: 5,
