@@ -293,6 +293,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   const handleHeroChange = (event) => {
     setActiveHero(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
@@ -744,28 +745,36 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <div className="teammateDescription">
               <ul>
-                <li>
-                  <HeroCompsDescriptions
-                    title={heroWiki[0].heroStats[index][1].teemmates.description[0][0][0]}
-                    description={heroWiki[0].heroStats[index][1].teemmates.description[0][0][1]}
-                  />
-                </li>
-                <li>
-                  <h5>Bleed Sinergy</h5>
-                  <p>
-                    Interesante sinergia con el sangrado, resultar efectiva en
-                    combate para sumar stacks.
-                  </p>
-                </li>
-                <li>
-                  <h5>move combo</h5>
-                  <p>
-                    En situaciones donde el posicionamiento adelantado es
-                    crucial, si Hellion es desplazada hacia atrás, Highwayman
-                    puede utilizar Point Blank Shot para devolverla al primer
-                    rango..
-                  </p>
-                </li>
+                <HeroCompsDescriptions
+                  title={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][0][0]
+                  }
+                  description={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][0][1]
+                  }
+                />
+                <HeroCompsDescriptions
+                  title={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][1][0]
+                  }
+                  description={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][1][1]
+                  }
+                />
+                <HeroCompsDescriptions
+                  title={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][2][0]
+                  }
+                  description={
+                    heroWiki[0].heroStats[index][1].teemmates
+                      .description[0][2][1]
+                  }
+                />
               </ul>
             </div>
 
