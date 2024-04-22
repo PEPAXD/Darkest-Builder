@@ -287,6 +287,7 @@ export const heroWiki = [
 
           teemmates: {
             friends: ["Hellion", "Vestal", "Jester"],
+            testFrineds: ["man-at-arms"],
 
             description: [
               [

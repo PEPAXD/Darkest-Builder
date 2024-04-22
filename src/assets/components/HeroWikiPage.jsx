@@ -17,16 +17,16 @@ import HeroCompsDescriptions from "./HeroCompsDescriptions.jsx";
 import DataTable from "./dataTable.jsx";
 
 function HeroWikiPage({ url_Bg, heroName }) {
-  const [index, setIndex] = useState(0);
-  const [pathIndex, setPathIndex] = useState(0);
-  const [selectedPathIndex, setSelectedPathIndex] = useState(0);
+  let [index, setIndex] = useState(0);
+  let [pathIndex, setPathIndex] = useState(0);
+  let [selectedPathIndex, setSelectedPathIndex] = useState(0);
 
-  const [pathSkillsStack, setPathSkillsStack] = useState(
+  let [pathSkillsStack, setPathSkillsStack] = useState(
     heroWiki[0].heroStats[0][1].pathStacks[0]
   );
 
   useEffect(() => {
-    const newIndex = heroWiki[0].heroNames.findIndex(
+    let newIndex = heroWiki[0].heroNames.findIndex(
       (name) => name === heroName
     );
     setIndex(newIndex);
@@ -71,7 +71,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setPathSkillsStack(heroWiki[0].heroStats[0][1].pathStacks[0]);
   }, [heroName]);
 
-  const ArrowNextBackArrayHero = (direction) => {
+  let ArrowNextBackArrayHero = (direction) => {
     setIndex((oldIndex) => {
       let newIndex;
       if (direction === "back") {
@@ -132,20 +132,20 @@ function HeroWikiPage({ url_Bg, heroName }) {
   };
 
   // SearchBar Functions
-  const items = heroWiki[0].heroNames.map((name, index) => ({
+  let items = heroWiki[0].heroNames.map((name, index) => ({
     id: index,
     name,
   }));
 
-  const selectHero = (item) => {
-    const selectedIndex = heroWiki[0].heroNames.indexOf(item.name);
+  let selectHero = (item) => {
+    let selectedIndex = heroWiki[0].heroNames.indexOf(item.name);
 
     if (selectedIndex !== -1) {
       setIndex(selectedIndex);
     }
   };
 
-  const formatResult = (item) => {
+  let formatResult = (item) => {
     return (
       <>
         <span style={{ display: "block", textAlign: "left" }}>{item.name}</span>
@@ -153,7 +153,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
-  const stats = [
+  let stats = [
     { type: "BLEED", icon: "public\\icon\\Bleed_dd2.webp" },
     { type: "MOVE", icon: "public\\icon\\Move_dd2.webp" },
     { type: "BURN", icon: "public\\icon\\Burn_dd2.webp" },
@@ -172,82 +172,82 @@ function HeroWikiPage({ url_Bg, heroName }) {
     { type: "SPD", icon: "public\\icon\\Icon_speed_dd2.webp" },
   ];
 
-  const [isUpgradeActive, setUpgradeActive] = useState(false);
+  let [isUpgradeActive, setUpgradeActive] = useState(false);
 
-  const toggleUpgrade = () => {
+  let toggleUpgrade = () => {
     setUpgradeActive(!isUpgradeActive);
   };
 
   //SKILL SELECTION RADIOBUTTONS
-  const [selectedInput, setSelectedInput] = useState(0);
+  let [selectedInput, setSelectedInput] = useState(0);
 
-  const [selectedSkill, setSelectedSkill] = useState(
+  let [selectedSkill, setSelectedSkill] = useState(
     heroWiki[0].heroStats[index][1].skills[0].name
   );
 
-  const [typeSkill, setTypeSkill] = useState(
+  let [typeSkill, setTypeSkill] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.type
   );
 
   //Rank/target checkPoints
-  const pointSlots = [1, 2, 3, 4];
-  const [rankChecksPoints, setrankChecksPoints] = useState(
+  let pointSlots = [1, 2, 3, 4];
+  let [rankChecksPoints, setrankChecksPoints] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.Rank
   );
-  const [targetChecksPoints, setTargetChecksPoints] = useState(
+  let [targetChecksPoints, setTargetChecksPoints] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.Target
   );
 
   //Cooldown
-  const [cooldown, setCooldown] = useState(
+  let [cooldown, setCooldown] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.Cooldown
   );
 
   //skillOverwiew
-  const [skillOverview, setSkillOverview] = useState(
+  let [skillOverview, setSkillOverview] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.skillOverwiew
   );
 
   //dataStatsArray
-  const dataStats = heroWiki[0].heroStats[index][1].skills[0].stats.dataStats;
+  let dataStats = heroWiki[0].heroStats[index][1].skills[0].stats.dataStats;
 
-  const [damage, setDamage] = useState(
+  let [damage, setDamage] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.damage
   );
 
-  const [crit, setCritic] = useState(
+  let [crit, setCritic] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.crit
   );
 
-  const [targetDebuff, setTargetDebuff] = useState(
+  let [targetDebuff, setTargetDebuff] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.target
   );
 
-  const [selfBuff, setSelfBuff] = useState(
+  let [selfBuff, setSelfBuff] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
   );
 
   //upgradesData
-  const dataUpgrade =
+  let dataUpgrade =
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade;
 
-  const [upgradeDamage, setUpgradeDamage] = useState(
+  let [upgradeDamage, setUpgradeDamage] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.damage
   );
 
-  const [upgradeCrit, setUpgradeCrit] = useState(
+  let [upgradeCrit, setUpgradeCrit] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.crit
   );
 
-  const [upgradeTargetDebuff, setUpgradeTargetDebuff] = useState(
+  let [upgradeTargetDebuff, setUpgradeTargetDebuff] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.target
   );
 
-  const [upgradeSelfBuff, setUpgradeSelfBuff] = useState(
+  let [upgradeSelfBuff, setUpgradeSelfBuff] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
   );
 
-  const handleSkillSelect = (event, i) => {
+  let handleSkillSelect = (event, i) => {
     setSelectedSkill(event.target.value);
     setSelectedInput(i);
     setTypeSkill(heroWiki[0].heroStats[index][1].skills[i].stats.type);
@@ -280,18 +280,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
   };
 
   //TODO WIP TRINKETS ---> NEW PASS ADD TO DATABASE.JS
-  const [trinketImg, setTrinketImg] = useState(
+  let [trinketImg, setTrinketImg] = useState(
     heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds
   );
 
   //TODO WIP TEAMMATES ---> RADIOBUTTONS SELECTS
-  const [heroes, setHeroes] = useState(
+  let [heroes, setHeroes] = useState(
     heroWiki[0].heroStats[index][1].teemmates.friends
   );
 
-  const [activeHero, setActiveHero] = useState(heroes[0]);
+  let [activeHero, setActiveHero] = useState(heroes[0]);
 
-  const handleHeroChange = (event) => {
+  let handleHeroChange = (event) => {
     setActiveHero(event.target.value);
     console.log(event.target.value);
   };
