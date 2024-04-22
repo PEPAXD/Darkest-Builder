@@ -842,5 +842,21 @@
     }
   }
 
- 
+  //new css Style
+  .copyRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    z-index: 1;
+
+    cite{
+      font-size: 1.2em;
+      font-weight: 100;
+      color: #fff;
+      
+    }
+  }
 }

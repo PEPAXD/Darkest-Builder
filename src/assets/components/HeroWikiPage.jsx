@@ -747,83 +747,54 @@ function HeroWikiPage({ url_Bg, heroName }) {
               <ul>
                 <HeroCompsDescriptions
                   title={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][0][0]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][0][0]
                   }
                   description={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][0][1]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][0][1]
                   }
                 />
                 <HeroCompsDescriptions
                   title={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][1][0]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][1][0]
                   }
                   description={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][1][1]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][1][1]
                   }
                 />
                 <HeroCompsDescriptions
                   title={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][2][0]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][2][0]
                   }
                   description={
-                    heroWiki[0].heroStats[index][1].teemmates
-                      .description[activeHero][2][1]
+                    heroWiki[0].heroStats[index][1].teemmates.description[
+                      activeHero
+                    ][2][1]
                   }
                 />
               </ul>
             </div>
 
             <br />
-            <br />
-            <br />
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus
-              risus at ultrices mi. Fringilla urna porttitor rhoncus dolor purus
-              non enim praesent elementum. Viverra accumsan in nisl nisi.
-              Egestas erat imperdiet sed euismod nisi porta lorem. Dolor sit
-              amet consectetur adipiscing elit duis. Scelerisque fermentum dui
-              faucibus in ornare quam viverra. Enim sed faucibus turpis in eu
-              mi. Vitae et leo duis ut diam quam. Auctor neque vitae tempus
-              quam. In ornare quam viverra orci sagittis eu volutpat odio
-              facilisis. Pharetra vel turpis nunc eget lorem. Cras ornare arcu
-              dui vivamus arcu felis bibendum ut. Hendrerit gravida rutrum
-              quisque non tellus orci. Ridiculus mus mauris vitae ultricies leo
-              integer. Aliquet eget sit amet tellus cras adipiscing enim eu
-              turpis. Habitant morbi tristique senectus et netus et malesuada
-              fames. A lacus vestibulum sed arcu non odio euismod lacinia.
-              Lacinia at quis risus sed. Lacinia quis vel eros donec ac. Diam in
-              arcu cursus euismod quis viverra nibh cras pulvinar. Diam donec
-              adipiscing tristique risus nec feugiat in fermentum posuere. Donec
-              massa sapien faucibus et molestie ac feugiat sed. Consectetur a
-              erat nam at lectus urna duis. Libero justo laoreet sit amet cursus
-              sit. Pharetra massa massa ultricies mi quis hendrerit dolor magna.
-              Nunc vel risus commodo viverra maecenas accumsan lacus vel.
-              Pharetra massa massa ultricies mi quis hendrerit. Massa tincidunt
-              dui ut ornare lectus sit amet est placerat. Imperdiet massa
-              tincidunt nunc pulvinar sapien. Nunc sed velit dignissim sodales
-              ut eu sem. Velit egestas dui id ornare arcu odio ut. Urna duis
-              convallis convallis tellus id interdum velit laoreet id. Lacinia
-              at quis risus sed vulputate odio ut. Sed blandit libero volutpat
-              sed cras ornare arcu dui. Vitae semper quis lectus nulla at.
-              Cursus turpis massa tincidunt dui ut ornare lectus sit amet.
-              Suspendisse potenti nullam ac tortor vitae. Arcu cursus euismod
-              quis viverra nibh cras pulvinar mattis nunc. Commodo viverra
-              maecenas accumsan lacus vel facilisis volutpat est velit. Erat
-              velit scelerisque in dictum non. Imperdiet proin fermentum leo vel
-              orci. In ante metus dictum at tempor commodo. Pellentesque
-              habitant morbi tristique senectus et netus et. Eget mauris
-              pharetra et ultrices neque ornare. Massa enim nec dui nunc. Amet
-              cursus sit amet dictum sit amet justo. Ultrices neque ornare
-              aenean euismod elementum nisi quis eleifend. Neque gravida in
-              fermentum et sollicitudin ac.
-            </p>
+
+            {/* //make a copywriten developer credits */}
+            <div className="copyRight">
+              <cite>
+                Developed by: <a href="">DevName</a>
+              </cite>
+              <cite>
+                InfoRef: <a href=""> AutorName </a>
+              </cite>
+            </div>
           </div>
         </div>
       </div>
