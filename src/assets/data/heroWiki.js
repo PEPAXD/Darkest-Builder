@@ -298,11 +298,11 @@ export const heroWiki = [
                 ["MOVE COMBO", "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
               ],
               [
-                ["AAAGOOD DAMAGE AND RANGE", "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
+                ["AAAGOOD DAMAGE AND RANGE", "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
 
-                ["AAABLEED SINERGY", "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
+                ["AAABLEED SINERGY", "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
 
-                ["MOVE COMBO", "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
+                ["AAAMOVE COMBO", "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
               ],
               [
                 ["BBBGOOD DAMAGE AND RANGE", "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],

@@ -26,9 +26,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
   );
 
   useEffect(() => {
-    let newIndex = heroWiki[0].heroNames.findIndex(
-      (name) => name === heroName
-    );
+    let newIndex = heroWiki[0].heroNames.findIndex((name) => name === heroName);
     setIndex(newIndex);
     setSelectedSkill(heroWiki[0].heroStats[newIndex][1].skills[0].name);
     setTypeSkill(heroWiki[0].heroStats[newIndex][1].skills[0].stats.type);
@@ -289,11 +287,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].teemmates.friends
   );
 
-  let [activeHero, setActiveHero] = useState(heroes[0]);
+  let [activeHero, setActiveHero] = useState(0);
 
   let handleHeroChange = (event) => {
-    setActiveHero(event.target.value);
-    console.log(event.target.value);
+    setActiveHero(Number(event.target.value));
   };
 
   return (
@@ -721,58 +718,61 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <br />
 
             <div className="friends">
-              {heroes.map((hero) => (
-                <div key={hero}>
-                  <input
-                    type="radio"
-                    id={hero}
-                    name="hero"
-                    value={hero}
-                    checked={activeHero === hero}
-                    onChange={handleHeroChange}
-                  />
-                  <label htmlFor={hero}>
-                    <HeroComps
-                      heroname={hero}
-                      activeHero={activeHero === hero}
+              {heroes.map((hero, index) => {
+                return (
+                  <div key={hero}>
+                    <input
+                      type="radio"
+                      id={hero}
+                      name="hero"
+                      value={index}
+                      checked={activeHero === index}
+                      onChange={handleHeroChange}
                     />
-                  </label>
-                </div>
-              ))}
+                    <label htmlFor={hero}>
+                      <HeroComps
+                        heroname={hero}
+                        trueHero={activeHero === index}
+                      />
+                    </label>
+                  </div>
+                );
+              })}
             </div>
 
             <br />
 
+            {/* //TODO WIP  */}
             <div className="teammateDescription">
               <ul>
                 <HeroCompsDescriptions
                   title={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][0][0]
+                      .description[activeHero][0][0]
                   }
                   description={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][0][1]
+                      .description[activeHero][0][1]
                   }
                 />
                 <HeroCompsDescriptions
                   title={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][1][0]
+                      .description[activeHero][1][0]
                   }
                   description={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][1][1]
+                      .description[activeHero][1][1]
                   }
                 />
                 <HeroCompsDescriptions
                   title={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][2][0]
+                      .description[activeHero][2][0]
                   }
                   description={
                     heroWiki[0].heroStats[index][1].teemmates
-                      .description[0][2][1]
+                      .description[activeHero][2][1]
                   }
                 />
               </ul>
