@@ -785,7 +785,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
 
             <br />
-
             {/* //make a copywriten developer credits */}
             <div className="copyRight">
               <cite>

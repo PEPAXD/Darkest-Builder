@@ -852,12 +852,17 @@
     width: 100%;
     z-index: 1;
 
+    margin-top: 1.5rem;
     border-top: 1px solid #fff;
 
     cite{
       font-size: 1.2em;
       font-weight: 100;
-      color: #fff;
+
+      a{
+        color: #8389c5;
+        text-decoration: underline;
+      }
     }
   }
 }
