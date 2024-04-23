@@ -753,12 +753,74 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
 
             <br />
+            <h2>Sample Comp</h2>
+            <hr />
+
+            <div className="teamCombo">
+              <h3>"Mitigación Infernal: Aturdimientos y Protección"</h3>
+
+              <div className="ImgHero">
+                <div>
+                  <HeroComps heroname={"vestal"} trueHero={false} />
+                  <span>(Seraph)</span>
+                </div>
+                <div>
+                  <HeroComps heroname={"highwayman"} trueHero={false} />
+                  <span>(Seraph)</span>
+                </div>
+                <div>
+                  <HeroComps heroname={"jester"} trueHero={false} />
+                  <span>(Seraph)</span>
+                </div>
+                <div>
+                  <HeroComps heroname={"man-at-arms"} trueHero={false} />
+                  <span>(Seraph)</span>
+                </div>
+              </div>
+
+              <p>
+                Este grupo funciona de manera simple. La Vestal lanza Fortaleza
+                en el Bufón, quien marca un objetivo con Ingenio de Razor,
+                mientras que Barristan aturde al enemigo con Rampa. Si no puede
+                aturdir, Dismas usa Disparo de Pistola. La consagración
+                proporciona bloqueo o esquiva +, lo que permite a la Vestal
+                lanzar Juicios potentes. Dismas dispara cuando no aturde. La
+                fuerte mitigación permite usar Apuntar sin preocupaciones. Con
+                críticos de Dismas y Fortalecer, el estrés no es problema.
+                Además, las curaciones de la Vestal cubren los puntos de vida.
+                Puedes romper el bucle de aturdimiento con Mantente Firme. Este
+                grupo es efectivo en cada acto, especialmente contra jefes
+                vulnerables al aturdimiento.
+              </p>
+            </div>
+
             <div className="copyRight">
               <cite>
-                Developed by: <a href="">DevName</a>
+                Developed by:{" "}
+                <a
+                  href="https://www.linkedin.com/in/mauro-pepa-dev/"
+                  target="_blanck"
+                >
+                  Mauro Exequiel Pepa
+                </a>
               </cite>
               <cite>
-                InfoRef: <a href=""> AutorName </a>
+                InfoRef:
+                <a
+                  href="https://darkestdungeon.fandom.com/wiki/Darkest_Dungeon_II_Wiki"
+                  target="_blanck"
+                >
+                  Getfandom
+                </a>
+                <a href="https://www.youtube.com/@ShuffleFM" target="_blanck">
+                  ShuffleFM
+                </a>
+                <a
+                  href="https://steamcommunity.com/sharedfiles/filedetails/?id=2973257745"
+                  target="_blanck"
+                >
+                  SpiderKhan
+                </a>
               </cite>
             </div>
           </div>

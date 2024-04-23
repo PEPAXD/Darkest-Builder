@@ -842,6 +842,66 @@
     }
   }
 
+  .friends {
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .teamCombo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    span {
+      font-weight: 100;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.1em;
+      font-weight: 100;
+    }
+
+    .ImgHero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      width: 100%;
+      gap: 2rem;
+
+      margin-top: 6%;
+      margin-bottom: 3%;
+    }
+
+    .heroFriend {
+      gap: 2.5rem;
+      margin-bottom: 0rem;
+
+      i {
+        font-size: 1.4em;
+      }
+
+      .friendContainer {
+        width: 8rem;
+        height: 8rem;
+
+        filter: grayscale(70%);
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
   //new css Style
   .copyRight {
     display: flex;
@@ -855,13 +915,22 @@
     margin-top: 1.5rem;
     border-top: 1px solid #fff;
 
-    cite{
+    cite {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
       font-size: 1.2em;
       font-weight: 100;
 
-      a{
+      a {
         color: #8389c5;
-        text-decoration: underline;
+        margin-left: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
