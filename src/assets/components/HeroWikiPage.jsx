@@ -742,50 +742,17 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
 
-            {/* //TODO WIP  */}
             <div className="teammateDescription">
-              <ul>
-                <HeroCompsDescriptions
-                  title={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][0][0]
-                  }
-                  description={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][0][1]
-                  }
-                />
-                <HeroCompsDescriptions
-                  title={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][1][0]
-                  }
-                  description={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][1][1]
-                  }
-                />
-                <HeroCompsDescriptions
-                  title={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][2][0]
-                  }
-                  description={
-                    heroWiki[0].heroStats[index][1].teemmates.description[
-                      activeHero
-                    ][2][1]
-                  }
-                />
-              </ul>
+              <HeroCompsDescriptions
+                description={
+                  heroWiki[0].heroStats[index][1].teemmates.description[
+                    activeHero
+                  ]
+                }
+              />
             </div>
 
             <br />
-            {/* //make a copywriten developer credits */}
             <div className="copyRight">
               <cite>
                 Developed by: <a href="">DevName</a>

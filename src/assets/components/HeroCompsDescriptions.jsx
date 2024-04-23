@@ -1,13 +1,17 @@
-import React from 'react'
-import './styles/HeroCompsDescriptions.scss'
+import React from "react";
+import "./styles/HeroCompsDescriptions.scss";
 
-function HeroCompsDescriptions({ title, description }) {
+function HeroCompsDescriptions({ description }) {
   return (
-    <li>
-      <h5>{title}</h5>
-      <p>{description}</p>
-    </li>
-  )
+    <ul>
+      {description.map((desc, index) => (
+        <li key={index}>
+          <h5>{desc[0]}</h5>
+          <p>{desc[1]}</p>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
-export default HeroCompsDescriptions
+export default HeroCompsDescriptions;
