@@ -291,6 +291,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setActiveHero(Number(event.target.value));
   };
 
+  //ScrollToSection id="paths"
+  let scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="wiki">
       <div
@@ -361,6 +366,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         setPathSkillsStack(
                           heroWiki[0].heroStats[0][1].pathStacks[pathIndex]
                         );
+                        scrollToSection("paths");
                       }}
                     />
                     <label htmlFor={`value-${pathIndex + 1}`}>{path}</label>
@@ -489,85 +495,88 @@ function HeroWikiPage({ url_Bg, heroName }) {
             </div>
             <br />
 
-            <h2>Hero Paths</h2>
-            <hr />
+            <section id="paths">
+              <h2>Hero Paths</h2>
+              <hr />
 
-            <div className="pathContainer">
-              <PathSkills
-                index={index}
-                heroWiki={heroWiki}
-                pathN={1}
-                skills={heroWiki[0].heroStats[index][1].paths[0][2]}
-                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`}
-                borderStyle={selectedPathIndex === 1}
-              />
-              <PathSkills
-                index={index}
-                heroWiki={heroWiki}
-                pathN={2}
-                skills={heroWiki[0].heroStats[index][1].paths[0][3]}
-                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`}
-                borderStyle={selectedPathIndex === 2}
-              />
-              <PathSkills
-                index={index}
-                heroWiki={heroWiki}
-                pathN={3}
-                skills={heroWiki[0].heroStats[index][1].paths[0][4]}
-                imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`}
-                borderStyle={selectedPathIndex === 3}
-              />
-            </div>
+              <div className="pathContainer">
+                <PathSkills
+                  index={index}
+                  heroWiki={heroWiki}
+                  pathN={1}
+                  skills={heroWiki[0].heroStats[index][1].paths[0][2]}
+                  imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][1]}.webp`}
+                  borderStyle={selectedPathIndex === 1}
+                />
+                <PathSkills
+                  index={index}
+                  heroWiki={heroWiki}
+                  pathN={2}
+                  skills={heroWiki[0].heroStats[index][1].paths[0][3]}
+                  imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][2]}.webp`}
+                  borderStyle={selectedPathIndex === 2}
+                />
+                <PathSkills
+                  index={index}
+                  heroWiki={heroWiki}
+                  pathN={3}
+                  skills={heroWiki[0].heroStats[index][1].paths[0][4]}
+                  imgPath={`public/HeroIcons/paths/${heroWiki[0].heroNames[index]}/Dd2_path_${heroWiki[0].heroPaths[index][1][3]}.webp`}
+                  borderStyle={selectedPathIndex === 3}
+                />
+              </div>
+              <br />
+              <cite>
+                {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
+              </cite>
+              <br />
+              <br />
 
-            <cite>
-              {heroWiki[0].heroStats[index][1].paths[0][1][selectedPathIndex]}
-            </cite>
-            <br />
-
-            <div className="skillsContain">
-              {heroWiki[0].heroStats[index][1].skills.map((skill, i) => (
-                <label
-                  className="imgContain"
-                  key={skill.id}
-                  style={{
-                    position: "relative",
-                    opacity:
-                      pathSkillsStack.includes(i) || pathSkillsStack == 11
-                        ? 1
-                        : 0.2,
-                  }}
-                >
-                  <input
-                    type="radio"
-                    name="skills"
-                    value={skill.name}
-                    checked={i === selectedInput}
-                    style={{ display: "none" }}
-                    onChange={(event) => handleSkillSelect(event, i)}
-                  />
-                  <img
-                    className="skills"
-                    src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
-                    alt={skill.name}
-                  />
-                  <i>{skill.name}</i>
-                  {pathSkillsStack.includes(i) && (
-                    <div
-                      style={{
-                        width: 0,
-                        height: 0,
-                        borderLeft: "10px solid transparent",
-                        borderRight: "10px solid transparent",
-                        borderTop: "10px solid cyan",
-                        position: "absolute",
-                        top: 0,
-                        left: "calc(50% - 10px)",
-                      }}
+              <div className="skillsContain">
+                {heroWiki[0].heroStats[index][1].skills.map((skill, i) => (
+                  <label
+                    className="imgContain"
+                    key={skill.id}
+                    style={{
+                      position: "relative",
+                      opacity:
+                        pathSkillsStack.includes(i) || pathSkillsStack == 11
+                          ? 1
+                          : 0.2,
+                    }}
+                  >
+                    <input
+                      type="radio"
+                      name="skills"
+                      value={skill.name}
+                      checked={i === selectedInput}
+                      style={{ display: "none" }}
+                      onChange={(event) => handleSkillSelect(event, i)}
                     />
-                  )}
-                </label>
-              ))}
-            </div>
+                    <img
+                      className="skills"
+                      src={`public/HeroIcons/skills/${heroWiki[0].heroNames[index]}/${skill.img}.webp`}
+                      alt={skill.name}
+                    />
+                    <i>{skill.name}</i>
+                    {pathSkillsStack.includes(i) && (
+                      <div
+                        style={{
+                          width: 0,
+                          height: 0,
+                          borderLeft: "10px solid transparent",
+                          borderRight: "10px solid transparent",
+                          borderTop: "10px solid cyan",
+                          position: "absolute",
+                          top: 0,
+                          left: "calc(50% - 10px)",
+                        }}
+                      />
+                    )}
+                  </label>
+                ))}
+              </div>
+            </section>
 
             <br />
 
@@ -777,7 +786,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     trueHero={false}
                   />
                   <span>
-                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[1]})
+                    ({heroWiki[0].heroStats[index][1].sampleCombo.paths[1]})
                   </span>
                 </div>
                 <div>
@@ -788,7 +797,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     trueHero={false}
                   />
                   <span>
-                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[2]})
+                    ({heroWiki[0].heroStats[index][1].sampleCombo.paths[2]})
                   </span>
                 </div>
                 <div>
@@ -799,7 +808,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     trueHero={false}
                   />
                   <span>
-                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[3]})
+                    ({heroWiki[0].heroStats[index][1].sampleCombo.paths[3]})
                   </span>
                 </div>
               </div>

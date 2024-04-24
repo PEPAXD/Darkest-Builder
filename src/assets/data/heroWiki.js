@@ -876,6 +876,14 @@ export const heroWiki = [
             ],
           },
 
+          sampleCombo: {
+            title: '"Infernal Mitigation: Stuns and Protection"',
+            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
+            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
+          },
+
+
           stats: {
             HP: 29,
             SPD: 5,
