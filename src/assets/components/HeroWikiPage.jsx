@@ -70,6 +70,9 @@ function HeroWikiPage({ url_Bg, heroName }) {
   }, [heroName]);
 
   let ArrowNextBackArrayHero = (direction) => {
+    //SCROLL TO TOP
+    scrollToSection("heroHome");
+
     setIndex((oldIndex) => {
       let newIndex;
       if (direction === "back") {
@@ -377,105 +380,108 @@ function HeroWikiPage({ url_Bg, heroName }) {
           </div>
 
           <div className="contain-WikiData">
-            <h1>{heroWiki[0].heroNames[index]}</h1>
-            <hr />
-            <p>{heroWiki[0].heroStats[index][1].description}</p>
-            <br />
+            <section id="heroHome">
+              <h1>{heroWiki[0].heroNames[index]}</h1>
+              <hr />
+              <p>{heroWiki[0].heroStats[index][1].description}</p>
+              <br />
 
-            <div className="Characteristics">
-              <h3>Characteristics</h3>
+              <div className="Characteristics">
+                <h3>Characteristics</h3>
 
-              <div className="listStats">
-                <i>"Role"</i>
-                <ul>
-                  <p>{heroWiki[0].heroStats[index][1].Characteristics.Rol}</p>
-                </ul>
+                <div className="listStats">
+                  <i>"Role"</i>
+                  <ul>
+                    <p>{heroWiki[0].heroStats[index][1].Characteristics.Rol}</p>
+                  </ul>
 
-                <i>"Strengths"</i>
-                <ul>
-                  {Object.entries(
-                    heroWiki[0].heroStats[index][1].Characteristics.Strengths
-                  ).map(([strength, description], i) => (
-                    <li key={i}>
-                      <a
-                        data-tooltip-id="my-tooltip"
-                        data-tooltip-content={description}
-                      >
-                        {strength}
-                      </a>
-                    </li>
-                  ))}
-                  <Tooltip id="my-tooltip" className="my-tooltip" />
-                </ul>
+                  <i>"Strengths"</i>
+                  <ul>
+                    {Object.entries(
+                      heroWiki[0].heroStats[index][1].Characteristics.Strengths
+                    ).map(([strength, description], i) => (
+                      <li key={i}>
+                        <a
+                          data-tooltip-id="my-tooltip"
+                          data-tooltip-content={description}
+                        >
+                          {strength}
+                        </a>
+                      </li>
+                    ))}
+                    <Tooltip id="my-tooltip" className="my-tooltip" />
+                  </ul>
 
-                <i>"Weaknesses"</i>
-                <ul>
-                  {Object.entries(
-                    heroWiki[0].heroStats[index][1].Characteristics.Weaknesses
-                  ).map(([Weaknesses, description], i) => (
-                    <li key={i}>
-                      <a
-                        data-tooltip-id="my-tooltip"
-                        data-tooltip-content={description}
-                      >
-                        {Weaknesses}
-                      </a>
-                    </li>
-                  ))}
-                  <Tooltip id="my-tooltip" className="my-tooltip" />
-                </ul>
+                  <i>"Weaknesses"</i>
+                  <ul>
+                    {Object.entries(
+                      heroWiki[0].heroStats[index][1].Characteristics.Weaknesses
+                    ).map(([Weaknesses, description], i) => (
+                      <li key={i}>
+                        <a
+                          data-tooltip-id="my-tooltip"
+                          data-tooltip-content={description}
+                        >
+                          {Weaknesses}
+                        </a>
+                      </li>
+                    ))}
+                    <Tooltip id="my-tooltip" className="my-tooltip" />
+                  </ul>
+                </div>
               </div>
-            </div>
-            <br />
+              <br />
 
-            <div className="statsContain">
-              <div className="angry-grid">
-                <div id="item-0">
-                  <div className="upgradeButton">
-                    <div className="checkbox-wrapper-46">
-                      <input
-                        type="checkbox"
-                        id="cbx-46"
-                        className="inp-cbx"
-                        onChange={toggleUpgrade}
-                      />
-                      <label htmlFor="cbx-46" className="cbx">
-                        <span>
-                          <svg viewBox="0 0 12 10" height="10px" width="12px">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </svg>
-                        </span>
-                        <span>Upgraded</span>
-                      </label>
+              <div className="statsContain">
+                <div className="angry-grid">
+                  <div id="item-0">
+                    <div className="upgradeButton">
+                      <div className="checkbox-wrapper-46">
+                        <input
+                          type="checkbox"
+                          id="cbx-46"
+                          className="inp-cbx"
+                          onChange={toggleUpgrade}
+                        />
+                        <label htmlFor="cbx-46" className="cbx">
+                          <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                          <span>Upgraded</span>
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div id="item-1">
-                  <h4>Resistances</h4>
-                </div>
-                {stats.map((stat, i) => (
-                  <div id={`item-${i + 2}`} key={`item-${i + 2}`}>
-                    <img src={stat.icon} alt="" />
-                    <h5>
-                      {stat.type}{" "}
-                      {isUpgradeActive
-                        ? heroWiki[0].heroStats[index][1].stats.upgrades[
-                            stat.type
-                          ]
-                        : heroWiki[0].heroStats[index][1].stats[stat.type]}
-                      {i < 9 ? "%" : ""}
-                    </h5>
+                  <div id="item-1">
+                    <h4>Resistances</h4>
                   </div>
-                ))}
-                <div id="item-10">
-                  <h4>Movement</h4>
-                </div>
-                <div id="item-15">
-                  <h4>Base Stats</h4>
+                  {stats.map((stat, i) => (
+                    <div id={`item-${i + 2}`} key={`item-${i + 2}`}>
+                      <img src={stat.icon} alt="" />
+                      <h5>
+                        {stat.type}{" "}
+                        {isUpgradeActive
+                          ? heroWiki[0].heroStats[index][1].stats.upgrades[
+                              stat.type
+                            ]
+                          : heroWiki[0].heroStats[index][1].stats[stat.type]}
+                        {i < 9 ? "%" : ""}
+                      </h5>
+                    </div>
+                  ))}
+                  <div id="item-10">
+                    <h4>Movement</h4>
+                  </div>
+                  <div id="item-15">
+                    <h4>Base Stats</h4>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
 
+            <br />
             <br />
 
             <h2>How to Play</h2>
