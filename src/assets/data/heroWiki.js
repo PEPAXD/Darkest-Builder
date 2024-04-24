@@ -287,31 +287,64 @@ export const heroWiki = [
 
           teemmates: {
             friends: ["Hellion", "Vestal", "Jester"],
-            testFrineds: ["man-at-arms"],
 
             description: [
               [
-                ["GOOD DAMAGE AND RANGE", "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
+                [
+                  "GOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
 
-                ["BLEED SINERGY", "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
+                [
+                  "BLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
 
-                ["MOVE COMBO", "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
+                [
+                  "MOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
               ],
               [
-                ["AAAGOOD DAMAGE AND RANGE", "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
+                [
+                  "AAAGOOD DAMAGE AND RANGE",
+                  "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
 
-                ["AAABLEED SINERGY", "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
+                [
+                  "AAABLEED SINERGY",
+                  "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
 
-                ["AAAMOVE COMBO", "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
+                [
+                  "AAAMOVE COMBO",
+                  "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
               ],
               [
-                ["BBBGOOD DAMAGE AND RANGE", "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3."],
+                [
+                  "BBBGOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
 
-                ["BBBBLEED SINERGY", "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks."],
+                [
+                  "BBBBLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
 
-                ["BBBMOVE COMBO", "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango.."],
+                [
+                  "BBBMOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
               ],
             ],
+          },
+
+          sampleCombo: {
+            title: '"Infernal Mitigation: Stuns and Protection"',
+            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
+            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
           },
 
           stats: {
@@ -787,6 +820,61 @@ export const heroWiki = [
               ],
             ],
           ],
+
+          teemmates: {
+            friends: ["Vestal", "man-at-arms", "highwayman"],
+
+            description: [
+              [
+                [
+                  "GOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "BLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "MOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+              [
+                [
+                  "AAAGOOD DAMAGE AND RANGE",
+                  "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "AAABLEED SINERGY",
+                  "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "AAAMOVE COMBO",
+                  "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+              [
+                [
+                  "BBBGOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "BBBBLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "BBBMOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+            ],
+          },
 
           stats: {
             HP: 29,

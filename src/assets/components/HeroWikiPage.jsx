@@ -277,12 +277,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
   };
 
-  //TODO WIP TRINKETS ---> NEW PASS ADD TO DATABASE.JS
   let [trinketImg, setTrinketImg] = useState(
     heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds
   );
 
-  //TODO WIP TEAMMATES ---> RADIOBUTTONS SELECTS
   let [heroes, setHeroes] = useState(
     heroWiki[0].heroStats[index][1].teemmates.friends
   );
@@ -757,41 +755,56 @@ function HeroWikiPage({ url_Bg, heroName }) {
             <hr />
 
             <div className="teamCombo">
-              <h3>"Mitigación Infernal: Aturdimientos y Protección"</h3>
+              <h3>{heroWiki[0].heroStats[index][1].sampleCombo.title}</h3>
 
               <div className="ImgHero">
                 <div>
-                  <HeroComps heroname={"vestal"} trueHero={false} />
-                  <span>(Seraph)</span>
+                  <HeroComps
+                    heroname={
+                      heroWiki[0].heroStats[index][1].sampleCombo.comp[0]
+                    }
+                    trueHero={false}
+                  />
+                  <span>
+                    ({heroWiki[0].heroStats[index][1].sampleCombo.paths[0]})
+                  </span>
                 </div>
                 <div>
-                  <HeroComps heroname={"highwayman"} trueHero={false} />
-                  <span>(Seraph)</span>
+                  <HeroComps
+                    heroname={
+                      heroWiki[0].heroStats[index][1].sampleCombo.comp[1]
+                    }
+                    trueHero={false}
+                  />
+                  <span>
+                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[1]})
+                  </span>
                 </div>
                 <div>
-                  <HeroComps heroname={"jester"} trueHero={false} />
-                  <span>(Seraph)</span>
+                  <HeroComps
+                    heroname={
+                      heroWiki[0].heroStats[index][1].sampleCombo.comp[2]
+                    }
+                    trueHero={false}
+                  />
+                  <span>
+                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[2]})
+                  </span>
                 </div>
                 <div>
-                  <HeroComps heroname={"man-at-arms"} trueHero={false} />
-                  <span>(Seraph)</span>
+                  <HeroComps
+                    heroname={
+                      heroWiki[0].heroStats[index][1].sampleCombo.comp[3]
+                    }
+                    trueHero={false}
+                  />
+                  <span>
+                  ({heroWiki[0].heroStats[index][1].sampleCombo.paths[3]})
+                  </span>
                 </div>
               </div>
 
-              <p>
-                Este grupo funciona de manera simple. La Vestal lanza Fortaleza
-                en el Bufón, quien marca un objetivo con Ingenio de Razor,
-                mientras que Barristan aturde al enemigo con Rampa. Si no puede
-                aturdir, Dismas usa Disparo de Pistola. La consagración
-                proporciona bloqueo o esquiva +, lo que permite a la Vestal
-                lanzar Juicios potentes. Dismas dispara cuando no aturde. La
-                fuerte mitigación permite usar Apuntar sin preocupaciones. Con
-                críticos de Dismas y Fortalecer, el estrés no es problema.
-                Además, las curaciones de la Vestal cubren los puntos de vida.
-                Puedes romper el bucle de aturdimiento con Mantente Firme. Este
-                grupo es efectivo en cada acto, especialmente contra jefes
-                vulnerables al aturdimiento.
-              </p>
+              <p>{heroWiki[0].heroStats[index][1].sampleCombo.description}</p>
             </div>
 
             <div className="copyRight">
