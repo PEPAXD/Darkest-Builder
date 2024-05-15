@@ -290,51 +290,53 @@ export const heroWiki = [
 
             description: [
               [
+
                 [
                   "GOOD DAMAGE AND RANGE",
-                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
-                ],
-
-                [
-                  "BLEED SINERGY",
-                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
-                ],
-
-                [
+                  "Stands out as an excellent ally, primarily due to her good range and considerable damage. However, unlike the Highwayman, she faces difficulties in rank 3.",
+                  ],
+                  
+                  [
+                  "BLEED SYNERGY",
+                  "Interesting synergy with bleeding, proving effective in combat for stacking additional damage.",
+                  ],
+                  
+                  [
                   "MOVE COMBO",
-                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
-                ],
+                  "In situations where advanced positioning is crucial, if Hellion is moved backward, Highwayman can use Point Blank Shot to return her to the front rank.",
+                  ]
+              ],
+              [
+
+                [
+                  "Consecration",
+                  "Applies buffs to allies, strengthening them by either increasing their defenses to better withstand enemy attacks or enhancing their ability to deal damage.",
+                  ],
+                  
+                  [
+                  "Healer",
+                  "In critical situations, restoring the health of companions can make the difference between life and death.",
+                  ],
+                  
+                  [
+                  "Ministrations",
+                  "Removes accumulated harmful effects on allies, such as stacks of ongoing damage.",
+                  ]
               ],
               [
                 [
-                  "AAAGOOD DAMAGE AND RANGE",
-                  "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                  "COMBO TOKEN",
+                  "A great ally that facilitates the application and subsequent execution of combo tokens on enemies.",
                 ],
 
                 [
-                  "AAABLEED SINERGY",
-                  "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                  "BLEED SYNERGY",
+                  "An interesting synergy with bleeding, proving effective in combat for stacking additional damage.",
                 ],
 
                 [
-                  "AAAMOVE COMBO",
-                  "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
-                ],
-              ],
-              [
-                [
-                  "BBBGOOD DAMAGE AND RANGE",
-                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
-                ],
-
-                [
-                  "BBBBLEED SINERGY",
-                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
-                ],
-
-                [
-                  "BBBMOVE COMBO",
-                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                  "Extra Action",
+                  "Grants an additional action, doubling the potential damage of the highwayman, ensuring the elimination of an enemy."
                 ],
               ],
             ],
@@ -342,9 +344,10 @@ export const heroWiki = [
 
           sampleCombo: {
             title: '"Infernal Mitigation: Stuns and Protection"',
-            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            comp: ["Vestal", "Highwayman", "Jester", "Man-At-Arms"],
             paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
-            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
+            description:
+              "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
           },
 
           stats: {
@@ -721,7 +724,8 @@ export const heroWiki = [
       [
         "Grave-Robber",
         {
-          description: "description Grave Robber",
+          description:
+            "She stands out for her versatility in positioning among the heroes. Her self-sustain ability, Dodge, and Stealth make her resilient to enemy disruptions. Her damage relies primarily on CRIT chance, which requires careful planning, but can be very effective under the right circumstances.",
 
           Characteristics: {
             Rol: ["AAA Damage Dealer and bleeder"],
@@ -738,12 +742,7 @@ export const heroWiki = [
               "AAA wants Mastery":
                 "AAA Needs to be mastered points to be effective",
             },
-            Class: [
-              "AAA ANY RANK",
-              "AAA HIGH DMG",
-              "AAA VERSATILE",
-              "AAA RIPOSTE",
-            ],
+            Class: ["ANY RANK", "STEALTH", "DODGE", "HIGH CRIT"],
           },
 
           HowToPlay: {
@@ -878,11 +877,11 @@ export const heroWiki = [
 
           sampleCombo: {
             title: '"Infernal Mitigation: Stuns and Protection"',
-            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            comp: ["Vestal", "Highwayman", "Jester", "Man-At-Arms"],
             paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
-            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
+            description:
+              "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
           },
-
 
           stats: {
             HP: 29,
