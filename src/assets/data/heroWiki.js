@@ -750,17 +750,17 @@ export const heroWiki = [
               {
                 name: "Damage Skill",
                 description:
-                  "AAA The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+                  "focus on one damage skill and upgrade it as soon as possible... Pick to the Face is a good mele option or flashing daggers for a ranged skill. And pick one other move skill to reposition yourself.",
               },
               {
                 name: "Build Around It",
                 description:
-                  "AAA It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+                  "build the rest of the team around it to maximize the potential of the Grave Robber. She can be a good combo with other heroes that can apply Combo tokens.",
               },
               {
                 name: "Keep a Heal",
                 description:
-                  "AAA To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
+                  "keep a heal or defense skill to keep her alive, she has low HP and can be easily killed.",
               },
             ],
           },
