@@ -728,19 +728,19 @@ export const heroWiki = [
             "She stands out for her versatility in positioning among the heroes. Her self-sustain ability, Dodge, and Stealth make her resilient to enemy disruptions. Her damage relies primarily on CRIT chance, which requires careful planning, but can be very effective under the right circumstances.",
 
           Characteristics: {
-            Rol: ["AAA Damage Dealer and bleeder"],
+            Rol: ["Combo Setter and Damage Dealer"],
             Strengths: {
-              "AAA No+Tokens":
-                "AAA Damage very flexible, he can hit any target",
-              "AAA No+ASD": "AAA Damage, Reach and Mobility are consistent",
-              "AAA No+DFE":
-                "AAA Highway Robbery - very strong ability to steal tokens",
+              "Self-Sustain":
+                "She can heal herself and has a high dodge chance",
+              "Reach": "She can hit any target",
+              "Dancing":
+                "She can move between ranks and reposition herself",
             },
             Weaknesses: {
-              "AAA No+Tokens": "AAA No access to defensive tokens",
-              "AAA Low ceiling": "AAA Doesn't have a super high damage ceiling",
-              "AAA wants Mastery":
-                "AAA Needs to be mastered points to be effective",
+              "Low HP": "she has one of the lowest HP pools in the game",
+              "Wants Crits": "her damage is balanced around crits, low base damage",
+              "Wants Mastery":
+                "She desperately needs to be mastered to be effective",
             },
             Class: ["ANY RANK", "STEALTH", "DODGE", "HIGH CRIT"],
           },
@@ -748,17 +748,17 @@ export const heroWiki = [
           HowToPlay: {
             Tips: [
               {
-                name: "AAA Target Priority",
+                name: "Damage Skill",
                 description:
                   "AAA The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
               },
               {
-                name: "AAA Backup Plans",
+                name: "Build Around It",
                 description:
                   "AAA It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
               },
               {
-                name: "AAA Feed Buffs",
+                name: "Keep a Heal",
                 description:
                   "AAA To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
               },
