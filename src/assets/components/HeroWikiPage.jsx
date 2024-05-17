@@ -66,7 +66,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
     );
-    setPathSkillsStack(heroWiki[0].heroStats[0][1].pathStacks[0]);
+    setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
   }, [heroName]);
 
   let ArrowNextBackArrayHero = (direction) => {
@@ -122,7 +122,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
           .self
       );
-      setPathSkillsStack(heroWiki[0].heroStats[0][1].pathStacks[0]);
+      setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
 
       return newIndex;
     });
@@ -367,7 +367,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         setSelectedPathIndex(pathIndex);
                         setPathIndex(pathIndex);
                         setPathSkillsStack(
-                          heroWiki[0].heroStats[0][1].pathStacks[pathIndex]
+                          heroWiki[0].heroStats[index][1].pathStacks[pathIndex]
                         );
                         scrollToSection("paths");
                       }}

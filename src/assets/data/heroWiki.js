@@ -760,7 +760,7 @@ export const heroWiki = [
               {
                 name: "Keep a Heal",
                 description:
-                  "keep a heal or defense skill to keep her alive, she has low HP and can be easily killed.",
+                  "Make sure to equip a healing or defense skill to ensure her survival. She has a low HP pool and can be easily killed. Keeping a heal or defensive ability can help her stay alive longer.",
               },
             ],
           },
@@ -791,33 +791,35 @@ export const heroWiki = [
 
           paths: [
             [
-              "AAAA",
+              "Grave-Robber",
               [
-                '"AAA Default skills. Rewards candles upon reaching the second Inn"',
-                '"AAA A brawler focused on front rank combat and ripostes."',
-                '"AAA A back rank role that emphasizes ranged skill use."',
-                '"AAA A rank-flexible Bleed specialist."',
+                '"Default skills. Rewards candles upon reaching the second Inn"',
+                '"A back rank role with heavy emphasis on CRIT and reach."',
+                '"Rank-flexible role that expands the Grave Robbers Blight capabilities."',
+                '"A flexible role with a variety of Stealh-oriented offense and counter-defense skills."',
               ],
               [
-                ["AAA Rank = 1", "+25% DMG"],
-                ["AAA Rank = 3", "-25% DMG"],
-                ["AAA Rank = 4", "-50% DMG"],
-                ["AAA Point Blank Shot", "Add Riposte"],
+                ["Debuff Move", "-33%"],
+                ["Range Damage", "25%"],
+                ["Range Crit", "5%"],
               ],
               [
-                ["AAA Ranged Skills", "+25% DMG"],
-                ["AAA Melee Skills", "-25% DMG"],
-                ["AAA Buff Self", "+3 Speed"],
-                ["AAA Grapeshot Blast Skills", "Add Strength"],
+                ["Buff With Stealh", "+2 Poison"],
+                ["Debuff Speed", "-3"],
               ],
               [
-                ["AAA Buff Self", "+15% MaxHP"],
-                ["AAA Ranged Skills", "-75% DMG"],
-                ["AAA On Hit Debuff Target", "-10% Bleed RES"],
-                ["AAA Highway Robbery", "Steal 1 Positive Token"],
-                ["AAA Double Cross", "Remove 1 Block"],
+                ["When Self Stealh", "+50% DMG"],
+                ["Debuff HP", "-20% MAX HP"],
+                ["Buff", "Lunge, Pirouette"],
               ],
             ],
+          ],
+
+          pathStacks: [
+            [11],
+            [2, 1, 4, 5, 8],
+            [2, 3, 4, 5, 10],
+            [4, 5, 7, 0, 10],
           ],
 
           teemmates: {
@@ -1152,86 +1154,8 @@ export const heroWiki = [
         },
       ],
 
-      [
-        "Hellion",
-        {
-          description: "description Hellion",
-
-          Characteristics: {
-            Rol: ["BBB Damage Dealer and bleeder"],
-            Strengths: {
-              "BBB No+Tokens":
-                "BBB Damage very flexible, he can hit any target",
-              "BBB No+ASD": "BBB Damage, Reach and Mobility are consistent",
-              "BBB No+DFE":
-                "BBB Highway Robbery - very strong ability to steal tokens",
-            },
-            Weaknesses: {
-              "BBB No+Tokens": "BBB No access to defensive tokens",
-              "BBB Low ceiling": "BBB Doesn't have a super high damage ceiling",
-              "BBB wants Mastery":
-                "BBB Needs to be mastered points to be effective",
-            },
-            Class: [
-              "BBB ANY RANK",
-              "BBB HIGH DMG",
-              "BBB VERSATILE",
-              "BBB RIPOSTE",
-            ],
-          },
-
-          HowToPlay: {
-            Tips: [
-              {
-                name: "BBB Target Priority",
-                description:
-                  "BBB The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
-              },
-              {
-                name: "BBB Backup Plans",
-                description:
-                  "BBB It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
-              },
-              {
-                name: "BBB Feed Buffs",
-                description:
-                  "BBB To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
-              },
-            ],
-          },
-
-          paths: [
-            [
-              "BBBA",
-              [
-                '"BBB Default skills. Rewards candles upon reaching the second Inn"',
-                '"BBB A brawler focused on front rank combat and ripostes."',
-                '"BBB A back rank role that emphasizes ranged skill use."',
-                '"BBB A rank-flexible Bleed specialist."',
-              ],
-            ],
-          ],
-
-          stats: {
-            HP: 1,
-            SPD: 2,
-
-            BLEED: 3,
-            BLIGHT: 4,
-            BURN: 5,
-            DISEASE: 2634,
-            STUN: 7,
-            MOVE: 8,
-            DEBUFF: 9,
-            DEATHBLOW: 0,
-
-            FORW: 1,
-            BACK: 2,
-          },
-        },
-      ],
-
-      //TODO: ADD NEXT HERO
+      //*END DATABASE
     ],
   },
 ];
+
