@@ -290,38 +290,36 @@ export const heroWiki = [
 
             description: [
               [
-
                 [
                   "GOOD DAMAGE AND RANGE",
                   "Stands out as an excellent ally, primarily due to her good range and considerable damage. However, unlike the Highwayman, she faces difficulties in rank 3.",
-                  ],
-                  
-                  [
+                ],
+
+                [
                   "BLEED SYNERGY",
                   "Interesting synergy with bleeding, proving effective in combat for stacking additional damage.",
-                  ],
-                  
-                  [
+                ],
+
+                [
                   "MOVE COMBO",
                   "In situations where advanced positioning is crucial, if Hellion is moved backward, Highwayman can use Point Blank Shot to return her to the front rank.",
-                  ]
+                ],
               ],
               [
-
                 [
                   "Consecration",
                   "Applies buffs to allies, strengthening them by either increasing their defenses to better withstand enemy attacks or enhancing their ability to deal damage.",
-                  ],
-                  
-                  [
+                ],
+
+                [
                   "Healer",
                   "In critical situations, restoring the health of companions can make the difference between life and death.",
-                  ],
-                  
-                  [
+                ],
+
+                [
                   "Ministrations",
                   "Removes accumulated harmful effects on allies, such as stacks of ongoing damage.",
-                  ]
+                ],
               ],
               [
                 [
@@ -336,7 +334,7 @@ export const heroWiki = [
 
                 [
                   "Extra Action",
-                  "Grants an additional action, doubling the potential damage of the highwayman, ensuring the elimination of an enemy."
+                  "Grants an additional action, doubling the potential damage of the highwayman, ensuring the elimination of an enemy.",
                 ],
               ],
             ],
@@ -732,13 +730,13 @@ export const heroWiki = [
             Strengths: {
               "Self-Sustain":
                 "She can heal herself and has a high dodge chance",
-              "Reach": "She can hit any target",
-              "Dancing":
-                "She can move between ranks and reposition herself",
+              Reach: "She can hit any target",
+              Dancing: "She can move between ranks and reposition herself",
             },
             Weaknesses: {
               "Low HP": "she has one of the lowest HP pools in the game",
-              "Wants Crits": "her damage is balanced around crits, low base damage",
+              "Wants Crits":
+                "her damage is balanced around crits, low base damage",
               "Wants Mastery":
                 "She desperately needs to be mastered to be effective",
             },
@@ -1055,7 +1053,6 @@ export const heroWiki = [
                 Cooldown: NaN,
                 Uses: 3,
 
-
                 skillOverwiew:
                   "Panic button. Heals HP and applies Dodge and speed tokens. It is a self-sustain for Grave robber.",
 
@@ -1086,6 +1083,23 @@ export const heroWiki = [
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
                 Uses: 3,
+
+                skillOverwiew:
+                  "Top self-recovery option, useful outside of boss fights. it’s powerful and should be run on most Graverobber builds",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: "Clear Corpse",
+                  self: "Heal 33%, Add Stealth",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: "Clear Corpse",
+                    self: "Heal 50%, Add Stealth x2, -1 Stress",
+                  },
+                },
               },
             },
 
@@ -1099,6 +1113,25 @@ export const heroWiki = [
                 Rank: [2, 3, 4],
                 Target: [1, 2, 3],
                 Cooldown: NaN,
+                Uses: NaN,
+
+                skillOverwiew:
+                  "It's effective against stealthy enemies and reduces Deathblow Resistance. It's now a strong option for Deadeye Graverobbers, unless they're in position 4.",
+
+                dataStats: {
+                  damage: [4, 7],
+                  crit: 5,
+                  target: "Ignores and remove Stealth, Execute 1",
+                  self: null,
+
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 10,
+                    target:
+                      "Ignores and remove Stealth, Execute 1 When Self Stealth Execute 3",
+                    self: null,
+                  },
+                },
               },
             },
 
@@ -1112,6 +1145,26 @@ export const heroWiki = [
                 Rank: [1, 2],
                 Target: [1, 2, 3],
                 Cooldown: NaN,
+                Uses: NaN,
+
+                skillOverwiew:
+                  "powerful ability in the game, with high damage and critical hit probability. It moves the Graverobber forward two positions, requiring strategic planning. Ideal for a high damage approach rather than consistency.",
+
+                dataStats: {
+                  damage: [5, 8],
+                  crit: 20,
+                  target:
+                    "Ignores Dodge When Self Stealth, on CRIT Apply Knockback 2",
+                  self: "Forward 2",
+
+                  upgrade: {
+                    damage: [7, 11],
+                    crit: 30,
+                    target:
+                      "Ignores Dodge And Block When Self Stealth, on CRIT Apply Knockback 3",
+                    self: "Forward 2",
+                  },
+                },
               },
             },
 
@@ -1125,6 +1178,24 @@ export const heroWiki = [
                 Rank: [3, 4],
                 Target: [1, 2],
                 Cooldown: 1,
+                Uses: NaN,
+
+                skillOverwiew:
+                  "Pirouette is a valuable move, often used in double lunge comps with Nightsworn or in Deadeye teams.",
+
+                dataStats: {
+                  damage: [4, 7],
+                  crit: 10,
+                  target: null,
+                  self: "Back 3, Add Daze and Debuff Attack (Does not apply when Self)",
+
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 15,
+                    target: null,
+                    self: "Back 3, Add Daze and Debuff Attack (Does not apply when Self)",
+                  },
+                },
               },
             },
 
@@ -1138,6 +1209,24 @@ export const heroWiki = [
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
                 Cooldown: 2,
+                Uses: NaN,
+
+                skillOverwiew:
+                  "Although it provides some slow utility, a damage-focused self-sustain build is generally preferred. It would be more viable with free access to stealth.",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Add Dodge x3, Taunt x2, Remove Stealth",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Add Dodge+ x3, Taunt x2, If Stealthed Gain When Missed Enemy Attack: Dodge (50%) (3turns), Remove Stealth",
+                  },
+                },
               },
             },
 
@@ -1151,6 +1240,24 @@ export const heroWiki = [
                 Rank: [3, 4],
                 Target: "Self",
                 Cooldown: 2,
+                Uses: NaN,
+
+                skillOverwiew:
+                  "It provides a damage bonus with the stealth for nightsworn. its a good Defensive and repositioning skill.",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Back 2, Add Stealth x2",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Back 2, Add Stealth x2, Add Strength",
+                  },
+                },
               },
             },
           ],
@@ -1161,4 +1268,3 @@ export const heroWiki = [
     ],
   },
 ];
-
