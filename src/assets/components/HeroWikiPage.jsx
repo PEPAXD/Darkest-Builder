@@ -5,6 +5,7 @@ import "./styles/HeroWikiPage.scss";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { TbClockBolt, TbArrowBigUpLinesFilled } from "react-icons/tb";
 import { GiBowman, GiSwordman } from "react-icons/gi";
+import { PiBatteryVerticalHigh } from "react-icons/pi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { Tooltip } from "react-tooltip";
@@ -37,6 +38,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
     );
     setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
+    setUses(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Uses);
     setSkillOverview(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
     );
@@ -91,6 +93,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.Target
       );
       setCooldown(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Cooldown);
+      setUses(heroWiki[0].heroStats[newIndex][1].skills[0].stats.Uses);
       setSkillOverview(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.skillOverwiew
       );
@@ -204,6 +207,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.Cooldown
   );
 
+  //Uses
+  let [uses, setUses] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.Uses
+  );
+
   //skillOverwiew
   let [skillOverview, setSkillOverview] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.skillOverwiew
@@ -257,6 +265,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.Target
     );
     setCooldown(heroWiki[0].heroStats[index][1].skills[i].stats.Cooldown);
+    setUses(heroWiki[0].heroStats[index][1].skills[i].stats.Uses);
     setSkillOverview(
       heroWiki[0].heroStats[index][1].skills[i].stats.skillOverwiew
     );
@@ -662,6 +671,16 @@ function HeroWikiPage({ url_Bg, heroName }) {
                       <div className="dataStat">
                         <TbClockBolt style={{ fontSize: "1.5em" }} />
                         <i> {cooldown}</i>
+                      </div>
+                    </li>
+                  )}
+
+                  {!isNaN(uses) && (
+                    <li>
+                      <b>Uses</b>
+                      <div className="dataStat">
+                        <PiBatteryVerticalHigh style={{ fontSize: "1.5em" }} />
+                        <i> {uses}</i>
                       </div>
                     </li>
                   )}

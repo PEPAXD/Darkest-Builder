@@ -1052,7 +1052,9 @@ export const heroWiki = [
                 type: "Buff",
                 Rank: [1, 2, 3, 4],
                 Target: "Self",
-                Cooldown: 3,
+                Cooldown: NaN,
+                Uses: 3,
+
 
                 skillOverwiew:
                   "Panic button. Heals HP and applies Dodge and speed tokens. It is a self-sustain for Grave robber.",
@@ -1083,6 +1085,7 @@ export const heroWiki = [
                 Rank: [1, 2, 3, 4],
                 Target: [1, 2, 3, 4],
                 Cooldown: NaN,
+                Uses: 3,
               },
             },
 
