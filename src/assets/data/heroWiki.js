@@ -764,25 +764,26 @@ export const heroWiki = [
           },
 
           heroTrinkeds: {
-            trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+            trinkeds: ["Foreclosure_Notice", "His_Rings", "Stiff_Drink"],
 
             description: [
               [
-                ["Buff", "+5% DMG per Positive Token"],
-                ["Highway Robbery", "Add Riposte x2 (50%)"],
-                ["Debuff", "If Relics > 100: -15% CRIT"],
-              ],
-              [
-                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                ["Apply on Hit:", "+5% DMG per Positive Token"],
                 [
-                  "Duelist's Advance",
-                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                  "Gain on Hit",
+                  "Flashing Daggers Skills: Dd2 token stealth (33%)",
                 ],
+                ["If no Stealth", "-75% Healing Received from Skills"],
               ],
               [
-                ["Melee Skills", "+15% CRIT"],
-                ["Open Vein", "+2 Bleed Dealt"],
-                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
+                ["Poison Dart Skill", "+2 Blight Dealt"],
+                ["Apply on CRIT", "Ranged Skills: 2 Blight "],
+                ["If Rank = 1", "+75% DMG Taken"],
+              ],
+              [
+                ["Pick to the Face Skills", "+50% DMG"],
+                ["Turn Start", "Convert stealth to Crit (80%)"],
+                ["Turn End", "Convert Speed to Daze (20%)"],
               ],
             ],
           },
@@ -821,55 +822,40 @@ export const heroWiki = [
           ],
 
           teemmates: {
-            friends: ["Vestal", "man-at-arms", "highwayman"],
+            friends: ["Vestal", "Jester", "Highwayman"],
 
             description: [
               [
                 [
-                  "GOOD DAMAGE AND RANGE",
-                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                  "Consecrations",
+                  " Applies buffs to allies when you move around other people will pick them up on their turn. The person that moves on to it the turn afeter her will get the buff.",
                 ],
 
                 [
-                  "BLEED SINERGY",
-                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
-                ],
-
-                [
-                  "MOVE COMBO",
-                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                  "Healer",
+                  "In critical situations, restoring the health of companions can make the difference between life and death.",
                 ],
               ],
               [
                 [
-                  "AAAGOOD DAMAGE AND RANGE",
-                  "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                  "move support",
+                  "Can move around the battlefield and reposition herself. He's very mobile... They can pretty much play off of each other.",
                 ],
 
                 [
-                  "AAABLEED SINERGY",
-                  "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
-                ],
-
-                [
-                  "AAAMOVE COMBO",
-                  "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                  "Combo token",
+                  "A great ally that facilitates the application and subsequent execution of combo tokens on enemies.",
                 ],
               ],
               [
                 [
-                  "BBBGOOD DAMAGE AND RANGE",
-                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                  "move dps",
+                  "Can move around the battlefield and reposition herself. He's very mobile... They can pretty much play off of each other.",
                 ],
 
                 [
-                  "BBBBLEED SINERGY",
-                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
-                ],
-
-                [
-                  "BBBMOVE COMBO",
-                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                  "any rank",
+                  "Good range and considerable damage. then can usualy hit all four spots on the enemy team.",
                 ],
               ],
             ],
@@ -877,8 +863,8 @@ export const heroWiki = [
 
           sampleCombo: {
             title: '"Infernal Mitigation: Stuns and Protection"',
-            comp: ["Vestal", "Highwayman", "Jester", "Man-At-Arms"],
-            paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
+            comp: ["Grave-Robber", "Vestal", "Occultist", "Hellion"],
+            paths: ["Nightsworn", "Seraph", "Aspirant", "Ravager"],
             description:
               "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
           },

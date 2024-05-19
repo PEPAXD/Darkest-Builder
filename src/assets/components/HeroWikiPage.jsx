@@ -69,6 +69,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
     );
     setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
+    setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
+    setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
   }, [heroName]);
 
   let ArrowNextBackArrayHero = (direction) => {
@@ -126,6 +128,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
           .self
       );
       setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
+      setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
+      setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
 
       return newIndex;
     });
@@ -287,6 +291,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.self
     );
+    setTrinketImg(heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds);
+    setHeroes(heroWiki[0].heroStats[index][1].teemmates.friends);
   };
 
   let [trinketImg, setTrinketImg] = useState(
