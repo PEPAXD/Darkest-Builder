@@ -862,11 +862,11 @@ export const heroWiki = [
           },
 
           sampleCombo: {
-            title: '"Infernal Mitigation: Stuns and Protection"',
+            title: '"Lethal Lunge: Lightning Strategy"',
             comp: ["Grave-Robber", "Vestal", "Occultist", "Hellion"],
             paths: ["Nightsworn", "Seraph", "Aspirant", "Ravager"],
             description:
-              "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
+              "This double lunge composition with Grave Robber and Hellion focuses on high, rapid damage. Grave Robber lunges, and Occultist repositions her, allowing continuous attacks while Vestal provides healing and support. This strategy aims to win battles in two rounds, sacrificing some mitigation for great flexibility and damage.",
           },
 
           stats: {
