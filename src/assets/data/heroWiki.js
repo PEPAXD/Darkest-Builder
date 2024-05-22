@@ -1250,6 +1250,542 @@ export const heroWiki = [
         },
       ],
 
+      //*END OF GRAVE-ROBBER
+      
+      [
+        "Hellion",
+        {
+          description:
+            "highly versatile hero that heavily focuses on dealing damage thanks to his ability to target the front Ranks as well as the back Ranks. His skillset places emphasis on damage and utility such as self-Buffs, Execution 1 finishers, and a unique skill to destroy or steal powerful Tokens from enemies.",
+
+          Characteristics: {
+            Rol: ["Damage Dealer and bleeder"],
+            Strengths: {
+              Reach: "Damage very flexible, he can hit any target",
+              Consistency: "Damage, Reach and Mobility are consistent",
+              Robbery: "Highway Robbery - very strong ability to steal tokens",
+            },
+            Weaknesses: {
+              "No+Tokens": "No access to defensive tokens",
+              "Low ceiling": "Doesn't have a super high damage ceiling",
+              "wants Mastery": "Needs to be mastered points to be effective",
+            },
+            Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+          },
+
+          HowToPlay: {
+            Tips: [
+              {
+                name: "Target Priority",
+                description:
+                  "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+              },
+              {
+                name: "Backup Plans",
+                description:
+                  "It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+              },
+              {
+                name: "Feed Buffs",
+                description:
+                  "To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
+              },
+            ],
+          },
+
+          heroTrinkeds: {
+            trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+
+            description: [
+              [
+                ["Buff", "+5% DMG per Positive Token"],
+                ["Highway Robbery", "Add Riposte x2 (50%)"],
+                ["Debuff", "If Relics > 100: -15% CRIT"],
+              ],
+              [
+                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                [
+                  "Duelist's Advance",
+                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                ],
+              ],
+              [
+                ["Melee Skills", "+15% CRIT"],
+                ["Open Vein", "+2 Bleed Dealt"],
+                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
+              ],
+            ],
+          },
+
+          paths: [
+            [
+              "Highwayman",
+              [
+                '"Default skills. Rewards candles upon reaching the second Inn"',
+                '"A brawler focused on front rank combat and ripostes."',
+                '"A back rank role that emphasizes ranged skill use."',
+                '"A rank-flexible Bleed specialist."',
+              ],
+              [
+                ["Rank = 1", "+25% DMG"],
+                ["Rank = 3", "-25% DMG"],
+                ["Rank = 4", "-50% DMG"],
+                ["Point Blank Shot", "Add Riposte"],
+              ],
+              [
+                ["Ranged Skills", "+25% DMG"],
+                ["Melee Skills", "-25% DMG"],
+                ["Buff Self", "+3 Speed"],
+                ["Grapeshot Blast Skills", "Add Strength"],
+              ],
+              [
+                ["Buff Self", "+15% MaxHP"],
+                ["Ranged Skills", "-75% DMG"],
+                ["On Hit Debuff Target", "-10% Bleed RES"],
+                ["Highway Robbery", "Steal 1 Positive Token"],
+                ["Double Cross", "Remove 1 Block"],
+              ],
+            ],
+          ],
+
+          pathStacks: [
+            [11],
+            [0, 2, 4, 6, 10],
+            [1, 5, 6, 8, 4],
+            [3, 4, 7, 9, 10],
+          ],
+
+          teemmates: {
+            friends: ["Hellion", "Vestal", "Jester"],
+
+            description: [
+              [
+                [
+                  "GOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "BLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "MOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+              [
+                [
+                  "AAAGOOD DAMAGE AND RANGE",
+                  "AAADestaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "AAABLEED SINERGY",
+                  "AAAInteresante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "AAAMOVE COMBO",
+                  "AAAEn situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+              [
+                [
+                  "BBBGOOD DAMAGE AND RANGE",
+                  "Destaca como una excelente aliada, principalmente por su buen rango y daño considerable. Aunque, a diferencia del Highwayman, enfrenta dificultades en el rango 3.",
+                ],
+
+                [
+                  "BBBBLEED SINERGY",
+                  "Interesante sinergia con el sangrado, resultar efectiva en combate para sumar stacks.",
+                ],
+
+                [
+                  "BBBMOVE COMBO",
+                  "En situaciones donde el posicionamiento adelantado es crucial, si Hellion es desplazada hacia atrás, Highwayman puede utilizar Point Blank Shot para devolverla al primer rango..",
+                ],
+              ],
+            ],
+          },
+
+          sampleCombo: {
+            title: '"Infernal Mitigation: Stuns and Protection"',
+            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
+            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
+          },
+
+          stats: {
+            HP: 35,
+            SPD: 5,
+
+            BLEED: 30,
+            BLIGHT: 30,
+            BURN: 30,
+            DISEASE: 30,
+            STUN: 30,
+            MOVE: 30,
+            DEBUFF: 20,
+            DEATHBLOW: 60,
+
+            FORW: 2,
+            BACK: 2,
+
+            upgrades: {
+              HP: 35,
+              SPD: 5,
+
+              BLEED: 40,
+              BLIGHT: 30,
+              BURN: 30,
+              DISEASE: 40,
+              STUN: 40,
+              MOVE: 30,
+              DEBUFF: 20,
+              DEATHBLOW: 75,
+
+              FORW: 2,
+              BACK: 2,
+            },
+          },
+
+          skills: [
+            {
+              id: 1,
+              name: "Wicked Slice",
+              img: "wickedslice",
+
+              stats: {
+                type: "Melee",
+                Rank: [2, 3, 4],
+                Target: [1, 2],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow.",
+
+                dataStats: {
+                  damage: [4, 8],
+                  crit: 15,
+                  target: "Execution",
+                  self: null,
+
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 20,
+                    target: "Execution",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 2,
+              name: "Pistol Shot",
+              img: "pistolshot",
+
+              stats: {
+                type: "Ranged",
+                Rank: [1, 2, 3],
+                Target: [2, 3, 4],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4.",
+
+                dataStats: {
+                  damage: [3, 6],
+                  crit: 10,
+                  target: "Add Daze with Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: [5, 8],
+                    crit: 15,
+                    target: "Add Stun with Combo",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 3,
+              name: "Duelist's Advance",
+              img: "duelistsadvance",
+
+              stats: {
+                type: "Melee",
+                Rank: [1, 2, 3],
+                Target: [1, 2, 3],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill.",
+
+                dataStats: {
+                  damage: [3, 5],
+                  crit: 5,
+                  target: null,
+                  self: "Forward 1, Add Riposte x2",
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 10,
+                    target: null,
+                    self: "Forward 1, Add Riposte x3, Add Dodge",
+                  },
+                },
+              },
+            },
+
+            {
+              id: 4,
+              name: "Tracking Shot",
+              img: "trackingshot",
+
+              stats: {
+                type: "Ranged",
+                Rank: [1, 2, 3, 4],
+                Target: [1, 2, 3, 4],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus.",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: "Ignores Dodge and Sthealth, Add Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target:
+                      "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 5,
+              name: "Take Aim",
+              img: "takeaim",
+
+              stats: {
+                type: "Buff",
+                Rank: [1, 2, 3, 4],
+                Target: "Self",
+                Cooldown: 2,
+
+                skillOverwiew:
+                  "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS.",
+
+                dataStats: {
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Add Crit, Remove Blind",
+
+                  upgrade: {
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Add Crit x2, Remove Blind",
+                  },
+                },
+              },
+            },
+
+            {
+              id: 6,
+              name: "Point Blank Shot",
+              img: "pointblankshot",
+
+              stats: {
+                type: "Ranged",
+                Rank: [4],
+                Target: [1],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "is a highly devastating skill, but has rather strict Rank requirement (Only can be used in Rank 1). Makes good combo with another Dancing heroes.",
+
+                dataStats: {
+                  damage: [6, 10],
+                  crit: 10,
+                  target: "Knockback 1, Add Combo",
+                  self: "Back 1",
+
+                  upgrade: {
+                    damage: [10, 13],
+                    crit: 15,
+                    target: "Knockback 1, Add Combo",
+                    self: "Back 1",
+                  },
+                },
+              },
+            },
+
+            {
+              id: 7,
+              name: "Grapeshot Blast",
+              img: "grapeshotblast",
+
+              stats: {
+                type: "Ranged",
+                Rank: [1, 2, 3, 4],
+                Target: [1, 2],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "Multi-hit attack. Due to the Low Base DMG is preferably used to remove Tokens and to finish off enemies at low health. Combined with takeaimTake skill can be used as a Pseudo Stress Healer (chance to heal Stress two times)",
+
+                dataStats: {
+                  damage: [3, 5],
+                  crit: 5,
+                  target: "---",
+                  self: null,
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 10,
+                    target: "-2 Speed",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 8,
+              name: "Open Vein",
+              img: "openvein",
+
+              stats: {
+                type: "Melee",
+                Rank: [2, 3, 4],
+                Target: [1, 2],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "Moderate Damage skill that hits the front ranks. Althought the direct damage is not high, the skill shines when the Target has Combo token. it doubles Bleed.",
+
+                dataStats: {
+                  damage: [3, 5],
+                  crit: 5,
+                  target: "Bleed x2/x4 when Combo",
+                  self: null,
+
+                  upgrade: {
+                    damage: [4, 6],
+                    crit: 10,
+                    target: "Bleed x3/x6 when Combo",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 9,
+              name: "Double Tap",
+              img: "doubletap",
+
+              stats: {
+                type: "Ranged",
+                Rank: [2, 3],
+                Target: [2, 3],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "High damage skill that hits the Middle-ranks. (when upgraded Execution 1 ), and deals more DMG when the enemy is a low HP. Works as a main DMG Skill, as a Finisher and is most effective the more health has the enemy.",
+
+                dataStats: {
+                  damage: [4, 8],
+                  crit: 5,
+                  target: "30% DMG when Target HP < 30%",
+                  self: null,
+
+                  upgrade: {
+                    damage: [6, 9],
+                    crit: 10,
+                    target: "30% DMG when Target HP < 50%",
+                    self: null,
+                  },
+                },
+              },
+            },
+
+            {
+              id: 10,
+              name: "Highway Robbery",
+              img: "highwayrobbery",
+
+              stats: {
+                type: "Melee",
+                Rank: [1, 2, 3],
+                Target: [1, 2, 3],
+                Cooldown: 1,
+
+                skillOverwiew:
+                  "is extremely useful against enemies that can apply positive Tokens on themselves or allies, as it can remove these Tokens and destroy enemies' advantages to alleviate combat risks. With the skill upgraded, the Highwayman can also steal powerful Tokens to increase his damage and defense",
+
+                dataStats: {
+                  damage: null,
+                  crit: 5,
+                  target: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
+                  self: "---",
+
+                  upgrade: {
+                    damage: null,
+                    crit: 5,
+                    target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
+                    self: "+5% Crit",
+                  },
+                },
+              },
+            },
+
+            {
+              id: 11,
+              name: "Double Cross",
+              img: "doublecross",
+
+              stats: {
+                type: "Melee",
+                Rank: [3, 4],
+                Target: [1, 2],
+                Cooldown: NaN,
+
+                skillOverwiew:
+                  "Can apply Vulnerable Token to enemies and Add Block token to Self. Is best pair with other heroes that can use Vulnerable token. Take Aim can make this Skill more effective as Crits token.",
+
+                dataStats: {
+                  damage: [2, 4],
+                  crit: 5,
+                  target: "Ignores block, Add Vulnerable",
+                  self: "Add Block",
+
+                  upgrade: {
+                    damage: [3, 5],
+                    crit: 10,
+                    target: "Ignores block, Add Vulnerable x2",
+                    self: "Add Block",
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
+
       //*END DATABASE
     ],
   },
