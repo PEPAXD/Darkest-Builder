@@ -1251,26 +1251,26 @@ export const heroWiki = [
       ],
 
       //*END OF GRAVE-ROBBER
-      
+
       [
         "Hellion",
         {
           description:
-            "highly versatile hero that heavily focuses on dealing damage thanks to his ability to target the front Ranks as well as the back Ranks. His skillset places emphasis on damage and utility such as self-Buffs, Execution 1 finishers, and a unique skill to destroy or steal powerful Tokens from enemies.",
+            "The Hellion's primary role is to be a front-line damage dealer, delivering large bursts of damage. Her ability to gain extra damage when low on health, along with her self-healing abilities, allows her to also serve as a tank. In addition to dealing damage and tanking, she can provide minimal support to the team and protect her teammates with the ability to taunt.",
 
           Characteristics: {
-            Rol: ["Damage Dealer and bleeder"],
+            Rol: ["Frontline damage and tanking."],
             Strengths: {
               Reach: "Damage very flexible, he can hit any target",
-              Consistency: "Damage, Reach and Mobility are consistent",
-              Robbery: "Highway Robbery - very strong ability to steal tokens",
+              Damage: "High damage, especially with ravage passive",
+              Survivability: "Self-sustain and tanking abilities",
             },
             Weaknesses: {
-              "No+Tokens": "No access to defensive tokens",
-              "Low ceiling": "Doesn't have a super high damage ceiling",
-              "wants Mastery": "Needs to be mastered points to be effective",
+              "Negative Tokens": "Magnet for negative tokens",
+              "Wants Unlocks": "Needs unlocked skills to be effective",
+              "Wants Mastery": "Needs to be mastered points to be effective",
             },
-            Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
+            Class: ["Front Rank", "High DMG", "BLEED", "Bloodlust"],
           },
 
           HowToPlay: {
