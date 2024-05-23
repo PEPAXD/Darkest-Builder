@@ -1276,19 +1276,19 @@ export const heroWiki = [
           HowToPlay: {
             Tips: [
               {
-                name: "Target Priority",
+                name: "Winded Moves Last",
                 description:
-                  "The gameplay with the Highwayman is characterized by its direct approach and its ability to deal significant damage. It is crucial to direct his attacks towards the biggest threats on the enemy side. Therefore, it is essential for him to focus on eliminating important enemy units.",
+                  "Put her in rank one or two, up front. You'll want to save your most powerful moves for as long as possible. Avoid using abilities like 'howling' and 'bleed out' until the winded penalty isn't a major issue, or make sure you have a quick way to recover if you decide to use them.",
               },
               {
-                name: "Backup Plans",
+                name: "HP < 50%",
                 description:
-                  "It is essential to have a backup plan to adapt to adverse situations, we must have alternative skills available for unforeseen events. 'Point-Blank Shot' or 'Advanced Duel' will be crucial for us to reposition ourselves. Having a well-defined backup plan can make the difference between victory and defeat in critical situations of the game.",
+                  "Hellion's damage increases when she's below 50% health. This can be a good time to use her most powerful abilities, make sure to keep her life low to maximize her damage output. but not like a dangerous level.",
               },
               {
-                name: "Feed Buffs",
+                name: "Equip a Move Skill",
                 description:
-                  "To maximize performance, provide your character with a wide range of benefits and enhancements. Equip yourself with damage items, apply critical buffs. Your character will truly stand out when receiving this type of additional support. Don't underestimate the impact these small details can have on your performance in the game!",
+                  "Equip a move skill to reposition her if she gets pushed back. This will allow her to get back to the front line and continue dealing damage.",
               },
             ],
           },
