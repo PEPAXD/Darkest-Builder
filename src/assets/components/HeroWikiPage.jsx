@@ -71,6 +71,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
     setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
     setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
+    setUniqueAttributes(
+      heroWiki[0].heroStats[newIndex][1].UniqueAattributes.Tittle
+    );
+    setUniqueAttributesDescription(
+      heroWiki[0].heroStats[newIndex][1].UniqueAattributes.description
+    );
   }, [heroName]);
 
   let ArrowNextBackArrayHero = (direction) => {
@@ -130,6 +136,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
       setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
       setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
+      setUniqueAttributes(
+        heroWiki[0].heroStats[newIndex][1].UniqueAattributes.Tittle
+      );
+      setUniqueAttributesDescription(
+        heroWiki[0].heroStats[newIndex][1].UniqueAattributes.description
+      );
 
       return newIndex;
     });
@@ -185,6 +197,14 @@ function HeroWikiPage({ url_Bg, heroName }) {
   let toggleUpgrade = () => {
     setUpgradeActive(!isUpgradeActive);
   };
+
+  //Unique Attributes
+  let [uniqueAttributes, setUniqueAttributes] = useState(
+    heroWiki[0].heroStats[index][1].UniqueAattributes.Tittle
+  );
+  let [uniqueAttributesDescription, setUniqueAttributesDescription] = useState(
+    heroWiki[0].heroStats[index][1].UniqueAattributes.description
+  );
 
   //SKILL SELECTION RADIOBUTTONS
   let [selectedInput, setSelectedInput] = useState(0);
@@ -293,6 +313,12 @@ function HeroWikiPage({ url_Bg, heroName }) {
     );
     setTrinketImg(heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds);
     setHeroes(heroWiki[0].heroStats[index][1].teemmates.friends);
+    setUniqueAttributes(
+      heroWiki[0].heroStats[index][1].UniqueAattributes.Tittle
+    );
+    setUniqueAttributesDescription(
+      heroWiki[0].heroStats[index][1].UniqueAattributes.description
+    );
   };
 
   let [trinketImg, setTrinketImg] = useState(
@@ -445,6 +471,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   </ul>
                 </div>
               </div>
+
               <br />
 
               <div className="statsContain">
@@ -494,8 +521,18 @@ function HeroWikiPage({ url_Bg, heroName }) {
                   </div>
                 </div>
               </div>
+
+              <br />
+
+              {uniqueAttributes !== "" && (
+                <div className="uniqueAttributeContain">
+                  <h3>{uniqueAttributes}</h3>
+                  <p>{uniqueAttributesDescription}</p>
+                </div>
+              )}
             </section>
 
+            <br />
             <br />
             <br />
 

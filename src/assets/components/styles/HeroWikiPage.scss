@@ -281,6 +281,30 @@
     }
   }
 
+  //unique Attributes
+  .uniqueAttributeContain{
+   
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: rgb(0, 0, 0, 0.8);
+
+    h3 {
+      width: 100%;
+      text-transform: uppercase;
+      background-color: rgb(42, 99, 131);
+      padding: 0.2rem;
+      font-size: 1.1em;
+    }
+
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+
   .howToPlay {
     display: flex;
     flex-direction: column;

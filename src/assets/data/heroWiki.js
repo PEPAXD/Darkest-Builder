@@ -203,6 +203,11 @@ export const heroWiki = [
             Class: ["ANY RANK", "HIGH DMG", "VERSATILE", "RIPOSTE"],
           },
 
+          UniqueAattributes: {
+            Tittle: "",
+            description: ""
+          },
+
           HowToPlay: {
             Tips: [
               {
@@ -743,6 +748,11 @@ export const heroWiki = [
             Class: ["ANY RANK", "STEALTH", "DODGE", "HIGH CRIT"],
           },
 
+          UniqueAattributes: {
+            Tittle: "",
+            description: ""
+          },
+
           HowToPlay: {
             Tips: [
               {
@@ -1271,6 +1281,11 @@ export const heroWiki = [
               "Wants Mastery": "Needs to be mastered points to be effective",
             },
             Class: ["Front Rank", "High DMG", "BLEED", "Bloodlust"],
+          },
+
+          UniqueAattributes: {
+            Tittle: "Bonus Damage at Low Health",
+            description: "+25% damage when HP < 50%, and another +25% damage when HP < 25%."
           },
 
           HowToPlay: {
