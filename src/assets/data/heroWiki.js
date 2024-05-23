@@ -1419,35 +1419,35 @@ export const heroWiki = [
 
           stats: {
             HP: 35,
-            SPD: 5,
+            SPD: 4,
 
             BLEED: 30,
             BLIGHT: 30,
             BURN: 30,
-            DISEASE: 30,
-            STUN: 30,
-            MOVE: 30,
+            DISEASE: 20,
+            STUN: 20,
+            MOVE: 20,
             DEBUFF: 20,
             DEATHBLOW: 60,
 
-            FORW: 2,
-            BACK: 2,
+            FORW: 1,
+            BACK: 0,
 
             upgrades: {
-              HP: 35,
-              SPD: 5,
+              HP: 39,
+              SPD: 4,
 
-              BLEED: 40,
+              BLEED: 30,
               BLIGHT: 30,
               BURN: 30,
-              DISEASE: 40,
-              STUN: 40,
-              MOVE: 30,
+              DISEASE: 30,
+              STUN: 20,
+              MOVE: 20,
               DEBUFF: 20,
-              DEATHBLOW: 75,
+              DEATHBLOW: 80,
 
-              FORW: 2,
-              BACK: 2,
+              FORW: 1,
+              BACK: 0,
             },
           },
 
