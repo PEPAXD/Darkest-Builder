@@ -6,7 +6,6 @@ const dataTable = ({ dataStats, damage, crit, targetDebuff, selfBuff, heal }) =>
     <div className="dataTable">
       {Object.entries(dataStats).map(([key, value]) => {
         let displayValue = null;
-        console.log(key);
         if (key === "damage" && damage !== null) {
           displayValue = `${damage[0]}-${damage[1]}`;
         } else if (key === "crit" && crit !== null) {
@@ -17,7 +16,6 @@ const dataTable = ({ dataStats, damage, crit, targetDebuff, selfBuff, heal }) =>
           displayValue = selfBuff;
         } else if (key === "heal" && heal !== null) {
           displayValue = heal;
-          console.log("TRUE");
         }
 
         return displayValue !== null ? (
