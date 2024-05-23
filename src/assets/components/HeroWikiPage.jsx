@@ -4,7 +4,7 @@ import "./styles/HeroWikiPage.scss";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { TbClockBolt, TbArrowBigUpLinesFilled } from "react-icons/tb";
-import { GiBowman, GiSwordman } from "react-icons/gi";
+import { GiBowman, GiSwordman, GiHealthNormal } from "react-icons/gi";
 import { PiBatteryVerticalHigh } from "react-icons/pi";
 
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
@@ -54,6 +54,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setSelfBuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self
     );
+    setHeal(heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.heal);
+
     setUpgradeDamage(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
         .damage
@@ -68,6 +70,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.self
     );
+    setUpgradeHeal(
+      heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade.heal
+    );
+
     setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
     setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
     setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
@@ -117,6 +123,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
       setSelfBuff(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.self
       );
+      setHeal(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.heal
+      );
+
       setUpgradeDamage(
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
           .damage
@@ -133,6 +143,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
         heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
           .self
       );
+      setUpgradeHeal(
+        heroWiki[0].heroStats[newIndex][1].skills[0].stats.dataStats.upgrade
+          .heal
+      );
+
       setPathSkillsStack(heroWiki[0].heroStats[newIndex][1].pathStacks[0]);
       setTrinketImg(heroWiki[0].heroStats[newIndex][1].heroTrinkeds.trinkeds);
       setHeroes(heroWiki[0].heroStats[newIndex][1].teemmates.friends);
@@ -260,6 +275,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.self
   );
 
+  let [heal, setHeal] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.heal
+  );
+
   //upgradesData
   let dataUpgrade =
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade;
@@ -278,6 +297,11 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
   let [upgradeSelfBuff, setUpgradeSelfBuff] = useState(
     heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.self
+  );
+
+
+  let [upgradeHeal, setUpgradeHeal] = useState(
+    heroWiki[0].heroStats[index][1].skills[0].stats.dataStats.upgrade.heal
   );
 
   let handleSkillSelect = (event, i) => {
@@ -299,6 +323,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.target
     );
     setSelfBuff(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.self);
+    setHeal(heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.heal);
+
     setUpgradeDamage(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.damage
     );
@@ -311,6 +337,10 @@ function HeroWikiPage({ url_Bg, heroName }) {
     setUpgradeSelfBuff(
       heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.self
     );
+    setUpgradeHeal(
+      heroWiki[0].heroStats[index][1].skills[i].stats.dataStats.upgrade.heal
+    );
+
     setTrinketImg(heroWiki[0].heroStats[index][1].heroTrinkeds.trinkeds);
     setHeroes(heroWiki[0].heroStats[index][1].teemmates.friends);
     setUniqueAttributes(
@@ -534,7 +564,6 @@ function HeroWikiPage({ url_Bg, heroName }) {
 
             <br />
             <br />
-            <br />
 
             <h2>How to Play</h2>
             <hr />
@@ -652,6 +681,8 @@ function HeroWikiPage({ url_Bg, heroName }) {
                         <GiBowman />
                       ) : typeSkill === "Buff" ? (
                         <TbArrowBigUpLinesFilled />
+                      ) : typeSkill === "Heal" ? (
+                        <GiHealthNormal />
                       ) : null}
                       <i> {typeSkill}</i>
                     </div>
@@ -743,6 +774,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     crit={crit}
                     targetDebuff={targetDebuff}
                     selfBuff={selfBuff}
+                    heal={heal}
                   />
 
                   <h4 style={{ backgroundColor: "#2a6383" }}>Upgrade</h4>
@@ -753,6 +785,7 @@ function HeroWikiPage({ url_Bg, heroName }) {
                     crit={upgradeCrit}
                     targetDebuff={upgradeTargetDebuff}
                     selfBuff={upgradeSelfBuff}
+                    heal={heal}
                   />
                 </div>
 

@@ -205,7 +205,7 @@ export const heroWiki = [
 
           UniqueAattributes: {
             Tittle: "",
-            description: ""
+            description: "",
           },
 
           HowToPlay: {
@@ -407,12 +407,14 @@ export const heroWiki = [
                   crit: 15,
                   target: "Execution",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [6, 9],
                     crit: 20,
                     target: "Execution",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -437,12 +439,14 @@ export const heroWiki = [
                   crit: 10,
                   target: "Add Daze with Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [5, 8],
                     crit: 15,
                     target: "Add Stun with Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -467,12 +471,14 @@ export const heroWiki = [
                   crit: 5,
                   target: null,
                   self: "Forward 1, Add Riposte x2",
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: null,
                     self: "Forward 1, Add Riposte x3, Add Dodge",
+                    heal: null,
                   },
                 },
               },
@@ -497,6 +503,7 @@ export const heroWiki = [
                   crit: null,
                   target: "Ignores Dodge and Sthealth, Add Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: null,
@@ -504,6 +511,7 @@ export const heroWiki = [
                     target:
                       "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -528,12 +536,14 @@ export const heroWiki = [
                   crit: null,
                   target: null,
                   self: "Add Crit, Remove Blind",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: null,
                     self: "Add Crit x2, Remove Blind",
+                    heal: null,
                   },
                 },
               },
@@ -558,12 +568,14 @@ export const heroWiki = [
                   crit: 10,
                   target: "Knockback 1, Add Combo",
                   self: "Back 1",
+                  heal: null,
 
                   upgrade: {
                     damage: [10, 13],
                     crit: 15,
                     target: "Knockback 1, Add Combo",
                     self: "Back 1",
+                    heal: null,
                   },
                 },
               },
@@ -588,12 +600,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "---",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "-2 Speed",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -618,12 +632,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Bleed x2/x4 when Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "Bleed x3/x6 when Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -648,12 +664,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "30% DMG when Target HP < 30%",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [6, 9],
                     crit: 10,
                     target: "30% DMG when Target HP < 50%",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -678,12 +696,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
                   self: "---",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: 5,
                     target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
                     self: "+5% Crit",
+                    heal: null,
                   },
                 },
               },
@@ -708,12 +728,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Ignores block, Add Vulnerable",
                   self: "Add Block",
+                  heal: null,
 
                   upgrade: {
                     damage: [3, 5],
                     crit: 10,
                     target: "Ignores block, Add Vulnerable x2",
                     self: "Add Block",
+                    heal: null,
                   },
                 },
               },
@@ -750,7 +772,7 @@ export const heroWiki = [
 
           UniqueAattributes: {
             Tittle: "",
-            description: ""
+            description: "",
           },
 
           HowToPlay: {
@@ -933,6 +955,7 @@ export const heroWiki = [
                   crit: 15,
                   target: "Ignores block, +50% Crit with Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 10],
@@ -940,6 +963,7 @@ export const heroWiki = [
                     target:
                       "Ignores block, +50% Crit with Combo, Remove Block on Crit",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -965,6 +989,7 @@ export const heroWiki = [
                   target:
                     "Ignores Guarded and Dodge when self Stealth, +50% Crit with Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 8],
@@ -972,6 +997,7 @@ export const heroWiki = [
                     target:
                       "Ignores Guarded and Dodge when self Stealth, +50% Crit with Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -996,12 +1022,14 @@ export const heroWiki = [
                   crit: 15,
                   target: "---",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 20,
                     target: "Ignores dodge when self Stealth.",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1026,12 +1054,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "x2 Blight, +50% Crit with Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [2, 5],
                     crit: 10,
                     target: "x4 Blight, +50% Crit with Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1057,12 +1087,14 @@ export const heroWiki = [
                   crit: null,
                   target: null,
                   self: "Add x3 Dodge, Speed, HP < 33% = Heal 33%",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: null,
                     self: "Add x3 Dodge, Speed, HP < 33% = Heal 33%",
+                    heal: null,
                   },
                 },
               },
@@ -1088,12 +1120,14 @@ export const heroWiki = [
                   crit: null,
                   target: "Clear Corpse",
                   self: "Heal 33%, Add Stealth",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: "Clear Corpse",
                     self: "Heal 50%, Add Stealth x2, -1 Stress",
+                    heal: null,
                   },
                 },
               },
@@ -1119,6 +1153,7 @@ export const heroWiki = [
                   crit: 5,
                   target: "Ignores and remove Stealth, Execute 1",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [6, 9],
@@ -1126,6 +1161,7 @@ export const heroWiki = [
                     target:
                       "Ignores and remove Stealth, Execute 1 When Self Stealth Execute 3",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1152,6 +1188,7 @@ export const heroWiki = [
                   target:
                     "Ignores Dodge When Self Stealth, on CRIT Apply Knockback 2",
                   self: "Forward 2",
+                  heal: null,
 
                   upgrade: {
                     damage: [7, 11],
@@ -1159,6 +1196,7 @@ export const heroWiki = [
                     target:
                       "Ignores Dodge And Block When Self Stealth, on CRIT Apply Knockback 3",
                     self: "Forward 2",
+                    heal: null,
                   },
                 },
               },
@@ -1184,12 +1222,14 @@ export const heroWiki = [
                   crit: 10,
                   target: null,
                   self: "Back 3, Add Daze and Debuff Attack (Does not apply when Self)",
+                  heal: null,
 
                   upgrade: {
                     damage: [6, 9],
                     crit: 15,
                     target: null,
                     self: "Back 3, Add Daze and Debuff Attack (Does not apply when Self)",
+                    heal: null,
                   },
                 },
               },
@@ -1215,12 +1255,14 @@ export const heroWiki = [
                   crit: null,
                   target: null,
                   self: "Add Dodge x3, Taunt x2, Remove Stealth",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: null,
                     self: "Add Dodge+ x3, Taunt x2, If Stealthed Gain When Missed Enemy Attack: Dodge (50%) (3turns), Remove Stealth",
+                    heal: null,
                   },
                 },
               },
@@ -1246,12 +1288,14 @@ export const heroWiki = [
                   crit: null,
                   target: null,
                   self: "Back 2, Add Stealth x2",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: null,
                     target: null,
                     self: "Back 2, Add Stealth x2, Add Strength",
+                    heal: null,
                   },
                 },
               },
@@ -1285,7 +1329,8 @@ export const heroWiki = [
 
           UniqueAattributes: {
             Tittle: "Bonus Damage at Low Health",
-            description: "+25% damage when HP < 50%, and another +25% damage when HP < 25%."
+            description:
+              "+25% damage when HP < 50%, and another +25% damage when HP < 25%.",
           },
 
           HowToPlay: {
@@ -1334,31 +1379,32 @@ export const heroWiki = [
 
           paths: [
             [
-              "Highwayman",
+              "Hellion",
               [
                 '"Default skills. Rewards candles upon reaching the second Inn"',
-                '"A brawler focused on front rank combat and ripostes."',
-                '"A back rank role that emphasizes ranged skill use."',
-                '"A rank-flexible Bleed specialist."',
+                '"More HP and damage in the front row, but with less effective bleeds and a risk of self-injury."',
+                '"More deathblow resistance, bleed chance, and crit on bleed moves at the cost of Max HP"',
+                '"Enhances utility and tanking ability, sacrificing attack power."',
               ],
               [
-                ["Rank = 1", "+25% DMG"],
-                ["Rank = 3", "-25% DMG"],
-                ["Rank = 4", "-50% DMG"],
-                ["Point Blank Shot", "Add Riposte"],
+                ["Buff Max HP", "+20%"],
+                ["If Rank = 1", "+25% DMG"],
+                ["Debuff Bleed Chance", "-33%"],
+                ["Turn Start", "Self x3 Bleed (25%)"],
               ],
               [
-                ["Ranged Skills", "+25% DMG"],
-                ["Melee Skills", "-25% DMG"],
-                ["Buff Self", "+3 Speed"],
-                ["Grapeshot Blast Skills", "Add Strength"],
+                ["Debuff Max HP", "-20% MaxHP"],
+                ["DeathsDoor", "+10% RES"],
+                ["Buff Bleed Chance", "+33% BLeed Chance"],
+                ["Bleed-causing Skills", "+10% CRIT"],
               ],
               [
-                ["Buff Self", "+15% MaxHP"],
-                ["Ranged Skills", "-75% DMG"],
-                ["On Hit Debuff Target", "-10% Bleed RES"],
-                ["Highway Robbery", "Steal 1 Positive Token"],
-                ["Double Cross", "Remove 1 Block"],
+                ["Gain When CRIT", "-1 or -2 Stress (50% or 25%)"],
+                ["Barbaric YAWP Skills", "x2 Taunt Self"],
+                ["Wicked Hack Skills", "Remove Block Target"],
+                ["Turn Start", "Add Self Winded"],
+                ["Turn End", "Winded ---> Block (75%)"],
+
               ],
             ],
           ],
@@ -1427,9 +1473,10 @@ export const heroWiki = [
 
           sampleCombo: {
             title: '"Infernal Mitigation: Stuns and Protection"',
-            comp: ["Vestal", "Highwayman",  "Jester", "Man-At-Arms"],
+            comp: ["Vestal", "Highwayman", "Jester", "Man-At-Arms"],
             paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
-            description: "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo."
+            description:
+              "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
           },
 
           stats: {
@@ -1469,29 +1516,32 @@ export const heroWiki = [
           skills: [
             {
               id: 1,
-              name: "Wicked Slice",
-              img: "wickedslice",
+              name: "Wicked Hack",
+              img: "wickedhack",
 
               stats: {
                 type: "Melee",
-                Rank: [2, 3, 4],
+                Rank: [3, 4],
                 Target: [1, 2],
                 Cooldown: NaN,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "high damage skill that hits the Front-rank. Has Execution 1, helping bypass Death Armor which would let enemies survive a Deathblow.",
+                  "Hellion's melee attack, deals solid damage with Combo tokens, it can one-shot many enemies.",
 
                 dataStats: {
                   damage: [4, 8],
-                  crit: 15,
-                  target: "Execution",
+                  crit: 5,
+                  target: "Deals +50% DMG when combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
-                    damage: [6, 9],
-                    crit: 20,
-                    target: "Execution",
+                    damage: [6, 10],
+                    crit: 10,
+                    target: "Deals +50% DMG when combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1499,29 +1549,32 @@ export const heroWiki = [
 
             {
               id: 2,
-              name: "Pistol Shot",
-              img: "pistolshot",
+              name: "Iron Swan",
+              img: "ironswan",
 
               stats: {
-                type: "Ranged",
-                Rank: [1, 2, 3],
-                Target: [2, 3, 4],
+                type: "Melee",
+                Rank: [4],
+                Target: [4],
                 Cooldown: NaN,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "high damage skills that hits the Back-ranks. Applies Daze/Stun token when Target has combo token. Most used as a utility but still has enough damage to kill most enemies, is the only HWM skill that can directly damage Target 4.",
+                "Attack that hits rank 4, useful against enemies with low health in that rank.",
 
                 dataStats: {
-                  damage: [3, 6],
-                  crit: 10,
-                  target: "Add Daze with Combo",
+                  damage: [4, 8],
+                  crit: 5,
+                  target: "---",
                   self: null,
+                  heal: null,
 
                   upgrade: {
-                    damage: [5, 8],
-                    crit: 15,
-                    target: "Add Stun with Combo",
+                    damage: [6, 10],
+                    crit: 10,
+                    target: "Apply Combo Token",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1529,29 +1582,32 @@ export const heroWiki = [
 
             {
               id: 3,
-              name: "Duelist's Advance",
-              img: "duelistsadvance",
+              name: "Barbaric YAWP!",
+              img: "barbaricyawp",
 
               stats: {
-                type: "Melee",
-                Rank: [1, 2, 3],
-                Target: [1, 2, 3],
-                Cooldown: NaN,
+                type: "Ranged",
+                Rank: [3, 4],
+                Target: [1, 2],
+                Cooldown: 1,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "Forward 1. Gives access to Riposte token, Highwayman Riposte has a chance to apply Combo token on enemies, this make HWM's Riposte valuable as a DMG skill, Finisher Tool and a Support skill.",
+                  "Weakens and stuns the enemy with combo. Great support for disabling the enemy frontline.",
 
                 dataStats: {
-                  damage: [3, 5],
-                  crit: 5,
-                  target: null,
-                  self: "Forward 1, Add Riposte x2",
+                  damage: null,
+                  crit: null,
+                  target: "Ignores and remove Stealth, Add Weakness",
+                  self: "Add winded",
+                  heal: null,
 
                   upgrade: {
-                    damage: [4, 6],
-                    crit: 10,
-                    target: null,
-                    self: "Forward 1, Add Riposte x3, Add Dodge",
+                    damage: null,
+                    crit: null,
+                    target: "Ignores and remove Stealth, Add x2 Weakness, Add Stun when Combo",
+                    self: "Add winded",
+                    heal: null,
                   },
                 },
               },
@@ -1559,30 +1615,32 @@ export const heroWiki = [
 
             {
               id: 4,
-              name: "Tracking Shot",
-              img: "trackingshot",
+              name: "If It Bleeds",
+              img: "ifitbleeds",
 
               stats: {
-                type: "Ranged",
-                Rank: [1, 2, 3, 4],
-                Target: [1, 2, 3, 4],
+                type: "Melee",
+                Rank: [2, 3],
+                Target: [2, 3],
                 Cooldown: NaN,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "Hard counter dodge/dodgeplus tokens. Very useful to counter certain enemies as no only Ignores and Remove tokens also prevents enemies to Gain Dodge/dodgeplus tokens for 2 Turns. Also adds Combo token and Removes Stealth token as an added bonus.",
+                "Bleeding attack reaching ranks 2 and 3. The only option to hit rank 3 with the Hellion.",
 
                 dataStats: {
-                  damage: null,
-                  crit: null,
-                  target: "Ignores Dodge and Sthealth, Add Combo",
+                  damage: [3, 6],
+                  crit: 5,
+                  target: "x2 Bleed +30% Bleed RES Piercing when Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
-                    damage: null,
-                    crit: null,
-                    target:
-                      "Ignores Dodge and Sthealth, Add Combo, Cannot Gain Dodge 2 rounds",
+                    damage: [3, 6],
+                    crit: 10,
+                    target: "x4 Bleed +30% Bleed RES Piercing when Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1590,29 +1648,32 @@ export const heroWiki = [
 
             {
               id: 5,
-              name: "Take Aim",
-              img: "takeaim",
+              name: "Toe to Toe",
+              img: "toetotoe",
 
               stats: {
-                type: "Buff",
-                Rank: [1, 2, 3, 4],
-                Target: "Self",
-                Cooldown: 2,
+                type: "Melee",
+                Rank: [2, 3, 4],
+                Target: [1, 2],
+                Cooldown: NaN,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "is the cornerstone of HWM's damage output. It generates Crit, Dodge token (and Speed token  when mastered), while simultaneously clearing Blind token . Is recommended to always use this skills in combination with other DMG skills as the guaranteed Crit token will greatly improve your DPS.",
+                  "Taunt, immobilization, and removes fatigue, without blocking. It's helpful for Hellion to be low on health. Helps survive and protect the team.",
 
                 dataStats: {
-                  damage: null,
-                  crit: null,
+                  damage: [2, 4],
+                  crit: 5,
                   target: null,
-                  self: "Add Crit, Remove Blind",
+                  self: "Forward 1, Add x2 Taunt And Immobilize",
+                  heal: null,
 
                   upgrade: {
-                    damage: null,
-                    crit: null,
+                    damage: [3, 5],
+                    crit: 5,
                     target: null,
-                    self: "Add Crit x2, Remove Blind",
+                    self: "Forward 1, Add x2 Taunt And Immobilize, Remove Winded",
+                    heal: null,
                   },
                 },
               },
@@ -1620,29 +1681,32 @@ export const heroWiki = [
 
             {
               id: 6,
-              name: "Point Blank Shot",
-              img: "pointblankshot",
+              name: "Adrenaline Rush",
+              img: "AdrenalineRush",
 
               stats: {
-                type: "Ranged",
-                Rank: [4],
-                Target: [1],
-                Cooldown: NaN,
+                type: "Heal",
+                Rank: [1,2,3,4],
+                Target: "Self",
+                Cooldown: 3,
+                Uses: 2,
 
                 skillOverwiew:
-                  "is a highly devastating skill, but has rather strict Rank requirement (Only can be used in Rank 1). Makes good combo with another Dancing heroes.",
+                  "Heals HP, removes Debuff, and can only be used with low HP. Grants Healing on Hit. Combine with sweeping attacks to maximize healing per turn.",
 
                 dataStats: {
-                  damage: [6, 10],
-                  crit: 10,
-                  target: "Knockback 1, Add Combo",
-                  self: "Back 1",
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Remove Bleed and Winded Tokens, Gain On Attack (Heal 20%)",
+                  heal: "If HP < 33% = Heal 20%",
 
                   upgrade: {
-                    damage: [10, 13],
-                    crit: 15,
-                    target: "Knockback 1, Add Combo",
-                    self: "Back 1",
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Remove Bleed, Blight, Burn and Winded Tokens, Gain On Attack (Heal 20%)",
+                    heal: "If HP < 33% = Heal 20%",
                   },
                 },
               },
@@ -1667,12 +1731,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "---",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "-2 Speed",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1697,12 +1763,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Bleed x2/x4 when Combo",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [4, 6],
                     crit: 10,
                     target: "Bleed x3/x6 when Combo",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1727,12 +1795,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "30% DMG when Target HP < 30%",
                   self: null,
+                  heal: null,
 
                   upgrade: {
                     damage: [6, 9],
                     crit: 10,
                     target: "30% DMG when Target HP < 50%",
                     self: null,
+                    heal: null,
                   },
                 },
               },
@@ -1757,12 +1827,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
                   self: "---",
+                  heal: null,
 
                   upgrade: {
                     damage: null,
                     crit: 5,
                     target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
                     self: "+5% Crit",
+                    heal: null,
                   },
                 },
               },
@@ -1787,12 +1859,14 @@ export const heroWiki = [
                   crit: 5,
                   target: "Ignores block, Add Vulnerable",
                   self: "Add Block",
+                  heal: null,
 
                   upgrade: {
                     damage: [3, 5],
                     crit: 10,
                     target: "Ignores block, Add Vulnerable x2",
                     self: "Add Block",
+                    heal: null,
                   },
                 },
               },
