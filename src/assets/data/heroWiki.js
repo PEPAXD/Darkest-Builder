@@ -1354,25 +1354,26 @@ export const heroWiki = [
           },
 
           heroTrinkeds: {
-            trinkeds: ["Cursed_Coin", "Rat_Skull", "Tormenting_Locket"],
+            trinkeds: ["Bloodied_Branch", "Rotten_Tomato", "Empty_Stein"],
 
             description: [
               [
-                ["Buff", "+5% DMG per Positive Token"],
-                ["Highway Robbery", "Add Riposte x2 (50%)"],
-                ["Debuff", "If Relics > 100: -15% CRIT"],
+                ["Gain on CRIT", "Melee Skills: Strenght (66%)"],
+                ["If It Bleeds", "x2 Bleed Dealt"],
+                ["When Moving", "If Rank = 4: +2 Stress"],
               ],
               [
-                ["Start Turn", " If First in Turn Order: Crit-token (66%)"],
+                ["If Rank = 1:", "-20% Disease RES"],
+                ["If Rank = 2:", "+30% DMG"],
                 [
-                  "Duelist's Advance",
-                  "Add immobilize (66%) vs Creature: -90% Healing Received from Skills",
+                  "Breakthrough",
+                  "Apply on Hit Combo Token, Add 1 Negative Token",
                 ],
               ],
               [
-                ["Melee Skills", "+15% CRIT"],
-                ["Open Vein", "+2 Bleed Dealt"],
-                ["Gain on Attack", "Ranged Skills: +1 Stress-Token (25%)"],
+                ["If Bleed", "+25% DMG"],
+                ["Barbaric YAWP!", "Self Add Strength"],
+                ["Gain on Bleed Resist", "weakness (25%)"],
               ],
             ],
           },
@@ -1802,7 +1803,8 @@ export const heroWiki = [
                   upgrade: {
                     damage: [4, 7],
                     crit: 5,
-                    target: "Ignores guarded, Removes guarded, Cannot Gain Shield (2 Rounds)",
+                    target:
+                      "Ignores guarded, Removes guarded, Cannot Gain Shield (2 Rounds)",
                     self: "Forward 2, Add Winded",
                     heal: null,
                   },
@@ -1836,7 +1838,7 @@ export const heroWiki = [
                     crit: null,
                     target: "Stress 5+: -1",
                     self: "Add Winded, HP < 33% = Heal 25%, Stress +5: -3, Remove Horror, +10 RES Deathdoor",
-                    heal: null,  
+                    heal: null,
                   },
                 },
               },
