@@ -1404,7 +1404,6 @@ export const heroWiki = [
                 ["Wicked Hack Skills", "Remove Block Target"],
                 ["Turn Start", "Add Self Winded"],
                 ["Turn End", "Winded ---> Block (75%)"],
-
               ],
             ],
           ],
@@ -1560,7 +1559,7 @@ export const heroWiki = [
                 Uses: NaN,
 
                 skillOverwiew:
-                "Attack that hits rank 4, useful against enemies with low health in that rank.",
+                  "Attack that hits rank 4, useful against enemies with low health in that rank.",
 
                 dataStats: {
                   damage: [4, 8],
@@ -1605,7 +1604,8 @@ export const heroWiki = [
                   upgrade: {
                     damage: null,
                     crit: null,
-                    target: "Ignores and remove Stealth, Add x2 Weakness, Add Stun when Combo",
+                    target:
+                      "Ignores and remove Stealth, Add x2 Weakness, Add Stun when Combo",
                     self: "Add winded",
                     heal: null,
                   },
@@ -1626,7 +1626,7 @@ export const heroWiki = [
                 Uses: NaN,
 
                 skillOverwiew:
-                "Bleeding attack reaching ranks 2 and 3. The only option to hit rank 3 with the Hellion.",
+                  "Bleeding attack reaching ranks 2 and 3. The only option to hit rank 3 with the Hellion.",
 
                 dataStats: {
                   damage: [3, 6],
@@ -1686,7 +1686,7 @@ export const heroWiki = [
 
               stats: {
                 type: "Heal",
-                Rank: [1,2,3,4],
+                Rank: [1, 2, 3, 4],
                 Target: "Self",
                 Cooldown: 3,
                 Uses: 2,
@@ -1714,30 +1714,31 @@ export const heroWiki = [
 
             {
               id: 7,
-              name: "Grapeshot Blast",
-              img: "grapeshotblast",
+              name: "Bleed Out",
+              img: "bleedout",
 
               stats: {
-                type: "Ranged",
-                Rank: [1, 2, 3, 4],
-                Target: [1, 2],
+                type: "Melee",
+                Rank: [4],
+                Target: [1],
                 Cooldown: NaN,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "Multi-hit attack. Due to the Low Base DMG is preferably used to remove Tokens and to finish off enemies at low health. Combined with takeaimTake skill can be used as a Pseudo Stress Healer (chance to heal Stress two times)",
+                  "High damage and bleed skill. Although it applies the 'Winded' token, the bleed is unaffected and can easily eliminate high HP targets",
 
                 dataStats: {
-                  damage: [3, 5],
+                  damage: [4, 8],
                   crit: 5,
-                  target: "---",
-                  self: null,
+                  target: "x4 Bleed, +30% bleed RES Piercing when Combo",
+                  self: "add Winded",
                   heal: null,
 
                   upgrade: {
-                    damage: [4, 6],
+                    damage: [6, 9],
                     crit: 10,
-                    target: "-2 Speed",
-                    self: null,
+                    target: "x6 Bleed, +30% bleed RES Piercing when Combo",
+                    self: "add Winded",
                     heal: null,
                   },
                 },
@@ -1746,30 +1747,30 @@ export const heroWiki = [
 
             {
               id: 8,
-              name: "Open Vein",
-              img: "openvein",
+              name: "Bloodlust",
+              img: "Bloodlust",
 
               stats: {
-                type: "Melee",
+                type: "Buff",
                 Rank: [2, 3, 4],
-                Target: [1, 2],
+                Target: "Self",
                 Cooldown: NaN,
 
                 skillOverwiew:
-                  "Moderate Damage skill that hits the front ranks. Althought the direct damage is not high, the skill shines when the Target has Combo token. it doubles Bleed.",
+                  "5-turn buff that increases her damage against bleeding targets, clears the 'Winded' status, and can increase damage by 100%-150%. Although it requires setup, it is worth it.",
 
                 dataStats: {
-                  damage: [3, 5],
-                  crit: 5,
-                  target: "Bleed x2/x4 when Combo",
-                  self: null,
+                  damage: null,
+                  crit: null,
+                  target: null,
+                  self: "Remove Winded, if Target Bleed (+30% DMG)",
                   heal: null,
 
                   upgrade: {
-                    damage: [4, 6],
-                    crit: 10,
-                    target: "Bleed x3/x6 when Combo",
-                    self: null,
+                    damage: null,
+                    crit: null,
+                    target: null,
+                    self: "Remove Winded, if Target Bleed (+30% DMG), Execution 1",
                     heal: null,
                   },
                 },
@@ -1778,30 +1779,31 @@ export const heroWiki = [
 
             {
               id: 9,
-              name: "Double Tap",
-              img: "doubletap",
+              name: "Breakthrough",
+              img: "breakthrough",
 
               stats: {
-                type: "Ranged",
-                Rank: [2, 3],
-                Target: [2, 3],
-                Cooldown: NaN,
+                type: "Melee",
+                Rank: [1, 2, 3],
+                Target: [1, 2, 3],
+                Cooldown: 1,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "High damage skill that hits the Middle-ranks. (when upgraded Execution 1 ), and deals more DMG when the enemy is a low HP. Works as a main DMG Skill, as a Finisher and is most effective the more health has the enemy.",
+                  "Counters enemy blocks and protections, adds the Winded state. Additionally, moves Hellion two positions forward",
 
                 dataStats: {
-                  damage: [4, 8],
+                  damage: [3, 6],
                   crit: 5,
-                  target: "30% DMG when Target HP < 30%",
-                  self: null,
+                  target: "Ignores guarded, Removes guarded",
+                  self: "Forward 2, Add Winded",
                   heal: null,
 
                   upgrade: {
-                    damage: [6, 9],
-                    crit: 10,
-                    target: "30% DMG when Target HP < 50%",
-                    self: null,
+                    damage: [4, 7],
+                    crit: 5,
+                    target: "Ignores guarded, Removes guarded, Cannot Gain Shield (2 Rounds)",
+                    self: "Forward 2, Add Winded",
                     heal: null,
                   },
                 },
@@ -1810,31 +1812,31 @@ export const heroWiki = [
 
             {
               id: 10,
-              name: "Highway Robbery",
-              img: "highwayrobbery",
+              name: "Raucous Revelry",
+              img: "rauciousrevelry",
 
               stats: {
-                type: "Melee",
-                Rank: [1, 2, 3],
-                Target: [1, 2, 3],
+                type: "Buff",
+                Rank: [1, 2, 3, 4],
+                Target: "Self",
                 Cooldown: 1,
 
                 skillOverwiew:
-                  "is extremely useful against enemies that can apply positive Tokens on themselves or allies, as it can remove these Tokens and destroy enemies' advantages to alleviate combat risks. With the skill upgraded, the Highwayman can also steal powerful Tokens to increase his damage and defense",
+                  "Heals stress when health is low, (x3 +1 to allies). The downside is its cooldown and the Winded effect.",
 
                 dataStats: {
                   damage: null,
-                  crit: 5,
-                  target: "Ignore Dodge, Remove 2 Positive Tokens, -5% Crit",
-                  self: "---",
+                  crit: null,
+                  target: "Stress 5+: -1",
+                  self: "Add Winded, HP < 33% = Heal 20%, Stress +5: -2, Remove Horror",
                   heal: null,
 
                   upgrade: {
                     damage: null,
-                    crit: 5,
-                    target: "Ignore Dodge, Steal 2 Positive Tokens, -5% Crit",
-                    self: "+5% Crit",
-                    heal: null,
+                    crit: null,
+                    target: "Stress 5+: -1",
+                    self: "Add Winded, HP < 33% = Heal 25%, Stress +5: -3, Remove Horror, +10 RES Deathdoor",
+                    heal: null,  
                   },
                 },
               },
@@ -1842,30 +1844,31 @@ export const heroWiki = [
 
             {
               id: 11,
-              name: "Double Cross",
-              img: "doublecross",
+              name: "Howling End",
+              img: "howlingEnd",
 
               stats: {
                 type: "Melee",
                 Rank: [3, 4],
                 Target: [1, 2],
-                Cooldown: NaN,
+                Cooldown: 3,
+                Uses: NaN,
 
                 skillOverwiew:
-                  "Can apply Vulnerable Token to enemies and Add Block token to Self. Is best pair with other heroes that can use Vulnerable token. Take Aim can make this Skill more effective as Crits token.",
+                  "Massive front-line attack. Applies Winded to the hero. With upgrades, it can one-shot enemies. Moves Hellion back, and is a good combo with If it Bleeds and Breakthrough.",
 
                 dataStats: {
-                  damage: [2, 4],
-                  crit: 5,
-                  target: "Ignores block, Add Vulnerable",
-                  self: "Add Block",
+                  damage: [8, 14],
+                  crit: 10,
+                  target: null,
+                  self: "Back 1, Add Winded",
                   heal: null,
 
                   upgrade: {
-                    damage: [3, 5],
-                    crit: 10,
-                    target: "Ignores block, Add Vulnerable x2",
-                    self: "Add Block",
+                    damage: [10, 18],
+                    crit: 15,
+                    target: null,
+                    self: "Back 1, Add Winded, Cooldown -1",
                     heal: null,
                   },
                 },
