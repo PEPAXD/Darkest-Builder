@@ -1472,11 +1472,11 @@ export const heroWiki = [
           },
 
           sampleCombo: {
-            title: '"Infernal Mitigation: Stuns and Protection"',
-            comp: ["Vestal", "Highwayman", "Jester", "Man-At-Arms"],
-            paths: ["Seraph", "Sharpshot", "Virtuoso", "Bulwark"],
+            title: '"Ultimate Backline Destroyer"',
+            comp: ["Plague-Doctor", "Occultist", "Highwayman", "Hellion"],
+            paths: ["Alchemist", "Warlock", "Sharpshot", "Ravager"],
             description:
-              "You know what we haven’t had yet? A strong as hell mitigation focused comp. Here you go, this comp carries enough mitigation to make even the scariest boss blush. Upgrade Rampart and Consecration of Fortitude at the first inn, and enjoy producing stuns and mitigation tokens up the wazoo.",
+              "Do you hate enemy backlines? Use this comp to smash them with Plague Grenades, Abyssal Artillery, Double Tap, and more. The Ravager Hellion and Jester can also destroy the frontline. Ideal for Act 2 and fights against Tangle and cultists.",
           },
 
           stats: {
