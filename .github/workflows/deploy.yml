@@ -20,7 +20,10 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
+
+      - name: Install sass
+        run: npm install -D sass
 
       - name: Build project
         run: npm run build
